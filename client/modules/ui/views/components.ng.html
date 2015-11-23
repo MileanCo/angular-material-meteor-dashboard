@@ -1,0 +1,157 @@
+<!-- DIALOGS -->
+<h1 class="md-display-1">Dialogs and Modals </h1>
+<div ng-controller="DialogCtrl" class="md-whiteframe-z2 md-padding dialogdemoBasicUsage"  id="popupContainer" ng-cloak>
+  <p class="inset">
+    Open a dialog over the app's content. Press escape or click outside to close the dialog and
+    send focus back to the triggering button.
+  </p>
+  <div class="dialog-demo-content" layout="row" layout-wrap layout-margin>
+    <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+      Alert Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="showConfirm($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+      Confirm Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="showAdvanced($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+      Custom Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="showTabDialog($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+      Tab Dialog
+    </md-button>
+  </div>
+  <p class="footer">Note: The <b>Confirm</b> dialog does not use <code>$mdDialog.clickOutsideToClose(true)</code>.</p>
+  <div ng-if="status">
+    <br/>
+    <b layout="row" layout-align="center center" class="md-padding">
+      {{status}}
+    </b>
+  </div>
+</div>
+<br/>
+<!-- LOADING BARS -->
+<h2 class="md-display-1">Progress Bars – Circular</h2>
+<div ng-controller="ProgressCtrl as vm" class="md-whiteframe-z2 progressCirculardemoBasicUsage" layout="column" style="padding:25px;" ng-cloak>
+
+  <div layout="row" layout-sm="column" layout-align="space-around">
+    <h4 style="margin-top:10px">Determinate</h4>
+    <md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>
+    <h4>Indeterminate</h4>
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+  <h4>Theming </h4>
+  <p>
+    Your current theme colors can be used to easily colorize your progress indicator with `md-warn` or `md-accent`
+    colors.
+  </p>
+  <div layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular class="md-hue-2" md-mode="{{vm.modes[0]}}" md-diameter="20px"></md-progress-circular>
+    <md-progress-circular class="md-accent" md-mode="{{vm.modes[1]}}" md-diameter="40"></md-progress-circular>
+    <md-progress-circular class="md-accent md-hue-1" md-mode="{{vm.modes[2]}}" md-diameter="60"></md-progress-circular>
+    <md-progress-circular class="md-warn md-hue-3" md-mode="{{vm.modes[3]}}" md-diameter="70"></md-progress-circular>
+    <md-progress-circular md-mode="{{vm.modes[4]}}" md-diameter="96"></md-progress-circular>
+  </div>
+  <hr ng-class="{'visible' : vm.activated}">
+  <div layout="row" id="loaders">
+    <h5>Off</h5>
+    <md-switch
+        ng-model="vm.activated"
+        ng-change="vm.toggleActivation()"
+        aria-label="Toggle Progress Circular Indicators">
+      <h5>On</h5>
+    </md-switch>
+  </div>
+</div>
+
+<h2 class="md-display-1">Progress Bars – Linear</h2>
+<div ng-controller="ProgressCtrl as vm" class="md-whiteframe-z2 progressLineardemoBasicUsage" layout="column" style="padding:25px;" ng-cloak>
+  <h2 class="md-title">Determinate / Percentage </h2>
+    <md-progress-linear md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-linear>
+  <h4 class="md-title">Indeterminate</h4>
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+  <h4 class="md-title">Buffer</h4>
+  <md-progress-linear class="md-warn" md-mode="{{vm.modes[0]}}" value="{{vm.determinateValue}}"
+                      md-buffer-value="{{vm.determinateValue2}}"></md-progress-linear>
+  <h4 class="md-title">Query</h4>
+  <div class="container" ng-class="{'visible' : !vm.activated}">
+    <md-progress-linear md-mode="{{vm.modes[1]}}"></md-progress-linear>
+    <div class="bottom-block">
+      <span>Loading application libraries...</span>
+    </div>
+  </div>
+  <hr ng-class="{'visible' : vm.activated}">
+  <div layout="row" id="loaders">
+    <h5>Off</h5>
+    <md-switch
+        ng-model="vm.activated"
+        ng-change="vm.toggleActivation()"
+        aria-label="Enable Indicators">
+      <h5>On</h5>
+    </md-switch>
+  </div>
+</div>
+<br>
+
+
+<h4>Standard date-picker</h4>
+<div class="md-whiteframe-z2">
+      <md-datepicker flex ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+</div>
+<br/>
+
+<!-- TOAST -->
+<h3> Notifications </h3>
+<div ng-controller="ToastCtrl" class="md-whiteframe-z2" layout="column" ng-cloak>
+    <div layout="row" layout-sm="column" layout-align="space-around">
+      <md-button ng-click="showSuccessToast()">
+        Success!
+      </md-button>
+      <md-button ng-click="showFailToast()">
+        Fail
+      </md-button>
+      <md-button ng-click="showInfoToast()">
+        Info
+      </md-button>
+    </div>
+</div>
+<br/>
+
+<h3> Sliders </h3>
+<div class="md-whiteframe-z2" ng-cloak>
+  <md-content style="margin: 16px; padding:16px">
+    <h3>
+      RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </h3>
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">R</span>
+        </div>
+        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+        </div><br>
+      </div>
+
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">G</span>
+        </div>
+        <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent">
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+        </div>
+      </div>
+
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">B</span>
+        </div>
+        <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+        </div>
+      </div>
+  </md-content>
+</div>

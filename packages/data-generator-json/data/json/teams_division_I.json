@@ -1,0 +1,27 @@
+[	
+
+	{"division": "I", "team_code": "FLOR", "short_name": "Florida", "city": "Miami"},
+	{"division": "I", "team_code": "FSU", "short_name": "Florida St", "city": "Miami"},
+	{"division": "I", "team_code": "STAN", "short_name": "Stanford", "city": "city"},
+	{"division": "I", "team_code": "FGCU", "short_name": "Florida Gulf", "city": "Miami"},
+	{"division": "I", "team_code": "TENN", "short_name": "Tennessee", "city": "city"},
+	{"division": "I", "team_code": "WSU", "short_name": "Washington St.", "city": "Seattle"},
+	{"division": "I", "team_code": "MIA", "short_name": "Miami (FL)", "city": "city"},
+	{"division": "I", "team_code": "USD", "short_name": "San Diego", "city": "city"},
+	{"division": "I", "team_code": "SDSU", "short_name": "San Diego St", "city": "city"},
+	{"division": "I", "team_code": "IOWA", "short_name": "Iowa", "city": "city"},
+	{"division": "I", "team_code": "TOWS", "short_name": "Towson", "city": "city"},
+	{"division": "I", "team_code": "BAMA", "short_name": "Alabama", "city": "Atlanta"},
+	{"division": "I", "team_code": "NU", "short_name": "Northeastern", "city": "city"},
+	{"division": "I", "team_code": "WAG", "short_name": "Wagner", "city": "city"},
+	{"division": "I", "team_code": "TCU", "short_name": "TCU", "city": "city"},
+	{"division": "I", "team_code": "UIC", "short_name": "Illinois-Chicago", "city": "Chicago"},
+	{"division": "I", "team_code": "LIBU", "short_name": "Liberty", "city": "city"},
+	{"division": "I", "team_code": "CU", "short_name": "Campbell", "city": "city"},
+	{"division": "I", "team_code": "CLEV", "short_name": "Cleveland St", "city": "city"},
+	{"division": "I", "team_code": "SLU", "short_name": "St. Louis", "city": "city"},
+	{"division": "I", "team_code": "UNCW", "short_name": "UNC Wilmington", "city": "Wilmington"},
+	{"division": "I", "team_code": "WIU", "short_name": "Western Ill", "city": "city"},
+	{"division": "I", "team_code": "CAL", "short_name": "California", "city": "Los Angeles"},
+	{"division": "I", "team_code": "POLY", "short_name": "Cal Poly", "city": "city"}
+]

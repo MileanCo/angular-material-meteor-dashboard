@@ -1,0 +1,72 @@
+  <!-- SIDEBAR -->
+  <md-sidenav flex layout="column" class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+    <div role="navigation" layout="column" flex>
+      <!-- <a ui-sref="core.home"><img src="/images/AR_square.png"></a>-->
+      <h3> AMM Dash </h3>
+      <ul class="side-menu">
+        <li ng-repeat="section in vm.menu.sections" class="parent-list-item"
+            ng-class="{'parentActive' : vm.isSectionSelected(section)}">
+          <h2 class="menu-heading" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
+            {{section}}
+          </h2>
+          <menu-link section="section" ng-if="section.type === 'link'"></menu-link>
+          <menu-toggle section="section" ng-if="section.type === 'toggle'"></menu-toggle>
+        </li>
+      </ul>
+    </div>
+  </md-sidenav>
+
+  <!-- MAIN CONTENT -->
+  <div layout="column" flex>
+    <!-- HEADER -->
+    <md-toolbar layout="row" class="md-toolbar-tools"> <!-- layout="row" layout-align="start center" layout-padding -->
+        <!-- TOGGLE SIDEMENU -->
+        <md-button ng-click="toggleLeft()" aria-label="menu" class="md-icon-button" hide-gt-sm >
+            <md-icon md-font-set="material-icons">menu</md-icon>
+        </md-button>
+        <!-- TOP TOOLBAR
+        <h1 flex ng-bind="$state.current.data.pageTitle"> </h1> -->
+        <h1 class="md-title" ng-bind="page.title"> </h1>
+        <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
+        <div ng-show="$root.currentUser">
+          <md-button class="md-icon-button" aria-label="dashboard" ui-sref="core.dashboard">
+            <md-icon md-font-set="material-icons">dashboard</md-icon>
+            <md-tooltip md-direction="down">Dashboard</md-tooltip>
+          </md-button>
+        </div>
+        <md-menu md-position-mode="target-right target" >
+          <!-- OPEN MENU BTN -->
+            <md-button  class="md-icon-button" aria-label="Open demo menu" ng-click="$mdOpenMenu($event)">
+              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
+              <md-icon md-font-set="material-icons"> more_vert </md-icon>
+            </md-button>
+
+            <md-menu-content width="3">
+              <!-- NOT AUTHENTICATED -->
+              <div ng-hide="$root.currentUser">
+                <!-- LOGIN -->
+                <md-menu-item>
+                  <md-button ui-sref="core.login" >Login
+                    <!-- <md-icon md-menu-align-target md-svg-icon="img/icons/more_vert.svg"></md-icon>Login-->
+                  </md-button>
+                </md-menu-item>
+                <!-- REGISTER -->
+                <md-menu-item>
+                  <md-button ui-sref="core.register">Sign up</md-button>
+                </md-menu-item>
+              </div>
+
+              <!-- AUTHENTICATED -->
+              <div ng-show="$root.currentUser">
+                <md-menu-item>
+                  <md-button ui-sref="core.dashboard.profile" >Profile </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                  <md-button ui-sref="core.logout" >Logout</md-button>
+                </md-menu-item>
+              </div>
+            </md-menu-content>
+        </md-menu>
+    </md-toolbar>
+    <md-content ui-view layout="column" flex></md-content>
+  </div>

@@ -1,0 +1,34 @@
+<div layout="row" layout-align="space-between start" layout-sm="column" layout-align-sm="space-around center">
+  <md-input-container flex>
+      <label>
+        <i class="material-icons">brush</i> Stroke
+      </label>
+      <md-select ng-model="formData.stroke" >
+          <md-option ng-value="stroke" ng-repeat="stroke in strokes">{{ stroke }}</md-option>
+      </md-select>
+  </md-input-container>
+
+  <md-input-container flex>
+      <label><i class="material-icons">space_bar</i>Distance
+      </label>
+      <md-select ng-model="formData.distance">
+          <md-option ng-value="distance" ng-repeat="distance in distances">{{ distance }}</md-option>
+      </md-select>
+  </md-input-container>
+
+  <md-input-container flex>
+    <label><i class="material-icons">timer</i> Time </label>
+    <input type="text" placeholder="00:00:00" name="time" ng-model="formData.time" required>
+  </md-input-container>
+</div>
+<div layout="column" layout-align="space-around center">
+  <md-input-container flex >
+    <label> NCAA Division</label>
+    <md-select ng-model="formData.division">
+        <md-option>I</md-option>
+        <md-option>II</md-option>
+        <md-option>III</md-option>
+    </md-select>
+  </md-input-container>
+  <md-button flex class="md-raised md-primary" ui-sref="core.explorer.demographics" aria-label="next"> Next </md-button>
+</div>

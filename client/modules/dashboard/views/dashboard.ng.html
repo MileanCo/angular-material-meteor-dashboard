@@ -1,0 +1,18 @@
+
+    <div ng-cloak>
+      <md-tabs md-selected="currentTab" md-stretch-tabs="always" md-align-tabs="top" >
+        <md-tab ng-click="goToTab(currentTab)">
+          <md-tab-label>Profile</md-tab-label>
+        </md-tab>
+        <md-tab ng-click="goToTab(currentTab)">
+          <md-tab-label>My Teams</md-tab-label>
+        </md-tab>
+        <md-tab ng-click="goToTab(currentTab)">
+          <md-tab-label>My Times</md-tab-label>
+        </md-tab>
+     </md-tabs>
+
+     <md-content class="md-padding">
+       <div id="content" ui-view flex> </div>
+     </md-content>
+  </div>

@@ -11,17 +11,16 @@ session                 # Client-side reactive dictionary for your app
 tracker                 # Meteor's client-side reactive programming library
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
-angular@1.0.2
+jquery
+angular
+angular:angular-material
 angularui:angular-ui-router
 accounts-password
 accounts-facebook
-angularutils:pagination
 tmeasday:publish-counts
 email
 check
 less
-angular:angular-material
-planettraining:material-design-icons
 data-generator-json # local, my package [joel]
 momentjs:moment
 dotansimha:angular-google-chart
@@ -29,4 +28,5 @@ planettraining:oclazyload
 twbs:bootstrap
 
 # urigo:angular-blaze-template
-jquery
+# angularutils:pagination
+# planettraining:material-design-icons

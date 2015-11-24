@@ -102,13 +102,13 @@
 <h3> Notifications </h3>
 <div ng-controller="ToastCtrl" class="md-whiteframe-z2" layout="column" ng-cloak>
     <div layout="row" layout-sm="column" layout-align="space-around">
-      <md-button ng-click="showSuccessToast()">
+      <md-button class="md-raised md-primary" ng-click="showSuccessToast()">
         Success!
       </md-button>
-      <md-button ng-click="showFailToast()">
+      <md-button class="md-raised md-warn" ng-click="showFailToast()">
         Fail
       </md-button>
-      <md-button ng-click="showInfoToast()">
+      <md-button class="md-raised md-accent md-hue-2" ng-click="showInfoToast()">
         Info
       </md-button>
     </div>
@@ -125,7 +125,7 @@
         <div flex="10" layout layout-align="center center">
           <span class="md-body-1">R</span>
         </div>
-        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
+        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class="md-accent md-hue-2">
         </md-slider>
         <div flex="20" layout layout-align="center center">
           <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
@@ -136,7 +136,7 @@
         <div flex="10" layout layout-align="center center">
           <span class="md-body-1">G</span>
         </div>
-        <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent">
+        <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent md-hue-2">
         </md-slider>
         <div flex="20" layout layout-align="center center">
           <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
@@ -147,7 +147,7 @@
         <div flex="10" layout layout-align="center center">
           <span class="md-body-1">B</span>
         </div>
-        <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
+        <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-accent md-hue-2">
         </md-slider>
         <div flex="20" layout layout-align="center center">
           <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">

@@ -10,7 +10,6 @@ angular:angular-animate@1.4.7
 angular:angular-aria@1.4.7
 angular:angular-material@0.11.4
 angularui:angular-ui-router@0.2.15
-angularutils:pagination@0.9.1_2
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -69,7 +68,6 @@ oauth2@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
 pbastowski:angular-babel@1.0.6
-planettraining:material-design-icons@2.0.0
 planettraining:oclazyload@1.0.8
 promise@0.5.1
 random@1.0.5

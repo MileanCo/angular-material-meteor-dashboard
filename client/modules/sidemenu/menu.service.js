@@ -10,7 +10,9 @@
             type: 'link' },
           { name: 'Dashboard ',
             state: 'core.dashboard',
-            type: 'link' },
+            type: 'link',
+            icon: 'dashboard',
+           },
         ];
 
         sections.push({
@@ -21,27 +23,27 @@
               name: 'Buttons',
               type: 'link',
               state: 'core.ui.buttons',
-              icon: 'univ'
+              icon: ''
             }, {
               name: 'Components',
               state: 'core.ui.components',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: 'extension'
             }, {
               name: 'Cards',
               state: 'core.ui.cards',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: 'card_travel'
             }, {
               name: 'Icons',
-              state: 'core.ui.icons`',
+              state: 'core.ui.icons',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: 'fiber_manual_record'
             }, {
               name: 'Tabs',
               state: 'core.ui.tabs',
               type: 'link',
-              icon: 'fa fa-plus'
+              icon: 'tab'
             }, {
               name: 'Timeline',
               state: 'core.ui.timeline',

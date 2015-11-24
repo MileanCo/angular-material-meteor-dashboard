@@ -4,9 +4,10 @@
     angular
         .module('app.core', [
           'angular-meteor',
+
           //'oc.lazyLoad',
           'ui.router',
-          'angularUtils.directives.dirPagination',
+          //'angularUtils.directives.dirPagination',
           //'uiGmapgoogle-maps',
           'ngMaterial',
 

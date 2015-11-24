@@ -8,7 +8,7 @@ angular-templates@0.0.1
 angular:angular@1.4.7
 angular:angular-animate@1.4.7
 angular:angular-aria@1.4.7
-angular:angular-material@0.11.4
+angular:angular-material@1.0.0-rc4
 angularui:angular-ui-router@0.2.15
 autoupdate@1.2.4
 babel-compiler@5.8.24_1

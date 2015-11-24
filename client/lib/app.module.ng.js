@@ -20,8 +20,10 @@
             'app.core',
             'app.auth',
             'app.sidemenu',
-            'app.ui',
             'app.dashboard',
+            'app.ui',
+            'app.tables',
+            'app.forms',
             'app.charts',
         ])
         .config(['$mdIconProvider', '$mdThemingProvider', function ($mdIconProvider, $mdThemingProvider) {

@@ -112,7 +112,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
           },
         })
 
-    // TEAMS
+    // Material UI
     .state('core.ui', {
       url:'/ui',
       controller: 'UICtrl',
@@ -138,7 +138,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         url:'/tabs',
         data : { pageTitle: 'Tabs' },
         templateUrl: 'client/modules/ui/views/tabs.ng.html',
-      })
+      })/**
       .state('core.ui.icons', {
         url:'/icons',
         data : { pageTitle: 'Icons' },
@@ -153,9 +153,30 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         url:'/typography',
         data : { pageTitle: 'Typography' },
         templateUrl: 'client/modules/ui/views/typography.ng.html',
+      })*/
+
+    // TEAMS
+    .state('core.forms', {
+      url:'/forms',
+      controller: 'FormsCtrl',
+      data : { pageTitle: 'Forms' },
+      templateUrl: 'client/modules/forms/views/forms.ng.html',
+    })
+      .state('core.forms.elements', {
+        url:'/elements',
+        data : { pageTitle: 'Elements' },
+        templateUrl: 'client/modules/forms/views/elements.ng.html',
       })
-
-
+      .state('core.forms.validation', {
+        url:'/validation',
+        data : { pageTitle: 'Validation' },
+        templateUrl: 'client/modules/forms/views/validation.ng.html',
+      })
+      .state('core.forms.wizard', {
+        url:'/wizard',
+        data : { pageTitle: 'Wizard' },
+        templateUrl: 'client/modules/forms/views/wizard.ng.html',
+      })
 
     // AUTH /////// /////// //////// //////////
     .state('core.login', {

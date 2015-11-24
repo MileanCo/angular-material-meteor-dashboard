@@ -81,25 +81,25 @@
           type: 'toggle',
           pages: [
             {
-              name: 'Elements',
+              name: 'Form Elements',
               type: 'link',
               state: 'core.forms.elements',
-              icon: 'univ'
+              icon: ''
             }, {
               name: 'Validation',
               state: 'core.forms.validation`',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             }, {
               name: 'Wizard',
               state: 'core.forms.wizard`',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             }, {
               name: 'Layout',
               state: 'core.forms.layout',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             },
           ]
         });

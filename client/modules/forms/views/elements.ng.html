@@ -1,0 +1,310 @@
+
+<!-- INPUT -->
+<h1 class="md-display-1">Material Input</h1>
+<div ng-controller="InputCtrl" layout="column" ng-cloak class="md-whiteframe-z2 md-inline-form">
+  <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
+    <md-input-container>
+      <label>Title</label>
+      <input ng-model="user.title">
+    </md-input-container>
+    <md-input-container>
+      <label>Email</label>
+      <input ng-model="user.email" type="email">
+    </md-input-container>
+  </md-content>
+  <md-content layout-padding>
+    <form name="userForm">
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Company (Disabled)</label>
+          <input ng-model="user.company" disabled>
+        </md-input-container>
+        <md-datepicker ng-model="user.submissionDate" md-placeholder="Enter date"></md-datepicker>
+      </div>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>First name</label>
+          <input ng-model="user.firstName">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Last Name</label>
+          <input ng-model="theMax">
+        </md-input-container>
+      </div>
+      <md-input-container class="md-block">
+        <label>Address</label>
+        <input ng-model="user.address">
+      </md-input-container>
+      <md-input-container md-no-float class="md-block">
+        <input ng-model="user.address2" placeholder="Address 2">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>City</label>
+          <input ng-model="user.city">
+        </md-input-container>
+        <md-input-container flex>
+          <label>State</label>
+          <md-select ng-model="user.state">
+            <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+              {{state.abbrev}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Postal Code</label>
+          <input name="postalCode" ng-model="user.postalCode" placeholder="12345"
+                 required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+          <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
+            <div ng-message="required" class="my-message">You must supply a postal code.</div>
+            <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
+              code.
+            </div>
+            <div ng-message="md-maxlength" class="my-message">
+              Don't use the long version silly...we don't need to be that specific...
+            </div>
+          </div>
+        </md-input-container>
+      </div>
+      <md-input-container class="md-block">
+        <label>Biography</label>
+        <textarea ng-model="user.biography" columns="1" md-maxlength="150" rows="5"></textarea>
+      </md-input-container>
+    </form>
+  </md-content>
+</div>
+
+<br/><br/>
+
+<!-- CHECK BOXES -->
+<h1 class="md-display-1">Checkboxes</h1>
+<div class="md-whiteframe-z2 checkboxdemoBasicUsage" ng-cloak>
+  <fieldset class="standard">
+    <legend>Using <code>ng-model</code></legend>
+    <div layout="row" layout-wrap>
+      <div flex="50">
+        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+          Checkbox 1: {{ data.cb1 }}
+        </md-checkbox>
+      </div>
+      <div flex="50">
+        <md-checkbox
+            ng-model="data.cb2"
+            aria-label="Checkbox 2"
+            ng-true-value="'yup'"
+            ng-false-value="'nope'"
+            class="md-warn md-align-top-left">
+          Checkbox 2 (md-warn)  <br/>
+          <span class="ipsum">
+            Have we checked ourselves today?
+          </span>
+          <br/>
+          {{ data.cb2 }}
+        </md-checkbox>
+      </div>
+      <div flex="50">
+        <md-checkbox ng-disabled="true" aria-label="Disabled checkbox" ng-model="data.cb3">
+          Checkbox: Disabled
+        </md-checkbox>
+      </div>
+      <div flex="50">
+        <md-checkbox ng-disabled="true" aria-label="Disabled checked checkbox" ng-model="data.cb4" ng-init="data.cb4=true">
+          Checkbox: Disabled, Checked
+        </md-checkbox>
+      </div>
+      <div flex="50">
+        <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb5" class="md-primary">
+          Checkbox (md-primary): No Ink
+        </md-checkbox>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<br/><br/>
+
+<!-- CHECK BOXES -->
+<h1 class="md-display-1">Radio Buttons</h1>
+<div class="md-whiteframe-z2 radioButtondemoBasicUsage" >
+  <form ng-submit="submit()" ng-controller="RadioCtrl" ng-cloak>
+    <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p>
+    <div >
+      <md-radio-group ng-model="data.group1" layout="row">
+        <md-radio-button flex value="Apple" class="md-primary">Apple</md-radio-button>
+        <md-radio-button flex value="Banana"> Banana </md-radio-button>
+        <md-radio-button flex value="Mango">Mango</md-radio-button>
+      </md-radio-group>
+    </div>
+    <hr />
+    <p>Selected Value: <span class="radioValue">{{ data.group2 }}</span></p>
+    <md-radio-group ng-model="data.group2" class="md-primary">
+        <md-radio-button ng-repeat="d in radioData"
+                         ng-value="d.value"
+                         ng-disabled=" d.isDisabled "
+                         ng-class="{'md-align-top-left': $index==1}" >
+            {{ d.label }}<br/>
+          <span class="ipsum"
+                ng-if="$index == 1">
+            Some comments about this radio button
+          </span>
+        </md-radio-button>
+    </md-radio-group>
+    <p>
+      <md-button class="md-raised" ng-click="addItem()" type="button">Add</md-button>
+      <md-button class="md-raised" ng-click="removeItem()" type="button">Remove</md-button>
+    </p>
+    <hr />
+  </form>
+
+
+  <div ng-controller='ContactController as cc' class="radioDemo2 radioButtondemoMultiColumn">
+    <h3>Multi Column</h3>
+      <md-divider></md-divider>
+      <md-radio-group ng-model="cc.selectedIndex" >
+        <div ng-repeat='person in cc.contacts' class="row">
+          <div flex layout='row' layout-padding layout-align="start center" >
+            <div flex style="max-width:200px;">
+              {{person.title}}
+            </div>
+            <md-radio-button flex
+                ng-value="person.id"
+                class="md-primary" >
+              {{person.fullName}}
+            </md-radio-button>
+          </div>
+        </div>
+      </md-radio-group>
+      <md-divider></md-divider>
+      <div class="summary" flex layout="row" layout-align="space-between center">
+        <div flex-initial>
+          <span class="title">Selected User</span>: <span class="md-checked">{{cc.selectedUser()}}</span>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+<br/><br/>
+
+<!-- SELECT-->
+<h1 class="md-display-1">Material Select</h1>
+<div ng-controller="SelectOptGroupController" class="md-padding md-whiteframe-z2 radioButtondemoBasicUsage" ng-cloak>
+  <div>
+    <h1 class="md-title">Pick your pizza below</h1>
+    <div layout="row" layout-align="start center" >
+      <md-input-container flex style="margin-right: 10px;">
+        <label>Size</label>
+        <md-select ng-model="size">
+          <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container flex >
+        <label>Topping</label>
+        <md-select ng-model="topping">
+          <md-optgroup label="Meats">
+            <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'meat' }">{{topping.name}}</md-option>
+          </md-optgroup>
+          <md-optgroup label="Veggies">
+            <md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'veg' }">{{topping.name}}</md-option>
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+    </div>
+    <p ng-if="topping">You ordered a {{size.toLowerCase()}} pizza with {{topping.toLowerCase()}}.</p>
+  </div>
+  <h1 class="md-title">Validation Select</h1>
+  <div layout="column" layout-align="start center" style="min-height: 200px;" ng-cloak>
+    <form name="myForm">
+      <p>Note that invalid styling only applies if invalid and dirty</p>
+      <md-input-container class="md-block">
+        <label>Favorite Number</label>
+        <md-select name="myModel" ng-model="myModel" required>
+          <md-option value="1">One</md-option>
+          <md-option value="2">Two</md-option>
+        </md-select>
+        <div class="errors" ng-messages="myForm.myModel.$error" ng-if="myForm.$dirty">
+          <div ng-message="required">Required</div>
+        </div>
+      </md-input-container>
+      <div layout="row">
+        <md-button ng-click="clearValue()" ng-disabled="!myModel" style="margin-right: 20px;">Clear</md-button>
+        <md-button ng-click="save()" ng-disabled="myForm.$invalid" class="md-primary" layout layout-align="center end">Save</md-button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<br/><br/>
+
+<!-- SELECT-->
+<h1 class="md-display-1">Switch</h1>
+<div class="inset md-whiteframe-z2" ng-cloak>
+  <md-switch ng-model="data.cb1" aria-label="Switch 1" class="md-block">
+    Switch 1: {{ data.cb1 }}
+  </md-switch>
+  <md-switch ng-model="data.cb2" aria-label="Switch 2" ng-true-value="'yup'" ng-false-value="'nope'" class="md-warn md-block">
+    Switch 2 (md-warn): {{ data.cb2 }}
+  </md-switch>
+  <md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel" class="md-block">
+    Switch (Disabled)
+  </md-switch>
+  <md-switch ng-disabled="true" aria-label="Disabled active switch" ng-model="data.cb4" class="md-block">
+    Switch (Disabled, Active)
+  </md-switch>
+  <md-switch class="md-primary md-block" md-no-ink aria-label="Switch No Ink" ng-model="data.cb5">
+    Switch (md-primary): No Ink
+  </md-switch>
+  <md-switch ng-model="data.cb6" aria-label="Switch 6" ng-change="onChange(data.cb6)" class="md-block">
+    Switch 6 message: {{ message }}
+  </md-switch>
+</div>
+
+
+<br/><br/>
+
+<!-- CHIPS -->
+<h1 class="md-display-1">Material Chips </h1>
+<div ng-controller="ChipsCtrl as ctrl" class ="md-whiteframe-z2" layout="column" ng-cloak>
+  <md-content class="md-padding" layout="column">
+    <h2 class="md-title">Use a custom chip template.</h2>
+    <md-chips ng-model="ctrl.roFruitNames" readonly="ctrl.readonly">
+      <md-chip-template>
+        <strong>{{$chip}}</strong>
+        <em>(fruit)</em>
+      </md-chip-template>
+    </md-chips>
+    <br/>
+    <h2 class="md-title">Use the default chip template.</h2>
+    <md-chips ng-model="ctrl.fruitNames" readonly="ctrl.readonly"></md-chips>
+    <br/>
+    <h2 class="md-title">Use Placeholders and override hint texts.</h2>
+    <md-chips
+        ng-model="ctrl.tags"
+        readonly="ctrl.readonly"
+        placeholder="Enter a tag"
+        delete-button-label="Remove Tag"
+        delete-hint="Press delete to remove tag"
+        secondary-placeholder="+Tag"></md-chips>
+    <br/>
+    <h2 class="md-title">Display an ordered set of objects as chips (with custom template).</h2>
+    <p>Note: the variables <code>$chip</code> and <code>$index</code> are available in custom chip templates.</p>
+    <md-chips class="custom-chips" ng-model="ctrl.vegObjs" readonly="ctrl.readonly"
+        md-transform-chip="ctrl.newVeg($chip)">
+      <md-chip-template>
+        <span>
+          <strong>[{{$index}}] {{$chip.name}}</strong>
+          <em>({{$chip.type}})</em>
+        </span>
+      </md-chip-template>
+      <button md-chip-remove class="md-primary vegetablechip">
+        <md-icon md-svg-icon="md-close"></md-icon>
+      </button>
+    </md-chips>
+    <br/>
+    <md-checkbox ng-model="ctrl.readonly">Readonly</md-checkbox>
+  </md-content>
+</div>

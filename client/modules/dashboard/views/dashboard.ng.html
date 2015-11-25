@@ -1,6 +1,6 @@
 
-    <div ng-cloak>
-      <md-tabs class = "md-accent hue-1" md-selected="currentTab" md-stretch-tabs="always" md-align-tabs="top" >
+  <div ng-cloak>
+      <md-tabs md-selected="currentTab" md-stretch-tabs="always" md-align-tabs="top" >
         <md-tab ng-click="goToTab(currentTab)">
           <md-tab-label>Profile</md-tab-label>
         </md-tab>
@@ -12,7 +12,8 @@
         </md-tab>
      </md-tabs>
 
-     <md-content class="md-padding">
-       <div id="content" ui-view flex> </div>
-     </md-content>
+     <div class="md-padding">
+         <ui-view id="content" flex> </ui-view>
+     </div>
+
   </div>

@@ -9,6 +9,7 @@ angular:angular@1.4.7
 angular:angular-animate@1.4.7
 angular:angular-aria@1.4.7
 angular:angular-material@1.0.0-rc4
+angular:angular-messages@1.4.7
 angularui:angular-ui-router@0.2.15
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
@@ -39,6 +40,7 @@ email@1.0.8
 es5-shim@4.1.14
 facebook@1.2.2
 fastclick@1.0.7
+fourseven:scss@3.4.1
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5

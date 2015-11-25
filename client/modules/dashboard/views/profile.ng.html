@@ -1,4 +1,5 @@
-<div layout="column">
+<h1 class="md-display-1">User Profile</h1>
+<div layout="column" class="md-whiteframe-z2 md-padding">
     <form role="form" name="userProfileForm" ng-submit="updateProfile(userProfileForm)" novalidate>
         <md-input-container flex>
           <label>First Name</label>
@@ -12,6 +13,4 @@
       <p> Email: {{ currentUser.emails[0].address }} </p>
       <md-button type="submit" class="md-raised" >Update Profile </md-button>
     </form>
-
-
 </div>

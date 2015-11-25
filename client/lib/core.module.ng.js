@@ -10,6 +10,8 @@
           //'angularUtils.directives.dirPagination',
           //'uiGmapgoogle-maps',
           'ngMaterial',
+          'ngMessages',
+          'mdColors', // js/mdStyleColor
 
           //'ngCookies'
         ]);

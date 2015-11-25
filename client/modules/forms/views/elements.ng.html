@@ -77,7 +77,7 @@
 <br/><br/>
 
 <!-- CHECK BOXES -->
-<h1 class="md-display-1">Checkboxes</h1>
+<h1 class="md-display-1">Checkbox</h1>
 <div class="md-whiteframe-z2 checkboxdemoBasicUsage" ng-cloak>
   <fieldset class="standard">
     <legend>Using <code>ng-model</code></legend>
@@ -96,10 +96,9 @@
             class="md-warn md-align-top-left">
           Checkbox 2 (md-warn)  <br/>
           <span class="ipsum">
-            Have we checked ourselves today?
+            Have we checked ourselves today? {{ data.cb2 }}
           </span>
           <br/>
-          {{ data.cb2 }}
         </md-checkbox>
       </div>
       <div flex="50">
@@ -127,7 +126,7 @@
 <h1 class="md-display-1">Radio Buttons</h1>
 <div class="md-whiteframe-z2 radioButtondemoBasicUsage" >
   <form ng-submit="submit()" ng-controller="RadioCtrl" ng-cloak>
-    <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p>
+    <p>Selected Value: <span md-style-color="{'color': 'warn.800'}">{{ data.group1 }}</span> </p>
     <div >
       <md-radio-group ng-model="data.group1" layout="row">
         <md-radio-button flex value="Apple" class="md-primary">Apple</md-radio-button>
@@ -136,14 +135,14 @@
       </md-radio-group>
     </div>
     <hr />
-    <p>Selected Value: <span class="radioValue">{{ data.group2 }}</span></p>
+    <p>Selected Value: <span md-style-color="{'color': 'primary.800'}">{{ data.group2 }}</span></p>
     <md-radio-group ng-model="data.group2" class="md-primary">
         <md-radio-button ng-repeat="d in radioData"
                          ng-value="d.value"
                          ng-disabled=" d.isDisabled "
                          ng-class="{'md-align-top-left': $index==1}" >
             {{ d.label }}<br/>
-          <span class="ipsum"
+          <span md-style-color="{'color': 'primary.800'}"
                 ng-if="$index == 1">
             Some comments about this radio button
           </span>

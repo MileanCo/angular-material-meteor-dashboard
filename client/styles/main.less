@@ -18,6 +18,51 @@ body {
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+
+}
+
+md-content {
+  background: white;
+  //border: 1px solid #e1e1e1;
+}
+// anything with 'class="gray-bg"'
+.gray-bg {
+  background: #f6f6f6;
+}
+
+// md-whiteframe-z*
+// set color to white
+div[class*='md-whiteframe-z'] {
+  background: #FFFFFF;
+  margin: 18px;
+}
+
+// ALL BUTTONS
+.md-button {
+  text-transform: none;
+}
+
+.md-tab {
+  background: white;
+  color: #010101;
+  text-transform: none;
+}
+
+md-content md-tabs {
+  background: #f6f6f6;
+  border: 1px solid #e1e1e1; }
+  md-content md-tabs md-tab-content {
+    background: white; }
+  md-content md-tabs md-tabs-wrapper {
+    background: white; }
+    md-content h1:first-child {
+      margin-top: 0; }
+
+
+// CARDS
+md-card.md-dark {
+  background-color: #2F2F2F;
+  color: #F4F4F4;
 }
 
 // TOAST
@@ -28,29 +73,30 @@ md-toast.md-error-toast-theme {
     background-color: red;
 }
 md-toast.md-info-toast-theme {
-    background-color: blue;
+    background-color: lightblue;
 }
 
+/**
+md-toast.md-THEME_NAME-theme {
+  background-color: #323232;
+  color: '{{background-50}}';
 
-.md-button {
-  text-transform: none;
-}
-md-tabs {
-  background: #f6f6f6;
-  color:inherit;
-}
-.md-tab {
-  color: #010101;
-  text-transform: none;
-}
+  .md-button {
+    color: '{{background-50}}';
+    &.md-highlight {
+      color: '{{primary-A200}}';
+      &.md-accent {
+        color: '{{accent-A200}}';
+      }
+      &.md-warn {
+        color: '{{warn-A200}}';
+      }
+    }
+  }
+}*/
 
-// CARDS
-md-card.md-dark {
-  background-color: #2F2F2F;
-  color: #F4F4F4;
-}
 
-// DIALOG
+// DIALOGs
 .dialogdemoBasicUsage #popupContainer {
   position: relative; }
 .dialogdemoBasicUsage .footer {
@@ -68,7 +114,9 @@ md-card.md-dark {
 @import "sidemenu.import.less";
 @import "carousel.import.less";
 // DEMOS
-@import "buttons.import.less";
-@import "tabs.import.less";
-@import "progressbar.import.less";
-@import "form_elements.import.less";
+@import "demos/buttons.import.less";
+@import "demos/tabs.import.less";
+@import "demos/progressbar.import.less";
+@import "demos/form_elements.import.less";
+
+//@import "toast-themes.import.less";

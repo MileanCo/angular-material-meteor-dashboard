@@ -26,7 +26,7 @@
             'app.forms',
             'app.charts',
         ])
-        .config(['$mdIconProvider', '$mdThemingProvider', function ($mdIconProvider, $mdThemingProvider) {
+        .config(['$mdIconProvider', function ($mdIconProvider) {
           /**
           $mdIconProvider
             .iconSet("social", "/packages/planettraining_material-design-icons/bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-social.svg")
@@ -37,18 +37,6 @@
             .iconSet("navigation", "/packages/planettraining_material-design-icons/bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-navigation.svg")
             .iconSet("image", "/packages/planettraining_material-design-icons/bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-image.svg");
           */
-          // DEFAULT THEME
-
-          $mdThemingProvider.theme('default')
-            .primaryPalette('blue-grey', {default:"800"})
-            .accentPalette('light-blue') //, {default:"100"})
-            .warnPalette('yellow', {default: '700'})
-            ;
-
-          // TOAST themes
-          $mdThemingProvider.theme("success-toast");
-          $mdThemingProvider.theme("error-toast");
-          $mdThemingProvider.theme("info-toast");
 
         }]);
 

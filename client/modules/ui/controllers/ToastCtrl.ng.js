@@ -24,13 +24,31 @@ angular
         if ( current.left && last.right ) current.right = false;
         last = angular.extend({},current);
       }
-      $scope.showToast = function(message, theme) {
+      $scope.showToast = function(message, ttheme) {
         $mdToast.show(
           $mdToast.simple()
             .content(message)
-            .theme(theme)
             .position($scope.getToastPosition())
             .hideDelay(2000)
+            .theme(ttheme)
+          /**{
+              template : '<md-toast md-style-color="{\'background-color\': \'{{toast.theme}}\'}">\
+                            {{ toast.content }}\
+                            <md-button ng-click="toast.resolve()" > \
+                                Ok\
+                            </md-button>\
+                        </md-toast>' ,
+              controller: [function () {
+                  this.content = message;
+                  this.theme = ttheme;
+              }],
+              controllerAs: 'toast',
+              theme: ttheme,
+              parent : $document[0].querySelector('#toastBounds'),
+              hideDelay: 2000,
+              position: $scope.getToastPosition()
+            }
+        */
         );
       };
       $scope.showSuccessToast = function(message) {

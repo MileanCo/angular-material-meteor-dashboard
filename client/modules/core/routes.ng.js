@@ -154,8 +154,19 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         data : { pageTitle: 'Typography' },
         templateUrl: 'client/modules/ui/views/typography.ng.html',
       })*/
+    .state('core.tables-static', {
+      url:'/tables/static',
+      data : { pageTitle: 'Static Tables' },
+      templateUrl: 'client/modules/tables/views/static-table.ng.html',
+    })
+    .state('core.tables-dynamic', {
+      url:'/tables/dynamic',
+      data : { pageTitle: 'Dynamic Tables' },
+      controller: "TableCtrl",
+      templateUrl: 'client/modules/tables/views/dynamic-table.ng.html',
+    })
 
-    // TEAMS
+    // FORMS
     .state('core.forms', {
       url:'/forms',
       controller: 'FormsCtrl',
@@ -177,6 +188,18 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         data : { pageTitle: 'Wizard' },
         templateUrl: 'client/modules/forms/views/wizard.ng.html',
       })
+
+    .state('core.charts', {
+      url:'/charts',
+      data : { pageTitle: 'Charts' },
+      templateUrl: 'client/modules/charts/views/charts.ng.html',
+    })
+        .state('core.charts.google', {
+          url:'/google',
+          data : { pageTitle: 'Google Charts' },
+          controller:"GoogleChartCtrl",
+          templateUrl: 'client/modules/charts/views/googlecharts.ng.html',
+        })
 
     // AUTH /////// /////// //////// //////////
     .state('core.login', {

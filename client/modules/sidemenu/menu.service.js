@@ -48,12 +48,12 @@
               name: 'Timeline',
               state: 'core.ui.timeline',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             }, {
               name: 'Typography',
               state: 'core.ui.typography',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             },
           ]
         });
@@ -65,13 +65,13 @@
             {
               name: 'Static',
               type: 'link',
-              state: 'core.tables.static',
-              icon: 'univ'
+              state: 'core.tables-static',
+              icon: ''
             }, {
               name: 'Dynamic',
-              state: 'core.tables.dynamic`',
+              state: 'core.tables-dynamic',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             },
           ]
         });
@@ -109,20 +109,20 @@
           type: 'toggle',
           pages: [
             {
-              name: 'Google',
+              name: 'Google Charts',
               type: 'link',
-              state: 'core.buttons',
+              state: 'core.charts.google',
               icon: 'univ'
             }, {
               name: 'ChartJS',
-              state: 'core.lists`',
+              state: 'core.charts.chartjs',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             }, {
               name: 'C3',
-              state: 'core.lists`',
+              state: 'core.charts.c3',
               type: 'link',
-              icon: 'fa fa-map-marker'
+              icon: ''
             },
           ]
         });

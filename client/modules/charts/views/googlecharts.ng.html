@@ -1,0 +1,28 @@
+<h1 class="md-display-1">Material Bar Chart</h1>
+<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+  <div flex ng-show="loading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+
+  <div google-chart chart="barChart" style="width: 100%; height: 500px;"></div>
+
+</div>
+<br/>
+
+<h1 class="md-display-1">Pie Chart</h1>
+<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+  <div flex ng-show="loading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+  <div google-chart chart="pieChart" style="width: 100%; height: 300px;"></div>
+</div>
+
+<br/>
+
+<h1 class="md-display-1">Material Line Chart</h1>
+<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+  <div flex ng-show="loading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+  <div google-chart chart="lineChart" style="width: 100%; height: 400px;"></div>
+</div>

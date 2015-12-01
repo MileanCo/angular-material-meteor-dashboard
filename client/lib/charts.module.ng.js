@@ -4,7 +4,7 @@
     angular
         .module('app.charts', [
             'googlechart',
-            //'chart.js'
+            'chart.js'
           ]
         );
 })();

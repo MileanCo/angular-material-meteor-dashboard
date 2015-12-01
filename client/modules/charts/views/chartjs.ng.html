@@ -1,0 +1,62 @@
+<h1 class="md-display-1">Angular Chart JS</h1>
+<br/>
+
+<div layout="column" layout-gt-md="row" ng-cloak>
+  <div flex layout="column">
+    <h2 flex class="md-display-1">Line Chart</h2>
+    <div flex class="md-padding md-whiteframe-z2">
+      <canvas id="line" class="chart chart-line" chart-data="line.data"
+        chart-labels="line.labels" chart-legend="true" chart-series="line.series"
+        chart-click="onClick"
+        height="100" >
+      </canvas>
+    </div>
+  </div>
+
+  <div flex layout="column">
+    <h2 flex class="md-display-1">Dynamic Pie Charts</h2>
+    <div flex class="md-padding md-whiteframe-z2">
+      <canvas flex id="base" class="chart-base" chart-type="pie.type"
+        chart-data="pie.data" chart-labels="pie.labels" chart-legend="true"
+        height="100" >
+      </canvas>
+      <md-button flex ng-click="toggle()" class="md-raised">Toggle </md-button>
+    </div>
+  </div>
+</div>
+<br/>
+
+<div layout="column" layout-gt-md="row" ng-cloak>
+    <div flex layout="column">
+      <h2 flex class="md-display-1">Doughnut </h2>
+      <div flex class="md-padding md-whiteframe-z2">
+        <canvas id="doughnut" class="chart chart-doughnut"
+          chart-data="doughnut.data" chart-labels="doughnut.labels"
+          chart-legend="true" >
+        </canvas>
+      </div>
+    </div>
+
+  <div flex layout="column">
+    <h2 flex class="md-display-1">Bar Chart</h2>
+    <div flex class="md-padding md-whiteframe-z2">
+      <canvas id="bar" class="chart chart-bar"
+        chart-data="bar.data" chart-labels="bar.labels"
+        height="100" chart-series="bar.series"
+        chart-legend="true" >
+      </canvas>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div layout="column" ng-cloak>
+  <h2 flex class="md-display-1">Radar Chart </h2>
+  <div flex class="md-padding md-whiteframe-z2">
+    <canvas id="radar" class="chart chart-radar"
+      chart-data="radar.data" chart-labels="radar.labels"
+      height="100" chart-legend="true" >
+    </canvas>
+  </div>
+</div>

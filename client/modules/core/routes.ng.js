@@ -200,6 +200,12 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
           controller:"GoogleChartCtrl",
           templateUrl: 'client/modules/charts/views/googlecharts.ng.html',
         })
+        .state('core.charts.chartjs', {
+          url:'/chartjs',
+          data : { pageTitle: 'Angular ChartJS' },
+          controller:"ChartJsCtrl",
+          templateUrl: 'client/modules/charts/views/chartjs.ng.html',
+        })
 
     // AUTH /////// /////// //////// //////////
     .state('core.login', {

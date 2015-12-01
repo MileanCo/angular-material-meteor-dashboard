@@ -1,10 +1,10 @@
 'use strict';
 /**
  * @ngdoc function
- * @name sbAdminApp.controller:MainCtrl
+ * @name app.charts.controller:GoogleChartCtrl
  * @description
- * # MainCtrl
- * Controller of the sbAdminApp
+ * # GoogleChartCtrl
+ * Controller of the Google Charts
  */
 angular.module('app.charts') // TO-DO: ONLY ADD CHARTS.JS HERE & MODULARIZE
   .controller('GoogleChartCtrl', ['$scope', '$rootScope', '$timeout', function ($scope, $rootScope, $timeout) {

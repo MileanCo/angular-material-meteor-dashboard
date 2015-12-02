@@ -32,7 +32,7 @@ angular.module('app.charts') // TO-DO: ONLY ADD CHARTS.JS HERE & MODULARIZE
 
     $scope.toggle = function () {
       $scope.pie.type = $scope.pie.type === 'Pie' ?
-        'Pie' : 'PolarArea';
+        'PolarArea' : 'Pie';
     };
 
     //BAR CHART

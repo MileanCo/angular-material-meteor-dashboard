@@ -1,27 +1,28 @@
+<h1 class="page-header"> Wizard</h1>
 <div layout="column" layout-align="start center">
   <div flex>
-    <h1 class="page-header"> Explorer</h1>
-    <h2> Rank Yourself  </h2>
+
+    <h2> Explore the Galaxy </h2>
     <!-- the links to our nested states using relative paths -->
     <!-- add the active class if the state matches our ui-sref -->
     <div id="status-buttons" class="text-center">
-        <md-button ui-sref-active="active" ui-sref=".times" aria-label="times"> Times</md-button>
+        <md-button ui-sref-active="active" ui-sref=".intro" aria-label="times"> Intro</md-button>
         <md-button ui-sref-active="active" ui-sref=".demographics" aria-label="demographics"> Demographics</md-button>
-        <md-button ui-sref-active="active" ui-sref=".search" aria-label="search"> Search</md-button>
+        <md-button ui-sref-active="active" ui-sref=".results" aria-label="search"> Results</md-button>
     </div>
   </div>
   <hr>
-  <div flex ng-show="ExplorerCtrl.error" class="md-warn">
-    <small>{{ lc.error }}</small>
+  <div flex ng-show="error" class="md-warn">
+    <small>{{ error }}</small>
   </div>
 </div>
-<md-whiteframe class="md-whiteframe-z2">
+<div class="md-whiteframe-z2">
   <!-- use ng-submit to catch the form submission and use our Angular function -->
   <form id="signup-form" ng-submit="postResults()">
       <!-- our nested state views will be injected here -->
       <div flex ui-view></div>
   </form>
-</md-whiteframe>
+</div>
 
 
   <!--

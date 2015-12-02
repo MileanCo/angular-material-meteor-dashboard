@@ -112,7 +112,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
           },
         })
 
-    // Material UI
+    // Material UI //////////////////////////////////////////
     .state('core.ui', {
       url:'/ui',
       controller: 'UICtrl',
@@ -166,7 +166,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
       templateUrl: 'client/modules/tables/views/dynamic-table.ng.html',
     })
 
-    // FORMS
+    // FORMS //////////////////////////////////////////
     .state('core.forms', {
       url:'/forms',
       controller: 'FormsCtrl',
@@ -183,12 +183,30 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         data : { pageTitle: 'Validation' },
         templateUrl: 'client/modules/forms/views/validation.ng.html',
       })
+      // WIZARD ////////////////
       .state('core.forms.wizard', {
         url:'/wizard',
+        controller:'WizardCtrl',
         data : { pageTitle: 'Wizard' },
-        templateUrl: 'client/modules/forms/views/wizard.ng.html',
+        templateUrl: 'client/modules/forms/wizard/views/wizard.ng.html',
       })
+          .state('core.forms.wizard.intro', {
+            url:'/intro',
+            data : { pageTitle: 'Intro' },
+            templateUrl: 'client/modules/forms/wizard/views/intro.ng.html',
+          })
+          .state('core.forms.wizard.demographics', {
+            url:'/demographics',
+            data : { pageTitle: 'Demographics' },
+            templateUrl: 'client/modules/forms/wizard/views/demographics.ng.html',
+          })
+          .state('core.forms.wizard.results', {
+            url:'/results',
+            data : { pageTitle: 'Results' },
+            templateUrl: 'client/modules/forms/wizard/views/results.ng.html',
+          })
 
+    // CHARTS //////////////////////////////////////////
     .state('core.charts', {
       url:'/charts',
       data : { pageTitle: 'Charts' },

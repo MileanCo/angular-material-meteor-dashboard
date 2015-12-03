@@ -31,5 +31,5 @@ twbs:bootstrap
 # urigo:angular-blaze-template
 # angularutils:pagination
 # planettraining:material-design-icons
-fourseven:scss
 sebastianilves:angular-chart-js
+fortawesome:fontawesome

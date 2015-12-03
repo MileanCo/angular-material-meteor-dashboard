@@ -13,6 +13,11 @@
             type: 'link',
             icon: 'dashboard',
            },
+           { name: 'Widgets ',
+             state: 'core.widgets',
+             type: 'link',
+             icon: '',
+            },
         ];
 
         sections.push({
@@ -126,6 +131,32 @@
             },
           ]
         });
+
+        sections.push({
+          name: 'Maps',
+          type: 'toggle',
+          pages: [
+            {
+              name: 'Google',
+              type: 'link',
+              state: 'core.maps.google',
+              icon: 'univ'
+            }, {
+              name: 'Vector',
+              state: 'core.maps.vector',
+              type: 'link',
+              icon: ''
+            },
+          ]
+        });
+
+        sections.push(
+          { name: 'Documentation ',
+            state: 'core.documentation',
+            type: 'link',
+            icon: '',
+           },
+        );
 
 
 

@@ -112,6 +112,14 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
           },
         })
 
+    .state('core.widgets', {
+      url:'/widgets',
+      //controller: 'WidgetsCtrl',
+      data : { pageTitle: 'Widgets' },
+      templateUrl: 'client/modules/core/views/widgets.ng.html',
+    })
+
+
     // Material UI //////////////////////////////////////////
     .state('core.ui', {
       url:'/ui',
@@ -138,7 +146,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         url:'/tabs',
         data : { pageTitle: 'Tabs' },
         templateUrl: 'client/modules/ui/views/tabs.ng.html',
-      })/**
+      })
       .state('core.ui.icons', {
         url:'/icons',
         data : { pageTitle: 'Icons' },
@@ -146,6 +154,8 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
       })
       .state('core.ui.timeline', {
         url:'/timeline',
+        controller: 'TimelineCtrl',
+        controllerAs: 'ctrl',
         data : { pageTitle: 'Timeline' },
         templateUrl: 'client/modules/ui/views/timeline.ng.html',
       })
@@ -153,7 +163,7 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         url:'/typography',
         data : { pageTitle: 'Typography' },
         templateUrl: 'client/modules/ui/views/typography.ng.html',
-      })*/
+      })
     .state('core.tables-static', {
       url:'/tables/static',
       data : { pageTitle: 'Static Tables' },

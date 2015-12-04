@@ -22,7 +22,6 @@ tmeasday:publish-counts
 email
 check
 less
-data-generator-json # local, my package [joel]
 momentjs:moment
 dotansimha:angular-google-chart
 planettraining:oclazyload
@@ -33,3 +32,7 @@ twbs:bootstrap
 # planettraining:material-design-icons
 sebastianilves:angular-chart-js
 fortawesome:fontawesome
+
+# MY PACKAGES [JOEL] [LOCAL]
+data-generator-json
+mystec:angular-nvd3

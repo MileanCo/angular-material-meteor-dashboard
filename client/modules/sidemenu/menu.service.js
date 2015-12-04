@@ -124,8 +124,8 @@
               type: 'link',
               icon: ''
             }, {
-              name: 'C3',
-              state: 'core.charts.c3',
+              name: 'nvd3',
+              state: 'core.charts.nvd3',
               type: 'link',
               icon: ''
             },

@@ -234,6 +234,12 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
           controller:"ChartJsCtrl",
           templateUrl: 'client/modules/charts/views/chartjs.ng.html',
         })
+        .state('core.charts.nvd3', {
+          url:'/nvd3',
+          data : { pageTitle: 'nvD3 Charts' },
+          controller:"nvD3Ctrl",
+          templateUrl: 'client/modules/charts/views/nvd3.ng.html',
+        })
 
     // AUTH /////// /////// //////// //////////
     .state('core.login', {

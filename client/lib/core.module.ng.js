@@ -11,8 +11,6 @@
           //'uiGmapgoogle-maps',
           'ngMaterial',
           'ngMessages',
-          'mdColors', // js/mdStyleColor
-
-          //'ngCookies'
+          'ncy-angular-breadcrumb',
         ]);
 })();

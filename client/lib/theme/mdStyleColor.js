@@ -17,7 +17,7 @@ USAGE:
   var _palettes;
 
   angular
-    .module('mdColors',['mdColors'])
+    .module('app.mdColors',[])
 
     .config(['$mdThemingProvider', function($mdThemingProvider) {
       // CUSTOMIZE THEME COLORS HERE

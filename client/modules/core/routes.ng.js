@@ -7,19 +7,20 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
     }
   });
 
-  // Set page title in rootscope
+  // CUSTOMIZE
   $rootScope.page = {
+        SITENAME : "AMM Dash",
+        // Sets page title
         setTitle: function(title) {
             this.title = title ;
         },
-        SITENAME : "AMM Dash",
   }
 
   // Change Title on stateChangeSuccess
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
       // Change title
-      if ($state.current.data) {
-        $rootScope.page.setTitle($state.current.data.pageTitle );
+      if ($state.current.ncyBreadcrumb) {
+        $rootScope.page.setTitle($state.current.ncyBreadcrumb.label );
       } else {
         $rootScope.page.setTitle(""); // no title if none specified
       }
@@ -49,27 +50,29 @@ angular.module("app.core")
       };
     });
 
-angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
+angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvider, $stateProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
-  //
-/**  $ocLazyLoad.load({
-      name:'arank',
-      files:[
-        'client/modules/core/main.ctrl.ng.js'
-      ]
-  });
-*/
-
+  // Set Breadcrumb Directive template
+  $breadcrumbProvider.setOptions({
+     //template: 'bootstrap2'
+     templateUrl: 'client/modules/core/directives/breadcrumbs.ng.html'
+   });
 
   $stateProvider
     .state('core', {
       templateUrl: 'client/modules/core/views/main.ng.html',
       controller: 'SidemenuCtrl as vm',
+      ncyBreadcrumb: {
+        label: 'Home'
+      }
     })
     .state('core.home', {
       url: '/',
       templateUrl: 'client/modules/core/views/home.ng.html',
-      data : { pageTitle: 'Home' },
+      ncyBreadcrumb: {
+        skip:true, //skip breadcrumb creation (no Home / Home )
+        label: 'Welcome!' // display Page title still
+      },
       //controller: 'LoginCtrl',
     })
     // DASHBOARD /////// /////// //////// //////////
@@ -77,8 +80,10 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
       url: '/dashboard',
       templateUrl: 'client/modules/dashboard/views/dashboard.ng.html',
       controller: 'DashboardCtrl',
+      ncyBreadcrumb: {
+        label: 'Dashboard'
+      },
       data: {
-        pageTitle: 'Dashboard',
         'selectedTab': -1,
       },
       resolve: {
@@ -91,24 +96,30 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
         .state('core.dashboard.profile', {
           url: '/profile',
           templateUrl: 'client/modules/dashboard/views/profile.ng.html',
+          ncyBreadcrumb: {
+            label: 'Profile'
+          },
           data: {
-            pageTitle: 'Dashboard',
             'selectedTab': 0,
           },
         })
         .state('core.dashboard.instances', {
           url: '/instances',
           templateUrl: 'client/modules/dashboard/views/instances.ng.html',
+          ncyBreadcrumb: {
+            label: 'Instances'
+          },
           data: {
-            pageTitle: 'Dashboard',
             'selectedTab': 1,
           },
         })
         .state('core.dashboard.mytimes', {
           url: '/mytimes',
           templateUrl: 'client/modules/dashboard/views/mytimes.ng.html',
+          ncyBreadcrumb: {
+            label: 'My Times'
+          },
           data: {
-            pageTitle: 'Dashboard',
             'selectedTab': 2,
           },
         })
@@ -116,7 +127,9 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
     .state('core.widgets', {
       url:'/widgets',
       //controller: 'WidgetsCtrl',
-      data : { pageTitle: 'Widgets' },
+      ncyBreadcrumb: {
+        label: 'Widgets'
+      },
       templateUrl: 'client/modules/core/views/widgets.ng.html',
     })
 
@@ -125,54 +138,74 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
     .state('core.ui', {
       url:'/ui',
       controller: 'UICtrl',
-      data : { pageTitle: 'Material UI' },
+      ncyBreadcrumb: {
+        label: 'Material UI'
+      },
       templateUrl: 'client/modules/ui/views/ui.ng.html',
     })
       .state('core.ui.buttons', {
         url:'/buttons',
-        data : { pageTitle: 'Buttons' },
+        ncyBreadcrumb: {
+          label: 'Buttons'
+        },
         templateUrl: 'client/modules/ui/views/buttons.ng.html',
       })
       .state('core.ui.cards', {
         url:'/cards',
-        data : { pageTitle: 'Cards' },
+        ncyBreadcrumb: {
+          label: 'Material Cards'
+        },
         templateUrl: 'client/modules/ui/views/cards.ng.html',
       })
       .state('core.ui.components', {
         url:'/components',
-        data : { pageTitle: 'Components' },
+        ncyBreadcrumb: {
+          label: 'Components'
+        },
         templateUrl: 'client/modules/ui/views/components.ng.html',
       })
       .state('core.ui.tabs', {
         url:'/tabs',
-        data : { pageTitle: 'Tabs' },
+        ncyBreadcrumb: {
+          label: 'Tabs'
+        },
         templateUrl: 'client/modules/ui/views/tabs.ng.html',
       })
       .state('core.ui.icons', {
         url:'/icons',
-        data : { pageTitle: 'Icons' },
+        ncyBreadcrumb: {
+          label: 'Icons'
+        },
         templateUrl: 'client/modules/ui/views/icons.ng.html',
       })
       .state('core.ui.timeline', {
         url:'/timeline',
         controller: 'TimelineCtrl',
         controllerAs: 'ctrl',
-        data : { pageTitle: 'Timeline' },
+        ncyBreadcrumb: {
+          label: 'Timeline'
+        },
         templateUrl: 'client/modules/ui/views/timeline.ng.html',
       })
       .state('core.ui.typography', {
         url:'/typography',
-        data : { pageTitle: 'Typography' },
+        ncyBreadcrumb: {
+          label: 'Typography'
+        },
         templateUrl: 'client/modules/ui/views/typography.ng.html',
       })
     .state('core.tables-static', {
       url:'/tables/static',
-      data : { pageTitle: 'Static Tables' },
+      ncyBreadcrumb: {
+        label: 'Static Tables'
+      },
       templateUrl: 'client/modules/tables/views/static-table.ng.html',
     })
     .state('core.tables-dynamic', {
       url:'/tables/dynamic',
-      data : { pageTitle: 'Dynamic Tables' },
+      ncyBreadcrumb: {
+        label: 'Dynamic Tables'
+      },
       controller: "TableCtrl",
       templateUrl: 'client/modules/tables/views/dynamic-table.ng.html',
     })
@@ -181,63 +214,85 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
     .state('core.forms', {
       url:'/forms',
       controller: 'FormsCtrl',
-      data : { pageTitle: 'Forms' },
+      ncyBreadcrumb: {
+        label: 'Forms'
+      },
       templateUrl: 'client/modules/forms/views/forms.ng.html',
     })
       .state('core.forms.elements', {
         url:'/elements',
-        data : { pageTitle: 'Elements' },
+        ncyBreadcrumb: {
+          label: 'Elements'
+        },
         templateUrl: 'client/modules/forms/views/elements.ng.html',
       })
       .state('core.forms.validation', {
         url:'/validation',
-        data : { pageTitle: 'Validation' },
+        ncyBreadcrumb: {
+          label: 'Validation'
+        },
         templateUrl: 'client/modules/forms/views/validation.ng.html',
       })
       // WIZARD ////////////////
       .state('core.forms.wizard', {
         url:'/wizard',
         controller:'WizardCtrl',
-        data : { pageTitle: 'Wizard' },
+        ncyBreadcrumb: {
+          label: 'Wizard'
+        },
         templateUrl: 'client/modules/forms/wizard/views/wizard.ng.html',
       })
           .state('core.forms.wizard.intro', {
             url:'/intro',
-            data : { pageTitle: 'Intro' },
+            ncyBreadcrumb: {
+              label: 'Intro'
+            },
             templateUrl: 'client/modules/forms/wizard/views/intro.ng.html',
           })
           .state('core.forms.wizard.demographics', {
             url:'/demographics',
-            data : { pageTitle: 'Demographics' },
+            ncyBreadcrumb: {
+              label: 'Demographics'
+            },
             templateUrl: 'client/modules/forms/wizard/views/demographics.ng.html',
           })
           .state('core.forms.wizard.results', {
             url:'/results',
-            data : { pageTitle: 'Results' },
+            ncyBreadcrumb: {
+              label: 'Results'
+            },
             templateUrl: 'client/modules/forms/wizard/views/results.ng.html',
           })
 
     // CHARTS //////////////////////////////////////////
     .state('core.charts', {
       url:'/charts',
-      data : { pageTitle: 'Charts' },
+      ncyBreadcrumb: {
+        label: 'Charts'
+      },
       templateUrl: 'client/modules/charts/views/charts.ng.html',
     })
         .state('core.charts.google', {
           url:'/google',
-          data : { pageTitle: 'Google Charts' },
+          ncyBreadcrumb: {
+            label: 'Google Charts'
+          },
           controller:"GoogleChartCtrl",
           templateUrl: 'client/modules/charts/views/googlecharts.ng.html',
         })
         .state('core.charts.chartjs', {
           url:'/chartjs',
-          data : { pageTitle: 'Angular ChartJS' },
+          ncyBreadcrumb: {
+            label: 'Angular ChartJS'
+          },
           controller:"ChartJsCtrl",
           templateUrl: 'client/modules/charts/views/chartjs.ng.html',
         })
         .state('core.charts.nvd3', {
           url:'/nvd3',
-          data : { pageTitle: 'nvD3 Charts' },
+          ncyBreadcrumb: {
+            label: 'nvD3 Charts'
+          },
           controller:"nvD3Ctrl",
           templateUrl: 'client/modules/charts/views/nvd3.ng.html',
         })
@@ -247,25 +302,34 @@ angular.module("app.core").config(function ($urlRouterProvider, $stateProvider, 
       url: '/login',
       templateUrl: 'client/modules/auth/views/login.ng.html',
       controller: 'LoginCtrl',
-      data : { pageTitle: 'Login' },
+      ncyBreadcrumb: {
+        label: 'Login'
+      },
       controllerAs: 'lc'
     })
     .state('core.register',{
       url: '/register',
       templateUrl: 'client/modules/auth/views/register.ng.html',
       controller: 'RegisterCtrl',
-      data : { pageTitle: 'Register' },
+      ncyBreadcrumb: {
+        label: 'Register'
+      },
       controllerAs: 'rc'
     })
     .state('core.resetpw', {
       url: '/resetpw',
       templateUrl: 'client/modules/auth/views/reset-password.ng.html',
       controller: 'ResetCtrl',
-      data : { pageTitle: 'Reset Password' },
+      ncyBreadcrumb: {
+        label: 'Reset Password'
+      },
       controllerAs: 'rpc'
     })
     .state('core.logout', {
       url: '/logout',
+      ncyBreadcrumb: {
+        label: 'Logout'
+      },
       resolve: {
         "logout": function($meteor, $state) {
           return $meteor.logout().then(function(){

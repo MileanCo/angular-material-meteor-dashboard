@@ -16,7 +16,7 @@
     'use strict';
 
     angular
-        .module('arank', [
+        .module('app', [
             'app.core',
             'app.auth',
             'app.sidemenu',
@@ -25,6 +25,7 @@
             'app.tables',
             'app.forms',
             'app.charts',
+            'app.mdColors', // client/lib/theme/mdStyleColor
         ])
         .config(['$mdIconProvider', function ($mdIconProvider) {
           /**
@@ -41,7 +42,7 @@
         }]);
 
     function onReady() {
-      angular.bootstrap(document, ['arank'], {
+      angular.bootstrap(document, ['app'], {
         strictDi: true
       });
     }

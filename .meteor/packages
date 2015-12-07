@@ -35,4 +35,5 @@ fortawesome:fontawesome
 
 # MY PACKAGES [JOEL] [LOCAL]
 data-generator-json
+ncuillery:angular-breadcrumb
 mystec:angular-nvd3

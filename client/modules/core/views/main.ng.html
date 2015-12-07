@@ -1,8 +1,23 @@
   <!-- SIDEBAR -->
   <md-sidenav flex layout="column" class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
     <div role="navigation" layout="column" flex>
-      <a ui-sref="core.home"><img src="/images/AR_square.png"></a>
+      <!-- PROFILE CARD -->
 
+      <md-content class="profile-card md-padding">
+        <md-list>
+
+          <md-list-item class="md-3-line">
+            <img src="images/businessman.png" class="md-avatar" />
+            <div class="md-list-item-text" layout="column">
+              <h3 class="md-title"> <a ui-sref="core.home"> Joel Stenquist </a> </h3>
+              <h4>Web Developer</h4>
+              <p>Apex, NC</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-content>
+
+      <!-- MENU -->
       <ul class="side-menu">
         <li ng-repeat="section in vm.menu.sections" class="parent-list-item"
             ng-class="{'parentActive' : vm.isSectionSelected(section)}">
@@ -70,10 +85,15 @@
         </md-menu>
     </md-toolbar>
 
+    <!-- MAIN CONTENT -->
     <md-content class="gray-bg" flex>
-      <div class="header-card md-padding">
+      <!-- HEADER CARD -->
+      <div class="header-card md-padding" >
         <h1 class="page-header" ng-bind="page.title"> </h1>
+        <ncy-breadcrumb ncy-breadcrumb-text-separator=' > '></ncy-breadcrumb>
       </div>
+
+      <!-- UI VIEW -->
       <ui-view layout="column" > </ui-view >
     </md-content>
   </div>

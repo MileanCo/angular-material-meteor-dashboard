@@ -26,7 +26,8 @@
         </md-button>
         <!-- TOP TOOLBAR
         <h1 flex ng-bind="$state.current.data.pageTitle"> </h1> -->
-        <h1 class="md-title" ng-bind="page.title"> </h1>
+        <!-- <h1 class="md-title" ng-bind="page.title"> </h1> -->
+        <h1 class="md-title"> {{page.SITENAME}} </h1>
         <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
         <div ng-show="$root.currentUser">
           <md-button class="md-icon-button" aria-label="dashboard" ui-sref="core.dashboard">
@@ -68,5 +69,11 @@
             </md-menu-content>
         </md-menu>
     </md-toolbar>
-    <md-content class="gray-bg" ui-view layout="column" flex></md-content>
+
+    <md-content class="gray-bg" flex>
+      <div class="header-card md-padding">
+        <h1 class="page-header" ng-bind="page.title"> </h1>
+      </div>
+      <ui-view layout="column" > </ui-view >
+    </md-content>
   </div>

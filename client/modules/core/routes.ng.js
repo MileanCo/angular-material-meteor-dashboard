@@ -6,14 +6,15 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
       $state.go('core.home');
     }
   });
-  var SITENAME = "AMM Dash";
 
   // Set page title in rootscope
   $rootScope.page = {
         setTitle: function(title) {
-            this.title = SITENAME + " - " + title ;
-        }
+            this.title = title ;
+        },
+        SITENAME : "AMM Dash",
   }
+
   // Change Title on stateChangeSuccess
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
       // Change title

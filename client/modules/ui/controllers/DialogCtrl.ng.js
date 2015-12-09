@@ -10,7 +10,7 @@ angular.module('app.ui')
         .parent(angular.element(document.querySelector('#popupContainer')))
         .clickOutsideToClose(true)
         .title('This is an alert title')
-        .content('You can specify some description text in here.') // textContent in newer Material versions
+        .textContent('You can specify some description text in here.') // textContent in newer Material versions // content in older versions
         .ariaLabel('Alert Dialog Demo')
         .ok('Got it!')
         .targetEvent(ev)
@@ -20,7 +20,7 @@ angular.module('app.ui')
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm()
           .title('Would you like to delete your debt?')
-          .content('All of the banks have agreed to forgive you your debts.') // textContent in newer Material versions
+          .textContent('All of the banks have agreed to forgive you your debts.') // textContent in newer Material versions // content in older versions
           .ariaLabel('Lucky day')
           .targetEvent(ev)
           .ok('Please do it!')

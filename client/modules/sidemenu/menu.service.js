@@ -82,7 +82,7 @@
         });
 
         sections.push({
-          name: 'Forms',
+          name: 'Material Forms',
           type: 'toggle',
           pages: [
             {

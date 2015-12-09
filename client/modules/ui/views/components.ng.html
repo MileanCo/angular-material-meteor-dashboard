@@ -5,7 +5,7 @@
     Open a dialog over the app's content. Press escape or click outside to close the dialog and
     send focus back to the triggering button.
   </p>
-  <div class="dialog-demo-content" layout="row" layout-wrap layout-margin>
+  <div layout="row" layout-wrap layout-margin>
     <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
       Alert Dialog
     </md-button>
@@ -19,7 +19,7 @@
       Tab Dialog
     </md-button>
   </div>
-  <p class="footer">Note: The <b>Confirm</b> dialog does not use <code>$mdDialog.clickOutsideToClose(true)</code>.</p>
+  <!-- <p class="footer">Note: The <b>Confirm</b> dialog does not use <code>$mdDialog.clickOutsideToClose(true)</code>.</p> -->
   <div ng-if="status">
     <br/>
     <b layout="row" layout-align="center center" class="md-padding">
@@ -27,6 +27,49 @@
     </b>
   </div>
 </div>
+<br>
+<h3> Sliders </h3>
+<div class="md-whiteframe-z2" ng-cloak>
+  <md-content style="margin: 16px; padding:16px">
+    <h3>
+      RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </h3>
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">R</span>
+        </div>
+        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class="md-accent md-hue-2">
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+        </div><br>
+      </div>
+
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">G</span>
+        </div>
+        <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent md-hue-2">
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+        </div>
+      </div>
+
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">B</span>
+        </div>
+        <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-accent md-hue-2">
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+        </div>
+      </div>
+  </md-content>
+</div>
+
+
 <br/>
 <!-- LOADING BARS -->
 <h2 class="md-display-1">Progress Bars – Circular</h2>
@@ -114,44 +157,3 @@
     </div>
 </div>
 <br/>
-
-<h3> Sliders </h3>
-<div class="md-whiteframe-z2" ng-cloak>
-  <md-content style="margin: 16px; padding:16px">
-    <h3>
-      RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </h3>
-      <div layout>
-        <div flex="10" layout layout-align="center center">
-          <span class="md-body-1">R</span>
-        </div>
-        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class="md-accent md-hue-2">
-        </md-slider>
-        <div flex="20" layout layout-align="center center">
-          <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
-        </div><br>
-      </div>
-
-      <div layout>
-        <div flex="10" layout layout-align="center center">
-          <span class="md-body-1">G</span>
-        </div>
-        <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent md-hue-2">
-        </md-slider>
-        <div flex="20" layout layout-align="center center">
-          <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
-        </div>
-      </div>
-
-      <div layout>
-        <div flex="10" layout layout-align="center center">
-          <span class="md-body-1">B</span>
-        </div>
-        <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-accent md-hue-2">
-        </md-slider>
-        <div flex="20" layout layout-align="center center">
-          <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
-        </div>
-      </div>
-  </md-content>
-</div>

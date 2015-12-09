@@ -222,7 +222,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
       .state('core.forms.elements', {
         url:'/elements',
         ncyBreadcrumb: {
-          label: 'Elements'
+          label: 'Material Elements'
         },
         templateUrl: 'client/modules/forms/views/elements.ng.html',
       })

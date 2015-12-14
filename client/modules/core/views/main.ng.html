@@ -131,22 +131,17 @@
       </md-menu>
     </md-toolbar>
     <!-- SEARCH toolbar-->
-    <md-toolbar class="md-toolbar-tools md-hue-1" ng-show="search.show">
-      <md-content>
-        <md-button ng-click="search.show = !search.show" aria-label="Back">
+    <md-toolbar layout="row" class="md-toolbar-tools" ng-show="search.show" >
+        <md-button class="square" ng-click="search.show = !search.show" aria-label="Back">
             <md-icon md-font-set="material-icons">arrow_back</md-icon>
         </md-button>
-        <md-input-container flex>
-          <label>Search</label>
-          <input ng-model="search.who">
-        </md-input-container>
-        <md-button aria-label="Search" ng-click="search.show = !search.show">
+        <input flex ng-model="search.who" placeholder="Enter in search..." type="text" class="form-control" id="search">
+        <md-button class="square" aria-label="Search" ng-click="search.show = !search.show">
           <md-icon md-font-set="material-icons">search</md-icon>
         </md-button>
-        <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+        <md-button  class="square" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
             <md-icon md-font-set="material-icons">more_vert</md-icon>
         </md-button>
-      </md-content>
     </md-toolbar>
 
     <!-- MAIN CONTENT -->

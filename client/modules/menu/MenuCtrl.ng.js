@@ -51,6 +51,9 @@
         }
 
         // MENU TOGGLE STUFF ////////// / / / / //
+        $scope.search = {
+          show : false,
+        }
         $scope.toggleLeft = buildDelayedToggler('left');
         $scope.toggleRight = buildToggler('right');
         $scope.isOpenRight = function(){

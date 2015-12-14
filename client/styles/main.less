@@ -25,6 +25,7 @@ md-content {
   background: white;
   //border: 1px solid #e1e1e1;
 }
+
 // anything with 'class="gray-bg"'
 .gray-bg {
   background: #f6f6f6;
@@ -37,6 +38,13 @@ div[class*='md-whiteframe-z'] {
   margin: 18px;
 }
 
+// LABELS
+.notification-label {
+  position:absolute;
+  right:0px;
+  font-size:70%;
+}
+
 // ALL BUTTONS
 .md-button {
   text-transform: none;
@@ -46,6 +54,12 @@ div[class*='md-whiteframe-z'] {
 }
 .md-primary md-button {
   text-transform: none;
+}
+
+.md-button.square {
+  min-width: 42px;
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
 }
 
 
@@ -120,8 +134,25 @@ md-toast.md-THEME_NAME-theme {
   }
 }*/
 
-
-
+// not sure this does anything
+// supposed to fix "first selected item highlight" on notifs drop-downs
+  md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  md-list-item.notifications > p,
+  .notifications md-list-item > .md-list-item-inner > p,
+  .notifications md-list-item .md-list-item-inner > p,
+  .notifications md-list-item .md-list-item-inner > .md-list-item-inner > p {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */ }
+  .listdemoListControls .secondary-button-padding p {
+    padding-right: 100px; }
 
 
 

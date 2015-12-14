@@ -6,7 +6,7 @@
         <md-list>
 
           <md-list-item class="md-3-line">
-            <img src="images/businessman.png" class="md-avatar" />
+            <img src="images/avatars/businessman.png" class="md-avatar" />
             <div class="md-list-item-text" layout="column">
               <h3 class="md-title"> <a ui-sref="core.home"> Joel Stenquist </a> </h3>
               <h4>Web Developer</h4>
@@ -32,90 +32,121 @@
 
   <!-- MAIN CONTENT -->
   <div layout="column" flex>
-    <!-- HEADER -->
-    <md-toolbar layout="row" class="md-toolbar-tools"> <!-- layout="row" layout-align="start center" layout-padding -->
-        <!-- TOGGLE SIDEMENU -->
-        <md-button ng-click="toggleLeft()" aria-label="menu" class="md-icon-button" hide-gt-sm >
-            <md-icon md-font-set="material-icons">menu</md-icon>
+    <!-- TOOLBAR / HEADER -->
+    <md-toolbar layout="row" class="md-toolbar-tools" ng-controller="ToolbarCtrl" ng-show="!search.show">
+      <!-- TOGGLE SIDEMENU -->
+      <md-button ng-click="toggleLeft()" aria-label="menu" class="md-icon-button" hide-gt-sm >
+          <md-icon md-font-set="material-icons">menu</md-icon>
+      </md-button>
+      <!-- TOP TOOLBAR -->
+      <!-- Left side -->
+      <h1 class="md-title"> {{page.SITENAME}} </h1>
+      <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
+      <md-button class="square" aria-label="Search" ng-click="search.show = !search.show">
+        <md-icon md-font-set="material-icons">search</md-icon>
+      </md-button>
+      <div ng-show="$root.currentUser">
+        <md-button class="square" aria-label="dashboard" ui-sref="core.dashboard">
+          <md-icon md-font-set="material-icons">dashboard</md-icon>
+          <md-tooltip md-direction="down">Dashboard</md-tooltip>
         </md-button>
-        <!-- TOP TOOLBAR -->
-        <h1 class="md-title"> {{page.SITENAME}} </h1>
-        <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
-        <div ng-show="$root.currentUser">
-          <md-button class="md-icon-button" aria-label="dashboard" ui-sref="core.dashboard">
-            <md-icon md-font-set="material-icons">dashboard</md-icon>
-            <md-tooltip md-direction="down">Dashboard</md-tooltip>
+      </div>
+      <!-- Right side -->
+      <md-menu md-position-mode="target-right target" >
+        <!-- OPEN MENU BTN -->
+          <md-button class="square" aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
+            <md-icon md-font-set="material-icons"> email </md-icon>
+            <div class="label label-danger notification-label">3</div>
           </md-button>
-        </div>
-        <md-menu md-position-mode="target-right target" >
-          <!-- OPEN MENU BTN -->
-            <md-button  aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
-              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
-              <md-icon md-font-set="material-icons"> email </md-icon>
-            </md-button>
-            <md-menu-content width="3">
-              <md-menu-item>
-                <md-button >M1 </md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button>M2</md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button>M3</md-button>
-              </md-menu-item>
-            </md-menu-content>
-        </md-menu>
-        <md-menu md-position-mode="target-right target" >
-          <!-- OPEN MENU BTN -->
-            <md-button  class="md-icon-button" aria-label="Open notifications menu" ng-click="$mdOpenMenu($event)">
-              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
-              <md-icon md-font-set="material-icons"> notifications </md-icon>
-            </md-button>
-            <md-menu-content width="3">
-              <md-menu-item>
-                <md-button >N1 </md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button>N2</md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button>N3</md-button>
-              </md-menu-item>
-            </md-menu-content>
-        </md-menu>
-        <md-menu md-menu-origin md-position-mode="target-right target" >
-          <!-- OPEN MENU BTN -->
-            <md-button  class="md-icon-button" aria-label="Open more menu" ng-click="$mdOpenMenu($event)">
-              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
-              <md-icon md-font-set="material-icons"> more_vert </md-icon>
-            </md-button>
+          <md-menu-content width="3">
+            <md-list class="notifications" ng-cloak >
+              <md-list-item>
+                  <h4>Messages </h4>
+                  <span flex> <!-- right align --> </span>
+                  <md-icon md-font-set="material-icons"> question_answer</md-icon>
+              </md-list-item >
+              <md-list-item class="md-2-line" ng-repeat="m in messages" ng-click="goToNotification(m.user, $event)">
+                <img alt="person" ng-src="{{m.avatar}}" class="md-avatar" />
+                <div class="md-list-item-text">
+                  <h3>{{m.user}}</h3>
+                  <p>{{m.text}}</p>
+                </div>
+              </md-list-item>
+            </md-list>
+          </md-menu-content>
+      </md-menu>
+      <md-menu md-position-mode="target-right target" >
+        <!-- OPEN MENU BTN -->
+        <md-button class="square" aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
+          <md-icon md-font-set="material-icons"> notifications </md-icon>
+          <div class="label label-danger notification-label">11</div>
+        </md-button>
+          <md-menu-content width="4">
+            <md-list class="notifications" ng-cloak >
+              <md-list-item>
+                  <h4>Notifications</h4>
+                  <span flex> <!-- right align --> </span>
+                  <md-icon md-font-set="material-icons"> done_all</md-icon>
+              </md-list-item >
+              <md-list-item class="md-2-line" ng-repeat="n in notifications" ng-click="goToNotification(n.text, $event)">
+                <md-icon  aria-label="n.icon" class="{{n.icon}}"></md-icon>
+                <div class="md-list-item-text">
+                  <h3>{{n.title}}</h3>
+                  <p>{{n.text}}</p>
+                </div>
+              </md-list-item>
+            </md-list>
+          </md-menu-content>
 
-            <md-menu-content width="3">
-              <!-- NOT AUTHENTICATED -->
-              <div ng-hide="$root.currentUser">
-                <!-- LOGIN -->
-                <md-menu-item>
-                  <md-button ui-sref="core.login" >Login
-                    <!-- <md-icon md-menu-align-target md-svg-icon="img/icons/more_vert.svg"></md-icon>Login-->
-                  </md-button>
-                </md-menu-item>
-                <!-- REGISTER -->
-                <md-menu-item>
-                  <md-button ui-sref="core.register">Sign up</md-button>
-                </md-menu-item>
-              </div>
+      </md-menu>
+      <md-menu md-menu-origin md-position-mode="target-right target" >
+          <!-- OPEN MENU BTN -->
+          <md-button class="square" aria-label="Open more menu" ng-click="$mdOpenMenu($event)">
+            <md-icon md-font-set="material-icons"> more_vert </md-icon>
+          </md-button>
+          <md-menu-content width="3">
+            <!-- NOT AUTHENTICATED -->
+            <div ng-hide="$root.currentUser">
+              <!-- LOGIN -->
+              <md-menu-item>
+                <md-button ui-sref="core.login" >Login
+                </md-button>
+              </md-menu-item>
+              <!-- REGISTER -->
+              <md-menu-item>
+                <md-button ui-sref="core.register">Sign up</md-button>
+              </md-menu-item>
+            </div>
 
-              <!-- AUTHENTICATED -->
-              <div ng-show="$root.currentUser">
-                <md-menu-item>
-                  <md-button ui-sref="core.dashboard.profile" >Profile </md-button>
-                </md-menu-item>
-                <md-menu-item>
-                  <md-button ui-sref="core.logout" >Logout</md-button>
-                </md-menu-item>
-              </div>
-            </md-menu-content>
-        </md-menu>
+            <!-- AUTHENTICATED -->
+            <div ng-show="$root.currentUser">
+              <md-menu-item>
+                <md-button ui-sref="core.dashboard.profile" >Profile </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ui-sref="core.logout" >Logout</md-button>
+              </md-menu-item>
+            </div>
+          </md-menu-content>
+      </md-menu>
+    </md-toolbar>
+    <!-- SEARCH toolbar-->
+    <md-toolbar class="md-toolbar-tools md-hue-1" ng-show="search.show">
+      <md-content>
+        <md-button ng-click="search.show = !search.show" aria-label="Back">
+            <md-icon md-font-set="material-icons">arrow_back</md-icon>
+        </md-button>
+        <md-input-container flex>
+          <label>Search</label>
+          <input ng-model="search.who">
+        </md-input-container>
+        <md-button aria-label="Search" ng-click="search.show = !search.show">
+          <md-icon md-font-set="material-icons">search</md-icon>
+        </md-button>
+        <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+            <md-icon md-font-set="material-icons">more_vert</md-icon>
+        </md-button>
+      </md-content>
     </md-toolbar>
 
     <!-- MAIN CONTENT -->

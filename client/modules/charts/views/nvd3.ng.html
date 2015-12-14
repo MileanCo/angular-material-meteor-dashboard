@@ -1,29 +1,29 @@
-<h1 class="md-headline">Line Chart </h1>
-<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
-  <div flex ng-show="loading">
-      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-  </div>
-
-  <nvd3 options="line.options" data="line.data"></nvd3>
-</div>
-<br/>
-
 <h1 class="md-headline">Discrete Bar Chart </h1>
-<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+<div layout="column" class="md-padding md-whiteframe-z2">
   <nvd3 options="bar.options" data="bar.data"></nvd3>
 
 </div>
 <br/>
 <h1 class="md-headline">Cumulative Line Chart [Stocks]</h1>
-<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+<div layout="column" class="md-padding md-whiteframe-z2">
   <nvd3 options="stocks.options" data="stocks.data"></nvd3>
 
 </div>
 
 <h1 class="md-headline">Gauge Chart </h1>
-<div layout="column" ng-cloak class="md-padding md-whiteframe-z2">
+<div layout="column" class="md-padding md-whiteframe-z2">
   <nvd3 options="donut.options" data="donut.data"></nvd3>
 
+</div>
+<br/>
+
+<h1 class="md-headline">Line Chart </h1>
+<div layout="column" class="md-padding md-whiteframe-z2">
+  <div flex ng-show="loading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+
+  <nvd3 options="line.options" data="line.data"></nvd3>
 </div>
 <br/>
 

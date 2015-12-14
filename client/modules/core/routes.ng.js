@@ -226,13 +226,6 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
         },
         templateUrl: 'client/modules/forms/views/elements.ng.html',
       })
-      .state('core.forms.validation', {
-        url:'/validation',
-        ncyBreadcrumb: {
-          label: 'Validation'
-        },
-        templateUrl: 'client/modules/forms/views/validation.ng.html',
-      })
       // WIZARD ////////////////
       .state('core.forms.wizard', {
         url:'/wizard',

@@ -8,15 +8,14 @@ angular
             left: false,
             right: true
       };
-
       $scope.toastPosition = angular.extend({},last);
       $scope.getToastPosition = function() {
-        _sanitizePosition();
+        sanitizePosition();
         return Object.keys($scope.toastPosition)
           .filter(function(pos) { return $scope.toastPosition[pos]; })
           .join(' ');
       };
-      function _sanitizePosition() {
+      function sanitizePosition() {
         var current = $scope.toastPosition;
         if ( current.bottom && last.top ) current.top = false;
         if ( current.top && last.bottom ) current.bottom = false;
@@ -24,10 +23,27 @@ angular
         if ( current.left && last.right ) current.right = false;
         last = angular.extend({},current);
       }
-      $scope.showToast = function(message, ttheme) {
+      $scope.showCustomToast = function() {
+        $mdToast.show({
+          controller: 'ToastCtrl',
+          templateUrl: 'toast-template.html',
+          parent : $document[0].querySelector('#toastBounds'),
+          hideDelay: 6000,
+          position: $scope.getToastPosition()
+        });
+      };
+      function showToast (message, ttheme) {
         $mdToast.show(
           $mdToast.simple()
-            .content(message)
+            .content(message) // textContent in newer Material versions
+            .position($scope.getToastPosition())
+            .hideDelay(4000)
+            .theme(ttheme)
+        );
+        /**
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent(message)
             .position($scope.getToastPosition())
             .hideDelay(2000)
             .theme(ttheme)
@@ -48,16 +64,17 @@ angular
               hideDelay: 2000,
               position: $scope.getToastPosition()
             }
-        */
+
         );
+        */
       };
-      $scope.showSuccessToast = function(message) {
-        $scope.showToast("Success! Bought new iPad.", "success-toast");
-      }
+      $scope.showSuccessToast = function() {
+        showToast("Success! Your order has been submitted.", "success-toast");
+      };
       $scope.showFailToast = function() {
-        $scope.showToast("Fail: the logic on line 15 is bad.", "error-toast");
-      }
+        showToast("Failed. Your shopping cart is empty!", "error-toast");
+      };
       $scope.showInfoToast = function() {
-        $scope.showToast("Useful information to the user", "info-toast");
+        showToast("New message from John: \"Yo! Lunch?\"", "info-toast");
       }
   }]);

@@ -91,11 +91,6 @@
               state: 'core.forms.elements',
               icon: ''
             }, {
-              name: 'Validation',
-              state: 'core.forms.validation',
-              type: 'link',
-              icon: ''
-            }, {
               name: 'Wizard',
               state: 'core.forms.wizard',
               type: 'link',

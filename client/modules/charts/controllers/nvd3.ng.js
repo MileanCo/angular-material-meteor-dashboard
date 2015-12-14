@@ -49,7 +49,7 @@ angular.module('app.charts') // TO-DO: ONLY ADD CHARTS.JS HERE & MODULARIZE
         },
         title: {
             enable: true,
-            text: 'Title for Line Chart'
+            text: 'Trigonometry'
         },
         subtitle: {
             enable: true,
@@ -187,14 +187,14 @@ angular.module('app.charts') // TO-DO: ONLY ADD CHARTS.JS HERE & MODULARIZE
                y: function(d){return d.value + (1e-10);},
                showValues: true,
                valueFormat: function(d){
-                   return d3.format(',.4f')(d);
+                   return "$ " + d3.format(',.2f')(d);
                },
                duration: 500,
                xAxis: {
-                   axisLabel: 'X Axis'
+                   axisLabel: 'Type'
                },
                yAxis: {
-                   axisLabel: 'Y Axis',
+                   axisLabel: 'Capital Invested ($)',
                    axisLabelDistance: -10
                }
            }
@@ -295,5 +295,4 @@ angular.module('app.charts') // TO-DO: ONLY ADD CHARTS.JS HERE & MODULARIZE
               y: .5
           }
       ];
-
     }]);

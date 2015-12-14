@@ -8,7 +8,7 @@ angular-templates@0.0.2
 angular:angular@1.4.8
 angular:angular-animate@1.4.8
 angular:angular-aria@1.4.8
-angular:angular-material@1.0.0-rc7
+angular:angular-material@1.0.0-rc5
 angular:angular-messages@1.4.8
 angularui:angular-ui-router@0.2.15
 autoupdate@1.2.4

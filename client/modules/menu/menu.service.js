@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('app.sidemenu')
+  angular.module('app.menu')
     .factory('MenuService', ['$location', function ($location) {
         var sections = [
           { name: 'Home',

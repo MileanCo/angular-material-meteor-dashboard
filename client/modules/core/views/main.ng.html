@@ -2,7 +2,6 @@
   <md-sidenav flex layout="column" class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
     <div role="navigation" layout="column" flex>
       <!-- PROFILE CARD -->
-
       <md-content class="profile-card md-padding">
         <md-list>
 
@@ -17,7 +16,7 @@
         </md-list>
       </md-content>
 
-      <!-- MENU -->
+      <!-- SIDEMENU -->
       <ul class="side-menu">
         <li ng-repeat="section in vm.menu.sections" class="parent-list-item"
             ng-class="{'parentActive' : vm.isSectionSelected(section)}">
@@ -39,9 +38,7 @@
         <md-button ng-click="toggleLeft()" aria-label="menu" class="md-icon-button" hide-gt-sm >
             <md-icon md-font-set="material-icons">menu</md-icon>
         </md-button>
-        <!-- TOP TOOLBAR
-        <h1 flex ng-bind="$state.current.data.pageTitle"> </h1> -->
-        <!-- <h1 class="md-title" ng-bind="page.title"> </h1> -->
+        <!-- TOP TOOLBAR -->
         <h1 class="md-title"> {{page.SITENAME}} </h1>
         <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
         <div ng-show="$root.currentUser">
@@ -52,7 +49,43 @@
         </div>
         <md-menu md-position-mode="target-right target" >
           <!-- OPEN MENU BTN -->
-            <md-button  class="md-icon-button" aria-label="Open demo menu" ng-click="$mdOpenMenu($event)">
+            <md-button  aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
+              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
+              <md-icon md-font-set="material-icons"> email </md-icon>
+            </md-button>
+            <md-menu-content width="3">
+              <md-menu-item>
+                <md-button >M1 </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>M2</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>M3</md-button>
+              </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <md-menu md-position-mode="target-right target" >
+          <!-- OPEN MENU BTN -->
+            <md-button  class="md-icon-button" aria-label="Open notifications menu" ng-click="$mdOpenMenu($event)">
+              <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
+              <md-icon md-font-set="material-icons"> notifications </md-icon>
+            </md-button>
+            <md-menu-content width="3">
+              <md-menu-item>
+                <md-button >N1 </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>N2</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>N3</md-button>
+              </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <md-menu md-menu-origin md-position-mode="target-right target" >
+          <!-- OPEN MENU BTN -->
+            <md-button  class="md-icon-button" aria-label="Open more menu" ng-click="$mdOpenMenu($event)">
               <!-- <md-icon md-menu-origin md-svg-icon="img/icons/more_vert.svg"></md-icon> -->
               <md-icon md-font-set="material-icons"> more_vert </md-icon>
             </md-button>
@@ -93,7 +126,15 @@
         <ncy-breadcrumb ncy-breadcrumb-text-separator=' > '></ncy-breadcrumb>
       </div>
 
-      <!-- UI VIEW -->
-      <ui-view layout="column" > </ui-view >
+      <!-- UI CONTENT VIEW -->
+      <ui-view layout="column"  > </ui-view >
+
+      <!-- FOOTER -->
+      <div class="gray-bg" layout="column" layout-align="end center">
+        <md-divider flex></md-divider>
+        <div flex>
+          Home | Dashboard | Contact Us | Careers | Terms of Service | Support
+        </div>
+      </div>
     </md-content>
   </div>

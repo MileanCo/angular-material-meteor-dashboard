@@ -33,7 +33,6 @@ twbs:bootstrap
 sebastianilves:angular-chart-js
 fortawesome:fontawesome
 
-# MY PACKAGES [JOEL] [LOCAL]
-data-generator-json
+data-generator-json # MY PACKAGES [JOEL] [LOCAL]
 ncuillery:angular-breadcrumb
 mystec:angular-nvd3

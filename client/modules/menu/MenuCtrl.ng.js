@@ -1,8 +1,8 @@
 (function(){
   'use strict';
 
-  angular.module('app.sidemenu')
-    .controller('SidemenuCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $state, $location, $log, MenuService) {
+  angular.module('app.menu')
+    .controller('MenuCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $state, $location, $log, MenuService) {
         var vm = this;
 
         //vars for menu-link and menu-toggle

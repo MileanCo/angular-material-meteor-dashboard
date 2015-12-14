@@ -1,13 +1,13 @@
 (function(){
   'use strict';
 
-  angular.module('app.sidemenu')
+  angular.module('app.menu')
     .directive('menuLink', function () {
       return {
         scope: {
           section: '='
         },
-        templateUrl: 'client/modules/sidemenu/directives/templates/menu-link.ng.html',
+        templateUrl: 'client/modules/menu/directives/templates/menu-link.ng.html',
         restrict: 'E',
         replace: true,
         link: function ($scope, $element) {

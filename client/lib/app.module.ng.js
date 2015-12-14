@@ -19,7 +19,7 @@
         .module('app', [
             'app.core',
             'app.auth',
-            'app.sidemenu',
+            'app.menu',
             'app.dashboard',
             'app.ui',
             'app.tables',

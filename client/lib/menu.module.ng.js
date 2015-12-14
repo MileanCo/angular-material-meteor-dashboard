@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('app.sidemenu', []);
+        .module('app.menu', []);
 })();

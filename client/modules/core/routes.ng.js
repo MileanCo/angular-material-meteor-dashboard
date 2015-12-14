@@ -61,7 +61,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
   $stateProvider
     .state('core', {
       templateUrl: 'client/modules/core/views/main.ng.html',
-      controller: 'SidemenuCtrl as vm',
+      controller: 'MenuCtrl as vm',
       ncyBreadcrumb: {
         label: 'Home'
       }

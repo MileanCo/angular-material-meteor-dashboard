@@ -1,5 +1,6 @@
 angular.module('app.core')
 .controller('ToolbarCtrl', function($scope, $mdDialog) {
+  
   $scope.notifications = [
     {icon: "fa fa-twitter", title: "Twitter", text:"You have 5 new followers"},
     {icon: "fa fa-user", title: " Friend requests", text:"You have 3 new friend requests"},
@@ -12,11 +13,11 @@ angular.module('app.core')
     {avatar: "images/avatars/female1.svg", user: "Sarah", text: "lorem aipsum diaga simone al paramana..."},
   ];
 
-  $scope.goToNotification = function(person, event) {
+  $scope.goToNotification = function(notif, event) {
     $mdDialog.show(
       $mdDialog.alert()
-        .title('Navigating')
-        .textContent('Inspect ' + person)
+        .title('Notification')
+        .textContent(notif)
         .ariaLabel('Person inspect demo')
         .ok('Neat!')
         .targetEvent(event)

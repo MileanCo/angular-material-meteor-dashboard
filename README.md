@@ -5,6 +5,14 @@
 * Fix nvd3 graphs
 * Modularize main.html 
 
+Links:
+* http://codepen.io/zavoloklom/pen/dIgco
+* http://themeforest.net/item/materil-angular-material-design-admin-template/full_screen_preview/11062969
+* http://wrapbootstrap.com/preview/WB04HF123
+* https://wrapbootstrap.com/theme/material-admin-responsive-angularjs-WB011H985
+
+
+
 # README #
 
 COMMANDS to get your application up and running
@@ -49,17 +57,5 @@ Files outside the client, server and tests subdirectories are loaded on both the
 Files inside the client folder will run only on the client side.
 
 
-
-TO-DO for 'template':
-	- Find hosting site for template.
-	- Use Ionic?
-	- Fix mobile version of Meteor
-	- Add Input, Button, Textarea, Toast, etc. "Demo" for Material
-	- User profile pic / menu 
-	- Better Charts
-	- Splash page. Box/infinity scroll.
-	- Separate Angular into only client
-	- 
-	
 ex_ http://themeforest.net/item/material-design-admin-with-angularjs/full_screen_preview/13582227
 

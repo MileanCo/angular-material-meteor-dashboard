@@ -1,0 +1,12 @@
+<md-toolbar layout="row" class="md-toolbar-tools" ng-show="search.show" >
+    <md-button class="square" ng-click="search.show = !search.show" aria-label="Back">
+        <md-icon md-font-set="material-icons">arrow_back</md-icon>
+    </md-button>
+    <input flex ng-model="search.who" placeholder="Enter in search..." type="text" class="form-control" id="search">
+    <md-button class="square" aria-label="Search" ng-click="search.show = !search.show">
+      <md-icon md-font-set="material-icons">search</md-icon>
+    </md-button>
+    <md-button  class="square" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+        <md-icon md-font-set="material-icons">more_vert</md-icon>
+    </md-button>
+</md-toolbar>

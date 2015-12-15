@@ -1,0 +1,26 @@
+  <!-- SIDEBAR -->
+<div ng-include="'client/modules/menu/views/includes/sidebar.ng.html'"></div>
+
+<!-- MAIN CONTENT -->
+<div layout="column" flex>
+  <!-- TOOLBAR / HEADER -->
+  <div ng-include="'client/modules/core/views/includes/header_toolbar.ng.html'"></div>
+
+  <!-- SEARCH toolbar-->
+  <div ng-include="'client/modules/core/views/includes/search_toolbar.ng.html'"></div>
+
+  <!-- MAIN CONTENT -->
+  <md-content class="gray-bg" flex>
+    <!-- HEADER [blue] CARD -->
+    <div class="header-card md-padding" >
+      <h1 class="page-header" ng-bind="page.title"> </h1>
+      <ncy-breadcrumb ncy-breadcrumb-text-separator=' > '></ncy-breadcrumb>
+    </div>
+
+    <!-- UI CONTENT VIEW -->
+    <ui-view layout="column" > </ui-view >
+
+    <!-- FOOTER -->
+    <div ng-include="'client/modules/core/views/includes/footer.ng.html'"></div>
+  </md-content>
+</div>

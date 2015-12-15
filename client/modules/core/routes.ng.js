@@ -9,7 +9,7 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
 
   // CUSTOMIZE
   $rootScope.page = {
-        SITENAME : "AMM Dash",
+        SITENAME : "Frozen",
         // Sets page title
         setTitle: function(title) {
             this.title = title ;
@@ -60,7 +60,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
 
   $stateProvider
     .state('core', {
-      templateUrl: 'client/modules/core/views/main.ng.html',
+      templateUrl: 'client/modules/core/views/core.ng.html',
       controller: 'MenuCtrl as vm',
       ncyBreadcrumb: {
         label: 'Home'
@@ -288,6 +288,23 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           },
           controller:"nvD3Ctrl",
           templateUrl: 'client/modules/charts/views/nvd3.ng.html',
+        })
+
+    // CHARTS //////////////////////////////////////////
+    .state('core.maps', {
+      url:'/maps',
+      ncyBreadcrumb: {
+        label: 'Maps'
+      },
+      templateUrl: 'client/modules/maps/views/maps.ng.html',
+    })
+        .state('core.maps.googlemaps', {
+          url:'/googlemaps',
+          ncyBreadcrumb: {
+            label: 'Google Maps'
+          },
+          controller:"MapsCtrl",
+          templateUrl: 'client/modules/maps/views/googlemaps.ng.html',
         })
 
     // AUTH /////// /////// //////// //////////

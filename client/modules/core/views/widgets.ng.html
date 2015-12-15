@@ -1,15 +1,53 @@
+<!--
 <md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
   <stats number="6" comments="New comments!" colour="primary" type="comments"></stats>
   <stats number="12" comments="New tasks!" colour="primary" type="user"></stats>
   <stats number="18" comments="New orders!" colour="yellow" type="shopping-cart"></stats>
   <stats number="24" comments="Support tickets!" colour="red" type="support"></stats>
 </md-content>
-
+-->
 <br/>
-<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
+<md-content class="md-padding" layout="column" layout-wrap layout-align="center start">
 
   <!-- START widget-->
   <div layout="row" flex>
+    <md-card flex="50">
+      <md-card-header>
+        <md-card-avatar>
+          <img class="md-user-avatar" src="images/avatars/supportfemale.svg"/>
+        </md-card-avatar>
+        <md-card-header-text>
+          <span class="md-title"> Jane Smith</span>
+          <span class="md-subhead">Customer Support</span>
+        </md-card-header-text>
+      </md-card-header>
+      <img ng-src="images/cards/mac_keyboard.jpg" class="md-card-image" alt="Washed Out">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Online Support</span>
+          <span class="md-subhead">Our agents are available 24/7</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="start center">
+        <md-button class = "md-primary"><md-icon md-font-set="material-icons">call</md-icon> Call</md-button>
+        <md-button><md-icon md-font-set="material-icons">chat</md-icon> IM </md-button>
+        <md-button><md-icon md-font-set="material-icons">email</md-icon> Report </md-button>
+        <md-card-icon-actions>
+          <md-button class="md-icon-button" aria-label="toggle">
+            <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+          </md-button>
+        </md-card-icon-actions>
+      </md-card-actions>
+      <!--
+      <md-card-content>
+        <p>
+          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        </p>
+      </md-card-content>
+    -->
+    </md-card>
+
     <div flex class="md-whiteframe-z2 panel widget">
        <div class="panel-body">
           <div class="text-right text-muted">
@@ -26,57 +64,24 @@
     </div>
   <!-- END widget-->
 
-
-    <md-card flex>
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">Card with image</span>
-          <span class="md-subhead">Large</span>
-        </md-card-title-text>
-        <md-card-title-media>
-          <div class="md-media-lg card-media"></div>
-        </md-card-title-media>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </md-card-actions>
-    </md-card>
-
-
-
-    <md-card flex>
-      <md-card-header>
-        <md-card-avatar>
-          <img class="md-user-avatar" src="img/100-2.jpeg"/>
-        </md-card-avatar>
-        <md-card-header-text>
-          <span class="md-title">User</span>
-          <span class="md-subhead">subhead</span>
-        </md-card-header-text>
-      </md-card-header>
-      <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">In-card mixed actions</span>
-          <span class="md-subhead">Reversed</span>
-        </md-card-title-text>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="start center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-        <md-card-icon-actions>
-          <md-button class="md-icon-button" aria-label="toggle">
-            <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
-          </md-button>
-        </md-card-icon-actions>
-      </md-card-actions>
-      <md-card-content>
-        <p>
-          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-        </p>
-      </md-card-content>
-    </md-card>
   </div>
+  <div layout="row" flex>
+
+
+      <md-card flex="25">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Large</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
 </md-content>

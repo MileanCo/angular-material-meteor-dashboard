@@ -20,6 +20,7 @@
             'app.core',
             'app.auth',
             'app.menu',
+            'app.maps',
             'app.dashboard',
             'app.ui',
             'app.tables',

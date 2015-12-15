@@ -25,6 +25,19 @@
           type: 'toggle',
           pages: [
             {
+              name: 'Level 2',
+              type: 'toggle',
+              pages: [
+                { name: 'Level 3 ',
+                  state: 'core.widgets',
+                  type: 'link',
+                  icon: '',
+                 }
+              ]
+            },
+
+
+            {
               name: 'Buttons',
               type: 'link',
               state: 'core.ui.buttons',
@@ -134,7 +147,7 @@
             {
               name: 'Google',
               type: 'link',
-              state: 'core.maps.google',
+              state: 'core.maps.googlemaps',
               icon: 'univ'
             }, {
               name: 'Vector',

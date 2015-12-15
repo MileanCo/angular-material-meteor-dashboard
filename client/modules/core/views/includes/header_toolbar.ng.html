@@ -1,0 +1,99 @@
+<!-- TOOLBAR / HEADER -->
+<md-toolbar layout="row" class="md-toolbar-tools" ng-controller="ToolbarCtrl" ng-show="!search.show">
+  <!-- TOGGLE SIDEMENU -->
+  <md-button ng-click="toggleLeft()" aria-label="menu" class="md-icon-button" hide-gt-sm >
+      <md-icon md-font-set="material-icons">menu</md-icon>
+  </md-button>
+  <!-- TOP TOOLBAR -->
+  <!-- Left side -->
+  <h1 class="md-title"> {{page.SITENAME}} </h1>
+  <span flex ><!-- MAKE RIGHT-ALIGNED --></span>
+  <md-button class="square" aria-label="Search" ng-click="search.show = !search.show">
+    <md-icon md-font-set="material-icons">search</md-icon>
+  </md-button>
+  <div ng-show="$root.currentUser">
+    <md-button class="square" aria-label="dashboard" ui-sref="core.dashboard">
+      <md-icon md-font-set="material-icons">dashboard</md-icon>
+      <md-tooltip md-direction="down">Dashboard</md-tooltip>
+    </md-button>
+  </div>
+  <!-- Right side -->
+  <md-menu md-position-mode="target-right target" >
+    <!-- OPEN MENU BTN -->
+      <md-button class="square" aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
+        <md-icon md-font-set="material-icons"> email </md-icon>
+        <div class="label label-danger notification-label">3</div>
+      </md-button>
+      <md-menu-content width="3">
+        <md-list class="notifications" ng-cloak >
+          <md-list-item>
+              <h4>Messages </h4>
+              <span flex> <!-- right align --> </span>
+              <md-icon md-font-set="material-icons"> question_answer</md-icon>
+          </md-list-item >
+          <md-list-item class="md-2-line" ng-repeat="m in messages" ng-click="goToNotification(m.user, $event)">
+            <img alt="person" ng-src="{{m.avatar}}" class="md-avatar" />
+            <div class="md-list-item-text">
+              <h3>{{m.user}}</h3>
+              <p>{{m.text}}</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-menu-content>
+  </md-menu>
+  <!-- MESSAGES menu -->
+  <md-menu md-position-mode="target-right target" >
+    <!-- OPEN MENU BTN -->
+    <md-button class="square" aria-label="Open messages menu" ng-click="$mdOpenMenu($event)">
+      <md-icon md-font-set="material-icons"> notifications </md-icon>
+      <div class="label label-danger notification-label">11</div>
+    </md-button>
+      <md-menu-content width="4">
+        <md-list class="notifications" ng-cloak >
+          <md-list-item>
+              <h4>Notifications</h4>
+              <span flex> <!-- right align --> </span>
+              <md-icon md-font-set="material-icons"> done_all</md-icon>
+          </md-list-item >
+          <md-list-item class="md-2-line" ng-repeat="n in notifications" ng-click="goToNotification(n.text, $event)">
+            <md-icon  aria-label="n.icon" class="{{n.icon}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>{{n.title}}</h3>
+              <p>{{n.text}}</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-menu-content>
+  </md-menu>
+  <!-- NOTIFICATIONS menu -->
+  <md-menu md-menu-origin md-position-mode="target-right target" >
+      <!-- OPEN MENU BTN -->
+      <md-button class="square" aria-label="Open more menu" ng-click="$mdOpenMenu($event)">
+        <md-icon md-font-set="material-icons"> more_vert </md-icon>
+      </md-button>
+      <md-menu-content width="3">
+        <!-- NOT AUTHENTICATED -->
+        <div ng-hide="$root.currentUser">
+          <!-- LOGIN -->
+          <md-menu-item>
+            <md-button ui-sref="core.login" >Login
+            </md-button>
+          </md-menu-item>
+          <!-- REGISTER -->
+          <md-menu-item>
+            <md-button ui-sref="core.register">Sign up</md-button>
+          </md-menu-item>
+        </div>
+
+        <!-- AUTHENTICATED -->
+        <div ng-show="$root.currentUser">
+          <md-menu-item>
+            <md-button ui-sref="core.dashboard.profile" >Profile </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ui-sref="core.logout" >Logout</md-button>
+          </md-menu-item>
+        </div>
+      </md-menu-content>
+  </md-menu>
+</md-toolbar>

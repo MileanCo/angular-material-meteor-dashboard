@@ -21,11 +21,11 @@
             'app.auth',
             'app.menu',
             'app.maps',
-            'app.dashboard',
+            'app.charts',
             'app.ui',
             'app.tables',
             'app.forms',
-            'app.charts',
+            'app.dashboard',
             'app.mdColors', // client/lib/theme/mdStyleColor
         ])
         .config(['$mdIconProvider', function ($mdIconProvider) {

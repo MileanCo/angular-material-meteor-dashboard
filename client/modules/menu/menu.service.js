@@ -9,7 +9,7 @@
             state: 'core.home',
             type: 'link' },
           { name: 'Dashboard ',
-            state: 'core.dashboard',
+            state: 'core.dashboard.home',
             type: 'link',
             icon: 'dashboard',
            },
@@ -24,19 +24,6 @@
           name: 'Material UI',
           type: 'toggle',
           pages: [
-            {
-              name: 'Level 2',
-              type: 'toggle',
-              pages: [
-                { name: 'Level 3 ',
-                  state: 'core.widgets',
-                  type: 'link',
-                  icon: '',
-                 }
-              ]
-            },
-
-
             {
               name: 'Buttons',
               type: 'link',

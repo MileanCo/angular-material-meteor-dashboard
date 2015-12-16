@@ -76,22 +76,25 @@
         <div ng-hide="$root.currentUser">
           <!-- LOGIN -->
           <md-menu-item>
-            <md-button ui-sref="core.login" >Login
+            <md-button ui-sref="core.login" ><md-icon md-font-set="material-icons"> chevron_right </md-icon> Login
             </md-button>
           </md-menu-item>
           <!-- REGISTER -->
           <md-menu-item>
-            <md-button ui-sref="core.register">Sign up</md-button>
+            <md-button ui-sref="core.register"><md-icon md-font-set="material-icons"> assignment_ind </md-icon> Register </md-button>
           </md-menu-item>
         </div>
 
         <!-- AUTHENTICATED -->
         <div ng-show="$root.currentUser">
           <md-menu-item>
-            <md-button ui-sref="core.dashboard.profile" >Profile </md-button>
+            <md-button ui-sref="core.dashboard.profile"><md-icon md-font-set="material-icons"> person </md-icon> Profile </md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button ui-sref="core.logout" >Logout</md-button>
+            <md-button ui-sref="core.dashboard.profile"><md-icon md-font-set="material-icons"> settings </md-icon> Settings </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ui-sref="core.logout" ><md-icon md-font-set="material-icons"> chevron_left </md-icon> Logout</md-button>
           </md-menu-item>
         </div>
       </md-menu-content>

@@ -35,7 +35,9 @@ angular.module("app.core")
       return function (value) {
         return (!value) ? '' : value.replace(/ /g, '');
       };
-    })
+    });
+
+    /**
     //replace uppercase to regular case
     .filter('humanizeDoc', function () {
       return function (doc) {
@@ -49,9 +51,11 @@ angular.module("app.core")
         return doc.label || doc.name;
       };
     });
+  */
 
 angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvider, $stateProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
+
   // Set Breadcrumb Directive template
   $breadcrumbProvider.setOptions({
      //template: 'bootstrap2'
@@ -93,6 +97,16 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
         }
       }
     })
+        .state('core.dashboard.home', {
+          url: '/home',
+          templateUrl: 'client/modules/dashboard/views/example1.ng.html',
+          ncyBreadcrumb: {
+            label: 'Home'
+          },
+          data: {
+            'selectedTab': 0,
+          },
+        })
         .state('core.dashboard.profile', {
           url: '/profile',
           templateUrl: 'client/modules/dashboard/views/profile.ng.html',
@@ -100,7 +114,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
             label: 'Profile'
           },
           data: {
-            'selectedTab': 0,
+            'selectedTab': 1,
           },
         })
         .state('core.dashboard.instances', {
@@ -108,16 +122,6 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           templateUrl: 'client/modules/dashboard/views/instances.ng.html',
           ncyBreadcrumb: {
             label: 'Instances'
-          },
-          data: {
-            'selectedTab': 1,
-          },
-        })
-        .state('core.dashboard.mytimes', {
-          url: '/mytimes',
-          templateUrl: 'client/modules/dashboard/views/mytimes.ng.html',
-          ncyBreadcrumb: {
-            label: 'My Times'
           },
           data: {
             'selectedTab': 2,

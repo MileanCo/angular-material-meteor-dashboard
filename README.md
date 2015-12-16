@@ -2,8 +2,7 @@
 * Refactor core
     * Consolidate MenuCtrl and Toolbar ctrl 
     * move search into 1
-* Fix nvd3 graphs
-* Modularize main.html 
+* Move header Menus into JS on header toolbar 
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

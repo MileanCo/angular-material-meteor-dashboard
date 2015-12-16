@@ -1,0 +1,211 @@
+
+<div layout="row" layout-wrap>
+  <md-card flex>
+    <md-card-title>
+      <md-card-title-media class="md-padding widget-1" >
+        <h1 class="md-display-3">10k</h1>
+        <!--<div class="md-media-lg card-media">10k</div>-->
+      </md-card-title-media>
+      <md-card-title-text class="md-padding" >
+        <span class="md-headline">Visitors</span>
+        <span class="md-subhead">This month</span>
+      </md-card-title-text>
+    </md-card-title>
+  </md-card>
+  <md-card flex>
+    <md-card-title>
+      <md-card-title-media class="md-padding widget-1" >
+        <h1 class="md-display-3">12k</h1>
+        <!--<div class="md-media-lg card-media">10k</div>-->
+      </md-card-title-media>
+      <md-card-title-text class="md-padding" >
+        <span class="md-headline">Profit</span>
+        <span class="md-subhead">This month</span>
+      </md-card-title-text>
+    </md-card-title>
+  </md-card>
+  <md-card flex>
+    <md-card-title>
+      <md-card-title-media class="md-padding widget-1" >
+        <h1 class="md-display-3">6k</h1>
+        <!--<div class="md-media-lg card-media">10k</div>-->
+      </md-card-title-media>
+      <md-card-title-text class="md-padding" >
+        <span class="md-headline">New Users</span>
+        <span class="md-subhead">This month</span>
+      </md-card-title-text>
+    </md-card-title>
+  </md-card>
+</div>
+
+<div layout="row">
+    <div flex class="md-padding md-whiteframe-z2">
+      <nvd3 flex options="sales.options" data="sales.data"></nvd3>
+    </div>
+    <!--
+    <div flex="33" class="md-padding md-whiteframe-z2">
+      <canvas flex id="doughnut" class="chart chart-doughnut"
+        chart-data="doughnut.data" chart-labels="doughnut.labels"
+        chart-legend="true" >
+      </canvas>
+    </div>-->
+</div>
+
+
+
+
+<div layout="row" layout-wrap>
+  <!-- SALES
+  <div flex class="md-padding md-whiteframe-z2">
+    <canvas flex id="line" class="chart chart-line" chart-data="line.data"
+      chart-labels="line.labels" chart-legend="true" chart-series="line.series">
+    </canvas>
+  </div>
+  -->
+  <div flex="60" class="md-whiteframe-z2" layout="column">
+      <md-content>
+        <md-tabs md-autoselect md-border-bottom>
+            <md-tab label="one">
+              <md-content class="md-padding">
+                <h2 class="md-display-1">Tab One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="two">
+              <md-content class="md-padding">
+                <h2 class="md-display-1">Tab Two</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="three">
+              <md-content class="md-padding">
+                <h2 class="md-display-2">Tab Three</h2>
+                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+              </md-content>
+            </md-tab>
+        </md-tabs>
+      </md-content>
+  </div>
+
+  <!-- UPDATE STATUS -->
+  <div flex class="md-whiteframe-z2" layout="column" layout-padding>
+    <md-input-container flex>
+      <label>Status </label>
+      <input name="status" ng-model="status" placeholder="Write something..."
+        aria-multiline="true"
+        md-maxlength="120" >
+    </md-input-container>
+    <div flex layout="row">
+      <md-button class="md-icon-button" aria-label="camera">
+        <md-icon md-font-set="material-icons">photo_camera</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="video">
+        <md-icon md-font-set="material-icons">videocam</md-icon>
+      </md-button>
+      <span flex> </span>
+      <md-button class="md-primary" aria-label="Post">Post</md-button>
+    </div>
+  </div>
+</div>
+
+<div layout="row" flex layout-wrap>
+  <!-- REV -->
+  <div flex="60" class="md-whiteframe-z2 widget">
+     <div class="panel-body">
+        <div class="text-right text-muted">
+           <em class="fa fa-coffee fa-2x"></em>
+        </div>
+        <h3 class="mt0">Tasks</h3>
+        <p class="text-muted"></p>
+        <!--<div class="progress">
+          <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+            80% Remaining
+          </div>
+        </div>-->
+        <div class="progress">
+         <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+           80% of Goal Met!
+         </div>
+        </div>
+     </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div flex layout="column" class="md-whiteframe">
+    <h1 flex class="md-headline">
+      Activities
+    </h1>
+    <ul flex class="timeline">
+        <li >
+            <div class="timeline-badge"><i class="fa fa-check"></i>
+            </div>
+            <div class="panel timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Ipsum dolor</h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 4 hours ago via Twitter</small></p>
+                </div>
+                <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted">
+            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+            </div>
+            <div class="panel timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Lorem dolor</h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 5 hours ago via Twitter</small></p>
+                </div>
+                <div class="timeline-body">
+                    <p>Autem dolorem quibusdam, tenetur commodi provident cumque magni .</p>
+                    <hr>
+                    <md-menu md-offset="0 -5" md-position-mode="target-right target" >
+                      <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-font-set="material-icons"> more_vert </md-icon>
+                      </md-button>
+                      <md-menu-content width="4">
+                        <md-menu-item ng-repeat="item in [1, 2, 3]">
+                          <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target>Option</span> {{item}} </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+            </div>
+            <div class="panel timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Lorem ipsum </h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small></p>
+                </div>
+                <div class="timeline-body">
+                    <p>Repellendus numquam facilis enim eaque...</p>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted">
+            <div class="panel timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                </div>
+                <div class="timeline-body">
+                    <p>Voluptates est quaerat asperiores sapiente, eligendi, nihil... </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+  </div>
+</div>
+<div layout="row" flex layout-wrap>
+
+  <div class="md-whiteframe-z2" flex >
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' height="100"></ui-gmap-google-map>
+  </div>
+</div>

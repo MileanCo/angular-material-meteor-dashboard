@@ -27,6 +27,7 @@ angular.module('app.dashboard')
           'colour': '@',
           'type': '@',
           'icon': '@',
+          'stat': '@',
     		}
         /**
         <!--

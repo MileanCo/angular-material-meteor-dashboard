@@ -1,8 +1,9 @@
 
-<div layout="row" layout-wrap>
+<div layout="row" layout-align="center start" layout-wrap>
   <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
   <widget-stat flex title="16,481" comments="Current profit" colour="success" icon="fa fa-dollar"></widget-stat>
-  <widget-stat flex title="13,214" comments="Number of followers" colour="info" icon="fa fa-users"></widget-stat>
+  <widget-stat flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-stat>
+  <widget-stat flex title="9" comments="Pending Tasks" colour="default" icon="fa fa-tasks"></widget-stat>
   <widget-stat flex title="1,893" comments="Subscribers" colour="warning" icon="fa fa-star-o"></widget-stat>
 </div>
 
@@ -30,7 +31,7 @@
     </canvas>
   </div>
   -->
-  <div flex="60" class="md-whiteframe-z2" layout="column">
+  <div flex class="md-whiteframe-z2" layout="column">
       <md-content>
         <md-tabs md-autoselect md-border-bottom>
             <md-tab label="one">
@@ -80,11 +81,11 @@
 
 <div layout="row" flex>
   <!-- TASKS -->
-  <div flex="60" layout="column" layout-wrap>
-    <h1 class="md-headline">Tasks </h1>
-    <widget-task flex title="Bandwidth" comments="Used this month" icon="fa-cab" type="info" number="20"> </widget-task>
-    <widget-task flex title="Q1 Revenue" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
-    <widget-task flex title="Disk Space" comments="Web space utilized" icon="fa-folder-o" type="danger" number="92"> </widget-task>
+  <div flex layout="column" layout-wrap>
+    <h1 class="md-headline">Progress, Goals, &amp; Tasks </h1>
+    <widget-task flex title="Bandwidth" stat="71 GB" comments="Used this month" icon="fa-cab" type="info" number="20"> </widget-task>
+    <widget-task flex title="Q1 Revenue" stat="$ 791,021" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
+    <widget-task flex title="Disk Space" stat="375 GB" comments="Web space utilized" icon="fa-folder-o" type="danger" number="92"> </widget-task>
     <widget-task flex title="Research" comments="Progress on research of new technology" icon="fa-circle-o-notch fa-spin" type="info" number="44"> </widget-task>
   </div>
 

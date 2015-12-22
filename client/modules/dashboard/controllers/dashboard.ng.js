@@ -13,7 +13,9 @@ angular.module("app.dashboard")
 
     // DOUGHNUT CHART
     $scope.doughnut = {};
-    $scope.doughnut.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+    $scope.doughnut.title = "Units Sold";
+    $scope.doughnut.labels = ["Product 0", "Product 1", "Product 2"];
+      //["Download Sales", "In-Store Sales", "Mail-Order Sales"];
     $scope.doughnut.data = [300, 500, 100];
 
     // Map
@@ -22,9 +24,9 @@ angular.module("app.dashboard")
     // MONEY CHART
     $scope.sales = {};
     $scope.sales.options = {
-            chart: {
+            "chart": {
                 type: 'multiBarChart',
-                height: 300,
+                height: 200,
                 /**
                 margin : {
                     top: 20,
@@ -40,7 +42,7 @@ angular.module("app.dashboard")
                     axisLabel: 'Time (months)',
                     showMaxMin: false,
                     tickFormat: function(d){
-                        return d3.format(',f')(d);
+                        return "Month: " + d3.format(',f')(d);
                     }
                 },
                 yAxis: {
@@ -50,7 +52,24 @@ angular.module("app.dashboard")
                         return d3.format(',.1f')(d);
                     }
                 }
+            },
+            "title": {
+            "enable": true,
+            "text": "Monthly Sales",
+            "className": "h4",
+            "css": {
+              "width": "nullpx",
+              "textAlign": "center"
             }
+          },
+          "subtitle": {
+            "enable": false,
+            "text": "Write Your Subtitle",
+            "css": {
+              "width": "nullpx",
+              "textAlign": "center"
+            }
+          },
         };
 
         $scope.sales.data = generateData();
@@ -72,11 +91,12 @@ angular.module("app.dashboard")
             "markers": [250]
         }
 
-
-        function getProductName(i){
-          if (i == 0) return "Laptops";
-          if (i == 1) return "Games";
-          if (i == 2) return "Movies";
+        function getProductName(i) {
+          return "Product " + i;
+          /**
+          if (i == 0) return "Product 1";
+          if (i == 1) return "Store";
+          if (i == 2) return "Retailer";*/
         }
 
         /* Random Data Generator (took from nvd3.org) */

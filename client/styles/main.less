@@ -1,3 +1,6 @@
+// IMPORTS
+@import "material-colors/colors.less";
+
 html, body {
   height: 100%;
 }
@@ -87,13 +90,16 @@ md-card.md-dark {
 
 // TOAST
 md-toast.md-success-toast-theme {
-    background-color: #67E54E;//green;
+    //background-color: #67E54E;//green;
+    background-color: @md-green-600 ;
 }
 md-toast.md-error-toast-theme {
-    background-color: #FF922B;
+    //background-color: #FF922B;
+    background-color: @md-red-600 ;
 }
 md-toast.md-info-toast-theme {
-    background-color: #55BEFF;
+    //background-color: #55BEFF;
+    background-color: @md-blue-700 ;
 }
 
 .header-card {
@@ -158,8 +164,6 @@ md-toast.md-THEME_NAME-theme {
     /* Likely future */ }
   .listdemoListControls .secondary-button-padding p {
     padding-right: 100px; }
-
-
 
 
 @import "navbar.import.less";

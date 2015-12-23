@@ -1,11 +1,15 @@
 
 <div layout="row" layout-align="center start" layout-wrap>
-  <div flex layout="row" layout-wrap>
-    <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
-    <widget-stat flex title="16,481" comments="Current profit" colour="success" icon="fa fa-dollar"></widget-stat>
-    <widget-stat flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-stat>
-    <widget-stat flex title="9" comments="Open Tasks" colour="default" icon="fa fa-tasks"></widget-stat>
-    <widget-stat flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-stat>
+  <div flex layout="column" layout-wrap>
+    <div flex layout="row">
+      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
+      <widget-stat flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-stat>
+      <widget-stat flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-stat>
+    </div>
+    <div flex layout="row">
+      <widget-stat flex title="9" comments="Open Tasks" colour="default" icon="fa fa-tasks"></widget-stat>
+      <widget-stat flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-stat>
+    </div>
   </div>
   <div flex="33" class="md-padding md-whiteframe-z2">
     <h1 class="md-headline">{{doughnut.title}} </h1>

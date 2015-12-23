@@ -1,79 +1,114 @@
-<!--
-<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
-  <stats number="6" comments="New comments!" colour="primary" type="comments"></stats>
-  <stats number="12" comments="New tasks!" colour="primary" type="user"></stats>
-  <stats number="18" comments="New orders!" colour="yellow" type="shopping-cart"></stats>
-  <stats number="24" comments="Support tickets!" colour="red" type="support"></stats>
-</md-content>
--->
-<br/>
-<md-content class="md-padding" layout="column" layout-wrap layout-align="center start">
+<div class="md-padding">
+<div layout="row" layout-align="center start" layout-wrap>
+  <div layout="column" layout-align="center start" layout-wrap>
+    <div flex layout="row">
+      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
+      <widget-stat flex title="Build Success!" comments="1923 tests passed" colour="success" icon="fa fa-graduation-cap"></widget-stat>
+      <widget-stat flex title="Ready" comments="10/10 servers connected" colour="info" icon="fa fa-thumbs-up"></widget-stat>
+    </div>
+    <div flex layout="row">
+      <widget-stat flex title="Build failed" comments="Syntax error on line 12" colour="danger" icon="fa fa-minus-square"></widget-stat>
+      <widget-stat flex title="Building..." comments="3 builds are running" colour="warning" icon="fa fa-link"></widget-stat>
+    </div>
+  </div>
 
-  <!-- START widget-->
-  <div layout="row" flex>
-    <md-card flex="50">
-      <md-card-header>
-        <md-card-avatar>
-          <img class="md-user-avatar" src="images/avatars/supportfemale.svg"/>
-        </md-card-avatar>
-        <md-card-header-text>
-          <span class="md-title"> Jane Smith</span>
-          <span class="md-subhead">Customer Support</span>
-        </md-card-header-text>
-      </md-card-header>
-      <img ng-src="images/cards/mac_keyboard.jpg" class="md-card-image" alt="Washed Out">
+  <md-card flex="30">
+    <md-card-header>
+      <md-card-header-text>
+        <span class="md-title"> Management Portal </span>
+        <span class="md-subhead"> Database control system </span>
+      </md-card-header-text>
+    </md-card-header>
+    <img ng-src="images/cards/micro_chip.jpg" class="md-card-image" alt="Micro chip">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-subhead">Control builds from this page</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-card-icon-actions>
+        <md-button class="md-icon-button" aria-label="new">
+          <md-tooltip >Start new build</md-tooltip>
+          <md-icon md-font-set="material-icons">create_new_folder </md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="cancel">
+          <md-tooltip >Cancel current build</md-tooltip>
+          <md-icon md-svg-icon="md-cancel"></md-icon>
+        </md-button>
+      </md-card-icon-actions>
+    </md-card-actions>
+  </md-card>
+</div>
+<br/>
+
+<!-- START widget-->
+<div layout="row" layout-wrap>
+  <md-card flex>
+    <md-card-header>
+      <md-card-avatar>
+        <img class="md-user-avatar" src="images/avatars/supportfemale.svg"/>
+      </md-card-avatar>
+      <md-card-header-text>
+        <span class="md-title"> Jane Smith</span>
+        <span class="md-subhead"> Customer Support </span>
+      </md-card-header-text>
+    </md-card-header>
+    <img ng-src="images/cards/mac_keyboard.jpg" class="md-card-image" alt="mac keyboard">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Online Support</span>
+        <span class="md-subhead">Our agents are available 24/7</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-card-icon-actions>
+        <md-button class="md-icon-button" aria-label="call">
+          <md-icon md-font-set="material-icons">call </md-icon>
+          <md-tooltip >Call customer support</md-tooltip>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="chat">
+          <md-icon md-font-set="material-icons">chat </md-icon>
+          <md-tooltip >IM customer support</md-tooltip>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="email">
+          <md-icon md-font-set="material-icons">email </md-icon>
+          <md-tooltip >Send an email</md-tooltip>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="toggle">
+          <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+        </md-button>
+      </md-card-icon-actions>
+    </md-card-actions>
+  </md-card>
+
+    <md-card flex>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Online Support</span>
-          <span class="md-subhead">Our agents are available 24/7</span>
+          <span class="md-headline">Card with image</span>
+          <span class="md-subhead">Large</span>
         </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
       </md-card-title>
-      <md-card-actions layout="row" layout-align="start center">
-        <md-button class = "md-primary"><md-icon md-font-set="material-icons">call</md-icon> Call</md-button>
-        <md-button><md-icon md-font-set="material-icons">chat</md-icon> IM </md-button>
-        <md-button><md-icon md-font-set="material-icons">email</md-icon> Report </md-button>
-        <md-card-icon-actions>
-          <md-button class="md-icon-button" aria-label="toggle">
-            <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
-          </md-button>
-        </md-card-icon-actions>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button>Action 1</md-button>
+        <md-button>Action 2</md-button>
       </md-card-actions>
     </md-card>
-
-    <div flex class="md-whiteframe-z2 panel widget">
-       <div class="panel-body">
-          <div class="text-right text-muted">
-             <em class="fa fa-coffee fa-2x"></em>
-          </div>
-          <h3 class="mt0">300</h3>
-          <p class="text-muted">Coffee cups per day</p>
-          <div class="progress progress-striped progress-xs">
-             <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-green progress-80">
-                <span class="sr-only">80% Complete</span>
-             </div>
-          </div>
-       </div>
-    </div>
-  <!-- END widget-->
-
   </div>
-  <div layout="row" flex>
 
 
-      <md-card flex="25">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Large</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <div class="md-media-lg card-media"></div>
-          </md-card-title-media>
-        </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
-        </md-card-actions>
-      </md-card>
-    </div>
-</md-content>
+<!-- TASKS -->
+<h1 class="md-headline">Progress &amp; Tasks </h1>
+<div flex layout="row" layout-wrap>
+  <div flex layout="column" >
+    <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
+    <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
+  </div>
+  <div flex layout="column" >
+    <widget-task flex title="Research" comments="Progress on research of new technology" icon="fa-circle-o-notch fa-spin" type="info" number="44"> </widget-task>
+    <widget-task flex title="Disk Space" stat="375 / 400 GB" comments="Web space utilized" icon="fa-folder-o" type="danger" number="94"> </widget-task>
+  </div>
+</div>
+</div>

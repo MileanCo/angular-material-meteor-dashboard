@@ -1,10 +1,9 @@
 /*!
+ *  AMM Dash Template!
  *
- * Angle - Bootstrap Admin App + AngularJS
- *
- * Version: 3.2.0
- * Author: @themicon_co
- * Website: http://themicon.co
+ * Version: 1.0.0
+ * Author: @mystec
+ * Website:
  * License: https://wrapbootstrap.com/help/licenses
  *
  */

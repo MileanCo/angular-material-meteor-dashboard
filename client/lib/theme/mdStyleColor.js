@@ -12,6 +12,13 @@ USAGE:
 */
 (function () {
   "use strict";
+/**
+  Chart.defaults.global.responsive = true;
+  //Chart.defaults.global.multiTooltipTemplate = '<%if (datasetLabel){%><%=datasetLabel%>: <%}%><%= value %>';
+*/
+
+
+
 
   var _theme;
   var _palettes;
@@ -23,7 +30,7 @@ USAGE:
       // CUSTOMIZE THEME COLORS HERE
       $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey', {default:"800"})
-        .accentPalette('light-blue') //, {default:"100"})
+        .accentPalette('light-blue')
         .warnPalette('yellow', {default: '900'})
         //.backgroundPalette("white")
         ;
@@ -76,4 +83,4 @@ USAGE:
           }
         }
       });
-}());
+})();

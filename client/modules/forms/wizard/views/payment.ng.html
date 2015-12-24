@@ -1,0 +1,41 @@
+<div layout="column" layout-align="space-around center">
+  <form class="checkout">
+    <div class="checkout-header">
+      <h1 class="checkout-title">
+        Checkout
+        <span class="checkout-price">$20</span>
+      </h1>
+    </div>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Full name</label>
+        <input type="text" ng-model="card.fullName" autofocus>
+      </md-input-container>
+      <md-input-container flex>
+        <label>Month</label>
+        <input type="text" class="checkout-input checkout-exp" ng-model="card.expireMonth" placeholder="MM" md-maxlength="2">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Year</label>
+        <input type="text" class="checkout-input checkout-exp" ng-model="card.expireYear" placeholder="YY" md-maxlength="2">
+      </md-input-container>
+    </div>
+
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Credit Card Number</label>
+        <input type="text" class="checkout-input checkout-card" ng-model="card.number" placeholder="4111 1111 1111 1111" md-maxlength="16">
+      </md-input-container>
+      <md-input-container flex>
+        <label>CVC</label>
+        <input type="text" class="checkout-input checkout-cvc" ng-model="card.cvc" md-maxlength="3">
+      </md-input-container>
+    </div>
+  </form>
+</div>
+
+
+<div layout="column" layout-align="space-around center">
+    <md-button flex class="md-raised md-primary" ui-sref="core.forms.wizard.launch" aria-label="next"> Purchase </md-button>
+    <md-button flex class="md-raised" ui-sref="core.forms.wizard.profile" aria-label="next"> Back </md-button>
+</div>

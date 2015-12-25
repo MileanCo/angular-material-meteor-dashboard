@@ -1,11 +1,11 @@
 # TO-DO #
 * Refactor core
-    * Consolidate MenuCtrl and Toolbar ctrl 
-    * move search into 1
 * Move header Menus into JS on header toolbar 
 * https://github.com/Xerdi/Material-Design-Flipper
 * Write docs
 * Comments everywhere! 
+* Pages -> Login, Register, ForgotPwd, etc.
+* Fix widgets
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

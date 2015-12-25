@@ -1,7 +1,8 @@
-<div layout="column" layout-align="space-around start">
+<h2 flex class="md-display-1 "> Checkout </h2>
+<div class="md-whiteframe-z2 md-padding" layout="column" layout-align="space-around start">
+  <span class="md-subhead color-light-blue-500">Price: $ {{price}} </span>
   <form class="checkout">
-    <h2 class="md-display-1"> Checkout - $ {{price}}</h2>
-    <br/>
+    <p></p>
     <div layout layout-sm="column">
       <md-input-container flex>
         <label>Full Name</label>
@@ -28,10 +29,12 @@
       </md-input-container>
     </div>
   </form>
-</div>
-
-
-<div layout="column" layout-align="space-around center">
-    <md-button flex class="md-raised md-primary" ui-sref="core.forms.wizard.launch" aria-label="next"> Purchase </md-button>
-    <md-button flex class="md-raised" ui-sref="core.forms.wizard.profile" aria-label="next"> Back </md-button>
+  <div flex layout="column"  layout-align="space-around center">
+    <div flex>
+      <md-button class="md-raised md-primary" ui-sref="core.forms.wizard.launch" aria-label="next"> Purchase </md-button>
+    </div>
+    <div flex>
+      <md-button class="md-raised" ui-sref="core.forms.wizard.profile" aria-label="next"> Back </md-button>
+    </div>
+  </div>
 </div>

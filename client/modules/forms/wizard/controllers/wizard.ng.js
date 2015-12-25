@@ -10,34 +10,48 @@ angular.module('app.forms')
   .controller('WizardCtrl', ['$scope', '$rootScope', '$meteor', '$location', WizardCtrl ]);
 
 function WizardCtrl($scope, $rootScope, $meteor, $location) {
-  // Possible input values
-  $scope.strokes = ['Freestyle', 'Backstroke', 'Breaststroke', 'Butterfly' ];
-  $scope.distances = [50, 100, 200, 400, 500, 1000, 1650];
-  $scope.genders = ['Male', 'Female'];
+  $scope.price = "20";
+  $scope.message= "";
+  $scope.showStartWizard = false;
 
   // we will store all of our form data in this object
-  $scope.formData = {
-    "stroke": 'Freestyle',
-    "distance": 100,
-    'gender': 'Male',
-    'time': '45',
-    'division': 'I',
+  $scope.user = {
+    company : '',
+    firstName: '',
+    lastName: '',
+    state: '',
+    city: '',
+    postalCode: '',
+    address: '',
+    biography: '',
   };
-  // Subscriptions
-  $meteor.subscribe('teams');
+  $scope.card = {
+      fullName: '',
+      number: '',
+      cvc: '',
+      expireMonth: '',
+      expireYear: '',
+  };
 
-  // $scope.states @ bottom
-  $scope.teams = [];
-  $scope.explorerStarted = false;
   /** True when Search Button pressed */
   $scope.searched = false;
   /** True when querying server */
   $scope.loading = false;
 
-  //$scope.records = $meteor.collection(Meteor.users, false).subscribe('records');
+
+  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+    console.log(toState);
+    // If we are on just "core.forms.wizard", show start button
+    if ( toState.url == '/wizard' ) {
+        $scope.showStartWizard = true;
+    } else {
+        $scope.showStartWizard = false;
+    }
+  });
+
 
   $scope.start = function () {
-    $scope.explorerStarted = true;
+    $scope.wizardStarted = true;
   }
 
   // function to process the form
@@ -47,6 +61,7 @@ function WizardCtrl($scope, $rootScope, $meteor, $location) {
     if ( valid_msg.indexOf("yes") > -1) {
       // Get(Query) records from server into local/client Minimongo
       // THEN 'query' client Minimongo for all Records
+      /**
       var subscription = $meteor.subscribe('recordsByFormData', $scope.formData);
       subscription.then(function() {
         // Process ALL RECORDS in local DB
@@ -54,6 +69,7 @@ function WizardCtrl($scope, $rootScope, $meteor, $location) {
         // Done loading when records processed
         $scope.loading=false;
       });
+      */
 
     } else {
       $scope.loading=false;

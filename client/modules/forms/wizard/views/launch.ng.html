@@ -1,8 +1,27 @@
 <div layout="column" layout-align="start center">
-  <div flex ng-hide="searched">
-    <h2> Search </h2>
-    {{formData}} <br>
-    <md-button type="submit" class="md-raised md-primary">Launch</md-button>
+  <div flex layout="column" ng-hide="searched">
+    <h2 flex class="md-display-1 color-light-blue-500"> Thank You! </h2>
+    <span flex class="md-subhead">Enjoy your new premium subscription service. </span>
+    <p > &nbsp; </p>
+    <h2 flex class="md-display-1 color-light-blue-500"> Receipt </h2>
+    <div flex layout="column" class="panel md-padding" style="border:1px solid black;">
+      <span flex class="md-headline"> Your Profile </span>
+      <table class="table table-striped table-hover">
+        <thead><td>Key </td> <td>Value</td></thead>
+        <tr ng-repeat="(key, value) in user">
+          <td>{{key}} </td> <td><code> {{ value }} </code></td>
+        </tr>
+      </table>
+      <p > &nbsp; </p>
+      <span flex class="md-headline"> Card Data </span>
+      <table class="table table-striped table-hover">
+        <thead><td>Key </td> <td>Value</td></thead>
+        <tr ng-repeat="(key, value) in card">
+          <td>{{key}} </td> <td><code> {{ value }} </code></td>
+        </tr>
+      </table>
+    </div>
+    <br/>
   </div>
   <div flex class="alert alert-danger" ng-show="message">
       {{message}}
@@ -12,9 +31,12 @@
   </div>
   <div ng-if="searched">
     <h2> Results </h2>
-    <div flex google-chart chart="avgChart"></div>
-    <div flex google-chart chart="tableChart" style="width:100%;"> </div>
-  </div>
 
-  <md-button flex class="md-raised" ui-sref="core.forms.wizard.profile" ng-click="exploreAgain()" aria-label="back"> Explore Again! </md-button>
+  </div>
+  <div flex ng-hide="searched">
+    <md-button type="submit" class="md-raised md-primary">Launch</md-button>
+  </div>
+  <div flex>
+    <md-button class="md-raised" ui-sref="core.forms.wizard.profile" ng-click="exploreAgain()" aria-label="back"> Explore Again! </md-button>
+  </div>
 </div>

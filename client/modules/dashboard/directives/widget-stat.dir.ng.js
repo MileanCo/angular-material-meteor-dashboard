@@ -22,7 +22,6 @@ angular.module('app.dashboard')
         scope: {
           'model': '=',
           'title': '@',
-          'headline': '@',
           'comments': '@',
           'icon': '@',
           'colour': '@',

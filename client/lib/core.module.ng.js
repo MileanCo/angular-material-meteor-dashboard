@@ -9,6 +9,7 @@
           'ui.router',
           //'angularUtils.directives.dirPagination',
           //'uiGmapgoogle-maps',
+          'ngAnimate',
           'ngMaterial',
           'ngMessages',
           'ncy-angular-breadcrumb',

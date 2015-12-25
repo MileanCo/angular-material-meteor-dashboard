@@ -1,34 +1,30 @@
 <!-- <h1 class="page-header"> Wizard</h1>-->
 <div layout="column" layout-align="start center">
-  <div flex>
-
-    <h2> Explore the Galaxy </h2>
-    <!-- the links to our nested states using relative paths -->
-    <!-- add the active class if the state matches our ui-sref -->
-    <div id="status-buttons" class="text-center">
-        <md-button ui-sref-active="active" ui-sref=".intro" aria-label="times"> Intro</md-button>
-        <md-button ui-sref-active="active" ui-sref=".demographics" aria-label="demographics"> Demographics</md-button>
-        <md-button ui-sref-active="active" ui-sref=".results" aria-label="search"> Results</md-button>
-    </div>
+  <h2 flex class="md-display-1"> Explore the Galaxy </h2>
+  <!-- the links to our nested states using relative paths -->
+  <!-- add the active class if the state matches our ui-sref -->
+  <div flex id="status-buttons" class="text-center">
+      <md-button class="md-primary" ui-sref-active="active" ui-sref=".profile" aria-label="profile"> Profile </md-button>
+      <md-button class="md-primary" ui-sref-active="active" ui-sref=".payment" aria-label="payment"> Payment </md-button>
+            <md-button class="md-primary" ui-sref-active="active" ui-sref=".launch" aria-label="launch"> Launch </md-button>
   </div>
   <hr>
   <div flex ng-show="error" class="md-warn">
     <small>{{ error }}</small>
   </div>
 </div>
-<div class="md-whiteframe-z2">
+
+<div ng-if="showStartWizard" layout="column" layout-align="center center">
+  <div flex>
+  <md-button ui-sref="core.forms.wizard.profile" class="md-raised md-primary" aria-label="next" ng-click="start()" >
+    Start Wizard! <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </md-button>
+  </div>
+</div>
+<div class="md-whiteframe-z2" ng-if="!showStartWizard" >
   <!-- use ng-submit to catch the form submission and use our Angular function -->
   <form id="signup-form" ng-submit="postResults()">
       <!-- our nested state views will be injected here -->
-      <div flex ui-view></div>
+      <div id="form-views" flex ui-view></div>
   </form>
 </div>
-
-
-  <!--
-  <div class="row" ng-hide="explorerStarted">
-    <a ui-sref="dashboard.explorer.times" class="btn btn-block btn-info" ng-click="start()" >
-      Start! <span class="glyphicon glyphicon-circle-arrow-right"></span>
-    </a>
-  </div>
-  -->

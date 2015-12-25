@@ -3,6 +3,9 @@
     * Consolidate MenuCtrl and Toolbar ctrl 
     * move search into 1
 * Move header Menus into JS on header toolbar 
+* https://github.com/Xerdi/Material-Design-Flipper
+* Write docs
+* Comments everywhere! 
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

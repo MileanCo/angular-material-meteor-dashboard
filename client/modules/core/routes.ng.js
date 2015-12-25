@@ -237,28 +237,29 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
         ncyBreadcrumb: {
           label: 'Wizard'
         },
+        data: {showStartWizard: true,},
         templateUrl: 'client/modules/forms/wizard/views/wizard.ng.html',
       })
-          .state('core.forms.wizard.intro', {
-            url:'/intro',
+          .state('core.forms.wizard.profile', {
+            url:'/profile',
             ncyBreadcrumb: {
-              label: 'Intro'
+              label: 'Profile'
             },
-            templateUrl: 'client/modules/forms/wizard/views/intro.ng.html',
+            templateUrl: 'client/modules/forms/wizard/views/profile.ng.html',
           })
-          .state('core.forms.wizard.demographics', {
-            url:'/demographics',
+          .state('core.forms.wizard.payment', {
+            url:'/payment',
             ncyBreadcrumb: {
-              label: 'Demographics'
+              label: 'Payment'
             },
-            templateUrl: 'client/modules/forms/wizard/views/demographics.ng.html',
+            templateUrl: 'client/modules/forms/wizard/views/payment.ng.html',
           })
-          .state('core.forms.wizard.results', {
-            url:'/results',
+          .state('core.forms.wizard.launch', {
+            url:'/launch',
             ncyBreadcrumb: {
-              label: 'Results'
+              label: 'Launch'
             },
-            templateUrl: 'client/modules/forms/wizard/views/results.ng.html',
+            templateUrl: 'client/modules/forms/wizard/views/launch.ng.html',
           })
 
     // CHARTS //////////////////////////////////////////

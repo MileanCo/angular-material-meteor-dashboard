@@ -37,3 +37,4 @@ data-generator-json # MY PACKAGES [JOEL] [LOCAL]
 ncuillery:angular-breadcrumb
 mystec:angular-nvd3
 angularui:angular-google-maps
+angular:angular-animate

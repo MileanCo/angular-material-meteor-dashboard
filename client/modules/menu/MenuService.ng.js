@@ -13,11 +13,6 @@
             type: 'link',
             icon: 'dashboard',
            },
-           { name: 'Widgets ',
-             state: 'core.widgets',
-             type: 'link',
-             icon: '',
-            },
         ];
 
         sections.push({
@@ -60,6 +55,11 @@
               type: 'link',
               icon: ''
             },
+            { name: 'Widgets ',
+              state: 'core.ui.widgets',
+              type: 'link',
+              icon: '',
+             },
           ]
         });
 
@@ -98,6 +98,29 @@
             }, {
               name: 'Layout',
               state: 'core.forms.layout',
+              type: 'link',
+              icon: ''
+            },
+          ]
+        });
+
+        sections.push({
+          name: 'Pages',
+          type: 'toggle',
+          pages: [
+            {
+              name: 'Login',
+              type: 'link',
+              state: 'login',
+              icon: ''
+            }, {
+              name: 'Register',
+              state: 'core.register',
+              type: 'link',
+              icon: ''
+            }, {
+              name: 'Reset Password',
+              state: 'core.resetpw',
               type: 'link',
               icon: ''
             },

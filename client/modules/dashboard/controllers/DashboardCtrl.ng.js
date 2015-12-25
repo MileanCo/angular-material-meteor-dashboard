@@ -18,7 +18,7 @@ angular.module("app.dashboard")
       //["Download Sales", "In-Store Sales", "Mail-Order Sales"];
     $scope.doughnut.data = [300, 500, 100];
 
-    
+
 
     // Map
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
@@ -37,7 +37,7 @@ angular.module("app.dashboard")
                     left: 45,
                 },*/
                 clipEdge: true,
-                duration: 500,
+                duration: 1400,
                 stacked: true,
                 showControls: false,
                 xAxis: {
@@ -55,7 +55,7 @@ angular.module("app.dashboard")
                     }
                 }
             },
-            "title": {
+          "title": {
             "enable": true,
             "text": "Monthly Sales",
             "className": "h4",

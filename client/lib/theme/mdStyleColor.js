@@ -35,6 +35,20 @@ USAGE:
         //.backgroundPalette("white")
         ;
 
+
+      $mdThemingProvider
+          .theme('dark')
+          .primaryPalette('light-blue', {
+            default:"A700",
+            //    'hue-2': '500'
+          })
+          .accentPalette('blue-grey', {default:'500'})
+          .warnPalette('yellow', {default: '800'})
+          .backgroundPalette('grey', {
+              'default': '800'
+          })
+          .dark();
+
       // TOAST themes
       $mdThemingProvider.theme("success-toast");
       $mdThemingProvider.theme("error-toast");

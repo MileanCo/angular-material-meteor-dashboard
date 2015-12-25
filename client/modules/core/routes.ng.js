@@ -128,15 +128,6 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           },
         })
 
-    .state('core.widgets', {
-      url:'/widgets',
-      //controller: 'WidgetsCtrl',
-      ncyBreadcrumb: {
-        label: 'Widgets'
-      },
-      templateUrl: 'client/modules/core/views/widgets.ng.html',
-    })
-
 
     // Material UI //////////////////////////////////////////
     .state('core.ui', {
@@ -198,6 +189,17 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
         },
         templateUrl: 'client/modules/ui/views/typography.ng.html',
       })
+      .state('core.ui.widgets', {
+        url:'/widgets',
+        //controller: 'WidgetsCtrl',
+        ncyBreadcrumb: {
+          label: 'Widgets'
+        },
+        templateUrl: 'client/modules/ui/views/widgets.ng.html',
+      })
+
+
+
     .state('core.tables-static', {
       url:'/tables/static',
       ncyBreadcrumb: {
@@ -313,7 +315,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
         })
 
     // AUTH /////// /////// //////// //////////
-    .state('core.login', {
+    .state('login', {
       url: '/login',
       templateUrl: 'client/modules/auth/views/login.ng.html',
       controller: 'LoginCtrl',

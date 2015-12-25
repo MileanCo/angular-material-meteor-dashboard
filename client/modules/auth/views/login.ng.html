@@ -1,30 +1,46 @@
-<md-whiteframe layout="column" flex="50">
-  <div layout="row" layout-align="space-around center">
-    <div>Login with:</div>
-    <md-button>Twitter</md-button>
-    <md-button>Facebook</md-button>
+<div class="bg-grey-900" layout="column" layout-align="start center" layout-fill >
+  <h1 class="md-display-1 color-white"> Angular Material Dashboard </h1>
+  <p></p>
+  <md-content class="md-whiteframe-z2" md-theme="dark" layout-padding layout="column" layout-sm="column">
+    <span class="md-subhead">Login </span>
+    <form layout="column">
+
+        <md-input-container>
+          <!-- <md-icon md-svg-icon="content:ic_mail_24px"></md-icon> -->
+          <md-icon md-font-set="material-icons" flex > mail </md-icon>
+          <input type="text" ng-model="lc.credentials.email"
+                 placeholder="email" aria-label="email"/>
+        </md-input-container>
+        <md-input-container>
+          <md-icon md-font-set="material-icons" flex > lock_open </md-icon>
+          <input type="password" ng-model="lc.credentials.password"
+                 placeholder="password" aria-label="password"/>
+        </md-input-container>
+        <md-button class="md-raised md-primary" ng-click="lc.login()"
+                   aria-label="login">Go!
+        </md-button>
+
+    </form>
+
+    <div layout="row" layout-align="space-around center">
+      <a class="md-accent" ui-sref="core.resetpw">Forgot password?</a>
+      <a class="md-accent" ui-sref="core.register">Create an account</a>
+    </div>
+
+    <div ng-show="lc.error" class="md-warn">
+      <small>{{ lc.error }}</small>
+    </div>
+
+    <div layout="row" layout-align="space-around center">
+      <div>Login with</div>
+      <md-button> <i class="fa fa-facebook-square"></i> Facebook</md-button>
+      <md-button><i class="fa fa-twitter-square"></i> Twitter  </md-button>
+      <md-button> <i class="fa fa-google-plus"></i> Google</md-button>
+    </div>
+  </md-content>
+  <p flex> </p>
+  <div flex layout="column" layout-align="end center">
+    <!-- FOOTER -->
+    <div flex class="color-white" ng-include="'client/modules/menu/views/includes/footer.ng.html'"></div>
   </div>
-  <div ng-show="lc.error" class="md-warn">
-    <small>{{ lc.error }}</small>
-  </div>
-  <form layout="column">
-    <md-input-container>
-      <md-icon md-svg-icon="content:ic_mail_24px"></md-icon>
-      <input type="text" ng-model="lc.credentials.email"
-             placeholder="email" aria-label="email"/>
-    </md-input-container>
-    <md-input-container>
-      <md-icon md-svg-icon="action:ic_lock_open_24px"></md-icon>
-      <input type="password" ng-model="lc.credentials.password"
-             placeholder="password" aria-label="password"/>
-    </md-input-container>
-    <md-button class="md-raised md-primary" ng-click="lc.login()"
-               aria-label="login">Sign In
-    </md-button>
-  </form>
-  <div layout="row" layout-align="space-around center">
-    <a ui-sref="core.resetpw">Forgot password?</a>
-    <a ui-sref="core.register">Create an account</a>
-  </div>
-</md-whiteframe>
-<span flex></span>
+</div>

@@ -1,19 +1,7 @@
 <md-sidenav flex layout="column" class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
   <div role="navigation" layout="column" flex>
     <!-- PROFILE CARD -->
-    <md-content class="profile-card md-padding">
-      <md-list>
-
-        <md-list-item class="md-3-line">
-          <img src="images/avatars/businessman.png" class="md-avatar" />
-          <div class="md-list-item-text" layout="column">
-            <h3 class="md-title"> <a ui-sref="core.dashboard.home"> Obiwan Kenobi </a> </h3>
-            <h4>Web Developer</h4>
-            <p>Raleigh, NC</p>
-          </div>
-        </md-list-item>
-      </md-list>
-    </md-content>
+    <div ng-include="'client/modules/menu/views/includes/profile_card.ng.html'"></div>
 
     <!-- SIDEMENU -->
     <ul class="side-menu">

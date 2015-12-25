@@ -11,17 +11,56 @@ angular.module("app.dashboard")
       [28, 48, 40, 19, 86, 27, 90]
     ];
 
-    // DOUGHNUT CHART
-    $scope.doughnut = {};
-    $scope.doughnut.title = "Units Sold";
-    $scope.doughnut.labels = ["Product 0", "Product 1", "Product 2"];
-      //["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-    $scope.doughnut.data = [300, 500, 100];
-
-
-
     // Map
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+
+    // SOLD CHART
+    $scope.sold = {};
+    $scope.sold.options = {
+      chart: {
+         type: "pieChart",
+         height: 255,
+         x: function(d) {return d.key;},
+         y: function(d) {return d.y;},
+         showLabels: false,
+         duration: 700,
+         labelThreshold: 0.01,
+         labelSunbeamLayout: true,
+         legend: {
+           /**
+           "margin": {
+             "top": 5,
+             "right": 35,
+             "bottom": 5,
+             "left": 0
+           }*/
+         }
+       },
+       "title": {
+        "enable": true,
+        "text": "Units Sold",
+        "className": "h3",
+        "css": {
+          //"width": "500px",
+          "margin-top": "15px",
+          "textAlign": "center",
+        }
+      },
+     };
+     $scope.sold.data = [
+         {
+             key: "Product 0",
+             y: 78
+         },
+         {
+             key: "Product 1",
+             y: 128
+         },
+         {
+             key: "Product 2",
+             y: 256
+         },
+     ];
 
     // MONEY CHART
     $scope.sales = {};
@@ -29,13 +68,6 @@ angular.module("app.dashboard")
             "chart": {
                 type: 'multiBarChart',
                 height: 200,
-                /**
-                margin : {
-                    top: 20,
-                    right: 20,
-                    bottom: 45,
-                    left: 45,
-                },*/
                 clipEdge: true,
                 duration: 1400,
                 stacked: true,
@@ -58,7 +90,7 @@ angular.module("app.dashboard")
           "title": {
             "enable": true,
             "text": "Monthly Sales",
-            "className": "h4",
+            "className": "h3",
             "css": {
               "width": "nullpx",
               "textAlign": "center"

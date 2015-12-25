@@ -1,5 +1,5 @@
-<div layout="row" layout-align="center start" layout-wrap>
-  <div layout="column" layout-align="center start" layout-wrap>
+<div layout-gt-sm="row" layout="column"  layout-align="center start" layout-wrap>
+  <div flex layout="column" layout-align="center start">
     <div flex layout="row">
       <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
       <widget-stat flex title="Build Success!" comments="1923 tests passed" colour="success" icon="fa fa-graduation-cap"></widget-stat>
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <md-card flex="30">
+  <md-card flex>
     <md-card-header>
       <md-card-header-text>
         <span class="md-title"> Management Portal </span>
@@ -41,7 +41,7 @@
 <br/>
 
 <!-- START widget-->
-<div layout="row" layout-wrap>
+<div layout-gt-sm="row" layout="column" layout-wrap>
   <md-card flex>
     <md-card-header>
       <md-card-avatar>
@@ -122,7 +122,7 @@
 
 <!-- TASKS -->
 <h1 class="md-headline">Progress &amp; Tasks </h1>
-<div flex layout="row" layout-wrap>
+<div flex layout-gt-sm="row" layout="column">
   <div flex layout="column" >
     <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
     <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>

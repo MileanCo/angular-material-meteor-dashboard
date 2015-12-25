@@ -7,9 +7,9 @@
 
         // HEADER TOOLBAR stuff //////////////////////////////
         $scope.notifications = [
-          {icon: "fa fa-twitter", title: "Twitter", text:"You have 5 new followers"},
-          {icon: "fa fa-user", title: " Friend requests", text:"You have 3 new friend requests"},
-          {icon: "fa fa-tasks", title: "Pending tasks", text:"You have 3 pending tasks"},
+          {icon: "fa fa-twitter fa-1x", title: "Twitter", text:"You have 5 new followers"},
+          {icon: "fa fa-user fa-1x", title: " Friend requests", text:"You have 3 new friend requests"},
+          {icon: "fa fa-tasks fa-1x", title: "Pending tasks", text:"You have 3 pending tasks"},
         ];
 
         $scope.messages = [

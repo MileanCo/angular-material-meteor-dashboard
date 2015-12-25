@@ -38,7 +38,7 @@ md-content {
 // set color to white
 div[class*='md-whiteframe-z'] {
   background: #FFFFFF;
-  margin: 18px;
+  margin: 15px;
 }
 
 // LABELS
@@ -48,7 +48,17 @@ div[class*='md-whiteframe-z'] {
   font-size:70%;
 }
 
+a {
+  color:@md-light-blue-500 ;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 // ALL BUTTONS
+md-button {
+  text-transform: none;
+}
 .md-button {
   text-transform: none;
 }
@@ -102,6 +112,7 @@ md-toast.md-info-toast-theme {
     background-color: @md-blue-700 ;
 }
 
+// Top toolbar
 .header-card {
   background-image : url("images/banner_blue-lines-diag_light.jpg");
   background-color: #cccccc;
@@ -110,6 +121,7 @@ md-toast.md-info-toast-theme {
   background-size: 1080px;
 }
 
+// Top-left above Sidebar
 .profile-card {
   height:150px;
   background-size: 300px;

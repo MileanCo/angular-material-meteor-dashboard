@@ -1,5 +1,5 @@
 <div class="bg-grey-900" layout="column" layout-align="start center" layout-fill >
-  <h1 class="md-display-1 color-white"> Angular Material Dashboard </h1>
+  <h1 class="md-display-1 color-white"><a ui-sref="core.dashboard.home"> {{page.SITENAME}} </a> </h1>
   <p></p>
   <md-card class="color-white" md-theme="dark" layout-padding layout="column" layout-sm="column">
     <md-card-title>
@@ -20,6 +20,9 @@
             <input type="password" ng-model="lc.credentials.password"
                    placeholder="password" aria-label="password"/>
           </md-input-container>
+          <div ng-show="lc.error" md-style-color="{'color': 'warn.hue-1'}">
+            <small>{{ lc.error }}</small>
+          </div>
           <md-button class="md-raised md-primary" ng-click="lc.login()"
                      aria-label="login">Go!
           </md-button>
@@ -29,9 +32,6 @@
         <a class="md-accent" ui-sref="core.register">Create an account</a>
       </div>
 
-      <div ng-show="lc.error" class="md-warn">
-        <small>{{ lc.error }}</small>
-      </div>
     </md-card-content>
     <md-divider></md-divider>
     <p>Login with</p>

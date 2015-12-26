@@ -1,6 +1,6 @@
 
 <div layout-gt-sm="row" layout="column" layout-align="center start" >
-  <div flex-gt-sm="66" flex="100" layout="column" >
+  <div flex-gt-sm="66"  layout="column" >
     <div flex layout="row">
       <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
       <widget-stat flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-stat>
@@ -11,7 +11,7 @@
       <widget-stat flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-stat>
     </div>
   </div>
-  <div flex-gt-sm="33" flex="100" class=" md-whiteframe-z2">
+  <div flex-gt-sm="33"  class="md-whiteframe-z2">
     <nvd3 options="sold.options" data="sold.data"></nvd3>
     <!--
     <canvas flex id="doughnut" class="chart chart-doughnut"
@@ -32,7 +32,7 @@
 
 
 <div layout-gt-sm="row" layout="column" >
-  <div flex-gt-sm="55" flex="100" class="md-whiteframe-z2" layout="column">
+  <div flex-gt-sm="55" class="md-whiteframe-z2" layout="column">
       <md-content>
         <md-tabs md-autoselect md-border-bottom>
             <md-tab label="one">
@@ -60,7 +60,7 @@
   </div>
 
   <!-- UPDATE SOCIAL STATUS -->
-  <div flex-gt-sm="45" flex="100" class="md-whiteframe-z2" layout="column" layout-padding>
+  <div flex-gt-sm="45" class="md-whiteframe-z2" layout="column" layout-padding>
     <md-input-container flex>
       <label>Status </label>
       <input name="status" ng-model="status" placeholder="Write something..."
@@ -80,9 +80,9 @@
   </div>
 </div>
 
-<div flex layout-gt-sm="row" layout="column" >
+<div layout-gt-sm="row" layout="column" >
   <!-- TASKS -->
-  <div flex-gt-sm="55" flex="100" layout="column" layout-wrap>
+  <div flex-gt-sm="55" flex layout="column" layout-wrap>
     <h1 class="md-headline">Progress &amp; Tasks </h1>
     <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
     <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
@@ -91,7 +91,7 @@
   </div>
 
   <!-- TIMELINE -->
-  <div flex-gt-sm="45" flex="100" >
+  <div flex-gt-sm="45" flex >
     <h1 class="md-headline">
       Activities
     </h1>

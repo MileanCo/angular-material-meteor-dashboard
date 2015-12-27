@@ -5,7 +5,8 @@
 * Write docs
 * Comments everywhere! 
 * Pages -> Login, Register, ForgotPwd, etc.
-* Fix widgets
+* Make grunt/bower/MEAN version! 
+
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

@@ -79,6 +79,14 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
       },
       //controller: 'LoginCtrl',
     })
+    .state('core.documentation', {
+      url: '/documentation',
+      templateUrl: 'client/modules/core/views/documentation.ng.html',
+      ncyBreadcrumb: {
+        label: 'documentation' // display Page title still
+      },
+      controller: 'DocumentationCtrl',
+    })
     // DASHBOARD /////// /////// //////// //////////
     .state('core.dashboard', {
       url: '/dashboard',

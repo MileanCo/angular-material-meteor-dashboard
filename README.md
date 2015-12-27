@@ -4,6 +4,8 @@
 * CODE to use:
     * https://github.com/Xerdi/Material-Design-Flipper
     * http://codepen.io/MattiaAstorino/pen/zxRayG/
+    * http://codepen.io/deltacoast/pen/azXKrZ/ 
+
 * Write docs
 * Comments everywhere! 
 * Pages -> Login, Register, ForgotPwd, etc.

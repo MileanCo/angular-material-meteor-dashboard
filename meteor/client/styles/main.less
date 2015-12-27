@@ -1,5 +1,8 @@
 // IMPORTS
-@import "material-colors/colors.less";
+
+// DEFINEs PRIMARY, ACCENT, & WARN SHADES
+@import "material-colors/md-theme.less";
+
 
 html, body {
   height: 100%;
@@ -49,7 +52,7 @@ div[class*='md-whiteframe-z'] {
 }
 
 a {
-  color:@md-light-blue-500 ;
+  color:@md-accent ;
 }
 a:hover {
   text-decoration: underline;
@@ -101,15 +104,15 @@ md-card.md-dark {
 // TOAST
 md-toast.md-success-toast-theme {
     //background-color: #67E54E;//green;
-    background-color: @md-green-600 ;
+    background-color: @md-success ;
 }
 md-toast.md-error-toast-theme {
     //background-color: #FF922B;
-    background-color: @md-red-600 ;
+    background-color: @md-error ;
 }
 md-toast.md-info-toast-theme {
     //background-color: #55BEFF;
-    background-color: @md-blue-700 ;
+    background-color: @md-info ;
 }
 
 // Top toolbar

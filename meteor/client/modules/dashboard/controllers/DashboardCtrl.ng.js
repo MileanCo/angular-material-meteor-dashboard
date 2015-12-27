@@ -22,6 +22,8 @@ angular.module("app.dashboard")
          height: 255,
          x: function(d) {return d.key;},
          y: function(d) {return d.y;},
+         donut: true,          //Turn on Donut mode. Makes pie chart look tasty!
+         donutRatio : 0.35,     //Configure how big you want the donut hole size to be.
          showLabels: false,
          duration: 700,
          labelThreshold: 0.01,

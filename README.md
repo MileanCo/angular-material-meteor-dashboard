@@ -1,12 +1,14 @@
 # TO-DO #
 * Refactor core
 * Move header Menus into JS on header toolbar 
-* https://github.com/Xerdi/Material-Design-Flipper
+* CODE to use:
+    * https://github.com/Xerdi/Material-Design-Flipper
+    * http://codepen.io/MattiaAstorino/pen/zxRayG/
 * Write docs
 * Comments everywhere! 
 * Pages -> Login, Register, ForgotPwd, etc.
 * Make grunt/bower/MEAN version! 
-
+* CSS variables for primary, accent, & warn shades!!
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

@@ -10,7 +10,6 @@
 * Comments everywhere! 
 * Pages -> Login, Register, ForgotPwd, etc.
 * Make grunt/bower/MEAN version! 
-* CSS variables for primary, accent, & warn shades!!
 
 Links:
 * http://codepen.io/zavoloklom/pen/dIgco

@@ -11,10 +11,27 @@
       <span class="md-subhead">{{comments}}</span>
     </md-card-title-text>
 
-    <md-card-title-media layout="row" layout-align="end center">
-        <md-button class="md-icon-button" aria-label="Details" >
+    <md-card-title-media>
+      <!-- DETAILS menu -->
+      <md-menu md-menu-origin md-position-mode="target-right target" >
+        <md-button class="md-icon-button" aria-label="Details" ng-click="$mdOpenMenu($event)">
           <md-icon md-font-set="material-icons"> more_vert </md-icon>
         </md-button>
+        <md-menu-content width="3">
+            <!-- LOGIN -->
+            <md-menu-item>
+              <md-button ui-sref="#" ><md-icon md-font-set="material-icons"> favorite </md-icon> Favorite
+              </md-button>
+            </md-menu-item>
+            <!-- REGISTER -->
+            <md-menu-item>
+              <md-button ui-sref="#"><md-icon md-font-set="material-icons"> more_horiz </md-icon> Details </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ui-sref="#"><md-icon md-font-set="material-icons"> power_settings_new </md-icon> Action </md-button>
+            </md-menu-item>
+          </md-menu-content>
+      </md-menu>
     </md-card-title-media>
   </md-card-title>
   <!--

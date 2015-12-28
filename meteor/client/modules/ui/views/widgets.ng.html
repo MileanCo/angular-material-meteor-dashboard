@@ -1,45 +1,47 @@
+<!-- MATERIAL WIDGETS -->
+<h1 class="md-headline">Material Widget Cards</h1>
+<div layout="row">
+  <div flex="50" layout="column" >
+      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
+      <widget-card flex title="Build Success!" comments="1923 tests passed" colour="success" icon="fa fa-graduation-cap"></widget-card>
+      <widget-card flex title="Ready" comments="10/10 servers connected" colour="info" icon="fa fa-thumbs-up"></widget-card>
+  </div>
+  <div flex="50" layout="column" >
+      <widget-card flex title="Build failed" comments="Syntax error on line 12" colour="error" icon="fa fa-minus-square"></widget-card>
+      <widget-card flex title="Building..." comments="3 builds are running" colour="warn" icon="fa fa-link"></widget-card>
+  </div>
+</div>
+
+
+<!-- TASKS -->
+<h1 class="md-headline">Progress &amp; Tasks </h1>
+<div flex layout-gt-sm="row" layout="column">
+  <div flex layout="column" >
+    <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
+    <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
+  </div>
+  <div flex layout="column" >
+    <widget-task flex title="Research" comments="Progress on research of new technology" icon="fa-circle-o-notch fa-spin" type="info" number="44"> </widget-task>
+    <widget-task flex title="Disk Space" stat="375 / 400 GB" comments="Web space utilized" icon="fa-folder-o" type="danger" number="94"> </widget-task>
+  </div>
+</div>
+
+
+<!-- BOOTSTRAP WIDGETS
+<h1 class="md-headline">Bootstrap Widgets </h1>
 <div layout-gt-md="row" layout="column"  layout-align="center start">
   <div flex layout="column" layout-align="center start">
-    <div flex layout="row">
-      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
+    <div flex="50" layout="row">
       <widget-stat flex title="Build Success!" comments="1923 tests passed" colour="success" icon="fa fa-graduation-cap"></widget-stat>
       <widget-stat flex title="Ready" comments="10/10 servers connected" colour="info" icon="fa fa-thumbs-up"></widget-stat>
     </div>
-    <div flex layout="row">
+    <div flex="50" layout="row">
       <widget-stat flex title="Build failed" comments="Syntax error on line 12" colour="danger" icon="fa fa-minus-square"></widget-stat>
       <widget-stat flex title="Building..." comments="3 builds are running" colour="warning" icon="fa fa-link"></widget-stat>
     </div>
   </div>
-
-  <md-card flex>
-    <md-card-header>
-      <md-card-header-text>
-        <span class="md-title"> Management Portal </span>
-        <span class="md-subhead"> Database control system </span>
-      </md-card-header-text>
-    </md-card-header>
-    <img ng-src="images/cards/micro_chip.jpg" class="md-card-image" alt="Micro chip">
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-subhead">Control builds from this page</span>
-      </md-card-title-text>
-    </md-card-title>
-    <md-card-actions layout="row" layout-align="start center">
-      <md-card-icon-actions>
-        <md-button class="md-icon-button" aria-label="new">
-          <md-tooltip >Start new build</md-tooltip>
-          <md-icon md-font-set="material-icons">create_new_folder </md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="cancel">
-          <md-tooltip >Cancel current build</md-tooltip>
-          <md-icon md-svg-icon="md-cancel"></md-icon>
-        </md-button>
-      </md-card-icon-actions>
-    </md-card-actions>
-  </md-card>
 </div>
-<br/>
-
+-->
 <!-- START widget-->
 <div layout-gt-sm="row" layout="column" >
   <md-card flex>
@@ -119,30 +121,61 @@
   </div>
 </div>
 
+<!-- START widget-->
+<div layout-gt-sm="row" layout="column" >
+  <md-card flex>
+      <md-card-header>
+        <md-card-avatar>
+          <img src="images/logo.svg"/>
+        </md-card-avatar>
+        <md-card-header-text>
+          <span class="md-title">Angular</span>
+          <span class="md-subhead">Material</span>
+        </md-card-header-text>
+      </md-card-header>
+      <img ng-src="images/cards/gradient-colorful-wallpaper.jpg" class="md-card-image" alt="wallpaper">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Mobile First</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content style="textAlign: top;">
+        <span class="md-subhead">What is Angular Material? </span>
+        <p>
+          For developers using AngularJS, Angular Material is the reference implementation of Google's Material Design Specification.
+        </p>
+        <br/>
+        <span class="md-subhead">What is Material Design? </span>
+        <p>
+          Material Design is a specification for a unified system of visual, motion, and interaction design that adapts across different devices and different screen sizes.
+        </p>
+      </md-card-content>
+    </md-card>
 
-<!-- TASKS -->
-<h1 class="md-headline">Progress &amp; Tasks </h1>
-<div flex layout-gt-sm="row" layout="column">
-  <div flex layout="column" >
-    <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
-    <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
-  </div>
-  <div flex layout="column" >
-    <widget-task flex title="Research" comments="Progress on research of new technology" icon="fa-circle-o-notch fa-spin" type="info" number="44"> </widget-task>
-    <widget-task flex title="Disk Space" stat="375 / 400 GB" comments="Web space utilized" icon="fa-folder-o" type="danger" number="94"> </widget-task>
-  </div>
-</div>
-
-
-<!-- TO DO: MAKE THESE SAME WIDTH AS OTHER CARDS.... -->
-<div layout="row">
-  <div flex="50" layout="column" >
-      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
-      <widget-card flex title="Build Success!" comments="1923 tests passed" colour="success" icon="fa fa-graduation-cap"></widget-card>
-      <widget-card flex title="Ready" comments="10/10 servers connected" colour="info" icon="fa fa-thumbs-up"></widget-card>
-  </div>
-  <div flex="50" layout="column" >
-      <widget-card flex title="Build failed" comments="Syntax error on line 12" colour="error" icon="fa fa-minus-square"></widget-card>
-      <widget-card flex title="Building..." comments="3 builds are running" colour="warn" icon="fa fa-link"></widget-card>
-  </div>
+  <md-card flex>
+    <md-card-header>
+      <md-card-header-text>
+        <span class="md-title"> Management Portal </span>
+        <span class="md-subhead"> Database control system </span>
+      </md-card-header-text>
+    </md-card-header>
+    <img ng-src="images/cards/micro_chip.jpg" class="md-card-image" alt="Micro chip">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-subhead">Control builds from this page</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-card-icon-actions>
+        <md-button class="md-icon-button" aria-label="new">
+          <md-tooltip >Start new build</md-tooltip>
+          <md-icon md-font-set="material-icons">create_new_folder </md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="cancel">
+          <md-tooltip >Cancel current build</md-tooltip>
+          <md-icon md-svg-icon="md-cancel"></md-icon>
+        </md-button>
+      </md-card-icon-actions>
+    </md-card-actions>
+  </md-card>
 </div>

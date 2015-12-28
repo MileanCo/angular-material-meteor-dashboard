@@ -1,14 +1,12 @@
 <md-card class="md-{{colour}}">
   <md-card-title layout="row" layout-align="start start">
-    <md-card-title-media>
-      <div class="md-media-sm card-media">
-        <i flex class="{{icon}} fa-3x"></i>
-      </div>
-    </md-card-title-media>
+    <div class="md-media-sm card-media" style="padding: 0 25px 0 0; ">
+      <i flex class="{{icon}} fa-3x"></i>
+    </div>
+    <!-- </md-card-title-media> -->
 
     <md-card-title-text class="md-{{colour}}">
-      <h1 class="md-headline">{{title}}</h1>
-      <span class="md-subhead">{{comments}}</span>
+      <span class="md-display-2">{{title}}</span>
     </md-card-title-text>
 
     <md-card-title-media>
@@ -34,6 +32,9 @@
       </md-menu>
     </md-card-title-media>
   </md-card-title>
+  <md-card-content layout="row" layout-align="start start">
+    <span class="md-subhead">{{comments}}</span>
+  </md-card-content>
   <!--
   <md-card-actions layout="row" layout-align="end center">
     <md-button class="md-icon-button" aria-label="Details" >

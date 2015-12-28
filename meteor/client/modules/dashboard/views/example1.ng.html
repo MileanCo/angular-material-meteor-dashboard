@@ -1,16 +1,25 @@
 
 <div layout-gt-sm="row" layout="column" layout-align="center start" >
+  <!--
   <div flex-gt-sm="66"  layout="column" >
     <div flex layout="row">
-      <!--<widget-stat flex number="6" comments="New comments!" colour="primary" type="comments"></widget-stat>-->
-      <widget-stat flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-stat>
-      <widget-stat flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-stat>
+      <widget-card flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-card>
+      <widget-card flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-card>
     </div>
     <div flex layout="row">
-      <widget-stat flex title="9" comments="Open Tasks" colour="default" icon="fa fa-tasks"></widget-stat>
-      <widget-stat flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-stat>
+      <widget-card flex title="9" comments="Open Tasks" colour="default" icon="fa fa-tasks"></widget-card>
+      <widget-card flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-card>
     </div>
-  </div>
+  </div>-->
+    <div flex="33" layout="column" >
+        <widget-card flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-card>
+        <widget-card flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-card>
+    </div>
+    <div flex="33" layout="column" >
+        <widget-card flex class="md-info hue-2" title="9" comments="Open Tasks" icon="fa fa-tasks"></widget-card>
+        <widget-card flex title="2,893" comments="Customers" colour="warn" icon="fa fa-star-o"></widget-card>
+    </div>
+
   <div flex-gt-sm="33"  class="md-whiteframe-z2">
     <nvd3 options="sold.options" data="sold.data"></nvd3>
     <!--

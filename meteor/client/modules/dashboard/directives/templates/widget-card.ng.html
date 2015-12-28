@@ -1,5 +1,29 @@
 <md-card class="md-{{colour}}">
-  <md-card-title style="text-align: top;">
+  <md-card-title layout="row" layout-align="start start">
+    <md-card-title-media>
+      <div class="md-media-sm card-media">
+        <i flex class="{{icon}} fa-3x"></i>
+      </div>
+    </md-card-title-media>
+
+    <md-card-title-text class="md-{{colour}}">
+      <h1 class="md-headline">{{title}}</h1>
+      <span class="md-subhead">{{comments}}</span>
+    </md-card-title-text>
+
+    <md-card-title-media layout="row" layout-align="end center">
+        <md-button class="md-icon-button" aria-label="Details" >
+          <md-icon md-font-set="material-icons"> more_vert </md-icon>
+        </md-button>
+    </md-card-title-media>
+  </md-card-title>
+  <!--
+  <md-card-actions layout="row" layout-align="end center">
+    <md-button class="md-icon-button" aria-label="Details" >
+      <md-icon md-font-set="material-icons"> more_vert </md-icon>
+    </md-button>
+  </md-card-actions>
+  <md-card-title layout="row" layout-align="start start">
     <md-card-title-media>
       <div class="md-media-sm card-media">
         <i flex class="{{icon}} fa-3x"></i>
@@ -9,10 +33,30 @@
       <h1 class="md-headline">{{title}}</h1>
       <span class="md-subhead">{{comments}}</span>
     </md-card-title-text>
-    <md-button class="md-icon-button" aria-label="Details">
-      <md-icon md-font-set="material-icons"> more_vert </md-icon>
-    </md-button>
   </md-card-title>
+-->
+<!--
+<md-card-title-text class="md-{{colour}}">
+  <h1 class="md-headline">{{title}}</h1>
+  <span class="md-subhead">{{comments}}</span>
+</md-card-title-text>
+  <md-card-content layout="row">
+    <div class="md-media-xl card-media">
+      <i flex class="{{icon}} fa-3x"></i>
+
+      <md-button class="md-icon-button" aria-label="Details">
+        <md-icon md-font-set="material-icons"> more_vert </md-icon>
+      </md-button>
+    </div>
+    <div>
+      <h1 class="md-headline">{{title}}</h1>
+      <span class="md-subhead">{{comments}}</span>
+    </div>
+    <md-card-actions layout="column">
+
+    </md-card-actions>
+  </md-card-content>
+  -->
   <!--
     <md-card-actions layout="row" layout-align="end center">
       <md-button>Action 1</md-button>

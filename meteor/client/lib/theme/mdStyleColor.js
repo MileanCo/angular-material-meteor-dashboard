@@ -1,5 +1,9 @@
 /**
-Get md theme colors in other HTML elements! (non-md)
+* Get md theme colors in other HTML elements! (non-md)
+* Use styles/material-colors/colors.css for class colors
+  ex) class="color-red-100"
+* MD COLOR VARS in your CSS in styles/material-colors/colors.less
+  ex) color: @color-red-100
 
 USAGE:
 <md-button md-style-color="{'background-color': 'hue-1'}">My Button</md-button>
@@ -30,8 +34,8 @@ USAGE:
       // CUSTOMIZE THEME COLORS HERE
       $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey', {default:"800"})
-        .accentPalette('light-blue')
-        .warnPalette('yellow', {default: '900'})
+        .accentPalette('light-blue', {default: '200', "hue-2":"300", "hue-3":"500"})
+        .warnPalette('yellow', {default: '500', "hue-2":"700", "hue-3":"800"})
         //.backgroundPalette("white")
         ;
 

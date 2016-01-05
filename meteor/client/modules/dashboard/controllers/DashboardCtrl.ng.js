@@ -14,6 +14,14 @@ angular.module("app.dashboard")
     // Map
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
+    var colorArray = ['#4fc3f7', '#e1f5fe', '#fdd835', '#00FFFF']; // ffeb3b 
+    $scope.colorFunction = function() {
+    	return function(d, i) {
+        	return colorArray[i];
+    	};
+    }
+
+
     // SOLD CHART
     $scope.sold = {};
     $scope.sold.options = {
@@ -28,6 +36,7 @@ angular.module("app.dashboard")
          duration: 700,
          labelThreshold: 0.01,
          labelSunbeamLayout: true,
+         color: $scope.colorFunction(),
          legend: {
            /**
            "margin": {
@@ -74,6 +83,7 @@ angular.module("app.dashboard")
                 duration: 1400,
                 stacked: true,
                 showControls: false,
+                color: $scope.colorFunction(),
                 xAxis: {
                     axisLabel: 'Time (months)',
                     showMaxMin: false,

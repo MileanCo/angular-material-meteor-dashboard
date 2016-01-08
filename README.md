@@ -1,6 +1,5 @@
 # TO-DO #
 * Refactor core
-* Move header Menus into JS on header toolbar 
 * CODE to use:
     * https://github.com/Xerdi/Material-Design-Flipper
     * http://codepen.io/MattiaAstorino/pen/zxRayG/

@@ -5,6 +5,12 @@
     .controller('MenuCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $state, $location, $log, MenuService) {
         var vm = this;
 
+        // PROFILE CARD
+        $scope.user = {};
+        $scope.user.name = "Obiwan Kenobi";
+        $scope.user.role = "Web Developer";
+        $scope.user.location = "Raleigh, NC, USA";
+
         // HEADER TOOLBAR stuff //////////////////////////////
         $scope.notifications = [
           {icon: "fa fa-twitter fa-1x", title: "Twitter", text:"You have 5 new followers"},

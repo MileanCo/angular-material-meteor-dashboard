@@ -1,8 +1,7 @@
 Meteor.startup(function (api) {
   if (Records.find().count() === 0) {
     // INSERT DATA TO MONGO
-
-    console.log("Loading Records for Division I!");
+    console.log("Inserting Data to Mongo from packages/data-generator-json/data");
     // data-generator-json package
     // insert EACH record
     _.each(DataGenerator.records_divI, function (records_divI) {
@@ -11,7 +10,7 @@ Meteor.startup(function (api) {
   }
   if (Teams.find().count() != 0) {
     Teams.remove({});
-    console.log("Loading Teams for Division I!");
+    console.log("Inserting Data to Mongo from packages/data-generator-json/data");
     // insert EACH team
     _.each(DataGenerator.teams_divI, function (teams_divI) {
       Teams.insert(teams_divI);

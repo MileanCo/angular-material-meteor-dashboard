@@ -12,6 +12,7 @@
           'ngAnimate',
           'ngMaterial',
           'ngMessages',
+          'ngSanitize',
           'ncy-angular-breadcrumb',
         ]);
 })();

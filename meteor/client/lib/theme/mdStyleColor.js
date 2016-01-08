@@ -34,7 +34,7 @@ USAGE:
       // CUSTOMIZE THEME COLORS HERE
       $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey', {default:"800"})
-        .accentPalette('light-blue', {default: '200', "hue-2":"300", "hue-3":"500"})
+        .accentPalette('light-blue', {default: '300', "hue-2":"400", "hue-3":"500"})
         .warnPalette('yellow', {default: '500', "hue-2":"700", "hue-3":"800"})
         //.backgroundPalette("white")
         ;

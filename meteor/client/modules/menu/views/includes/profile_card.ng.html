@@ -3,9 +3,9 @@
     <md-list-item class="md-3-line" style="padding:5px; ">
       <img src="images/avatars/businessman.png" class="md-avatar" />
       <div class="md-list-item-text" layout="column">
-        <h3 class="md-title"> <a ui-sref="core.dashboard.home"> Obiwan Kenobi </a> </h3>
-        <h4>Web Developer</h4>
-        <p>Raleigh, NC</p>
+        <h3 class="md-title"> <a ui-sref="core.dashboard.home"> {{user.name}} </a> </h3>
+        <h4>{{user.role}}</h4>
+        <p>{{user.location}}</p>
       </div>
     </md-list-item>
   </md-list>

@@ -83,7 +83,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
       url: '/documentation',
       templateUrl: 'client/modules/core/views/documentation.ng.html',
       ncyBreadcrumb: {
-        label: 'documentation' // display Page title still
+        label: 'Documentation' // display Page title still
       },
       controller: 'DocumentationCtrl',
     })

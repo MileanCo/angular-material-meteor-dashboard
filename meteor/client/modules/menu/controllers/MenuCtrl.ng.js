@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app.menu')
-    .controller('MenuCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $state, $location, $log, MenuService) {
+    .controller('MenuCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $state, $location, $log, SideMenuService) {
         var vm = this;
 
         // PROFILE CARD
@@ -68,7 +68,7 @@
         // SIDEMENU STUFF //////////////////////////////
         //vars for menu-link and menu-toggle
         vm.autoFocusContent = false;
-        vm.menu = MenuService;
+        vm.menu = SideMenuService;
 
         console.log('menu: ', vm.menu)
 
@@ -78,16 +78,16 @@
         };
 
         vm.isOpen = function (section) {
-          return MenuService.isSectionSelected(section);
+          return SideMenuService.isSectionSelected(section);
         }
 
         vm.toggleOpen = function (section) {
-          MenuService.toggleSelectSection(section);
+          SideMenuService.toggleSelectSection(section);
         }
 
         vm.isSectionSelected = function (section) {
           var selected = false;
-          var openedSection = MenuService.openedSection;
+          var openedSection = SideMenuService.openedSection;
           if(openedSection === section){
             selected = true;
           }

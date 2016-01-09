@@ -3,7 +3,7 @@
   'use strict';
 
   angular.module('app.menu')
-    .factory('MenuService', ['$location', function ($location) {
+    .factory('SideMenuService', ['$location', function ($location) {
         var sections = [
           { name: 'Home',
             state: 'core.home',

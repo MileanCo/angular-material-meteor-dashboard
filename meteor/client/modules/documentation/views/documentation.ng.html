@@ -55,6 +55,7 @@
 
   <h1 class="md-display-2">Structure</h1>
   <div class="md-padding md-whiteframe-z2">
+      <h1 class="md-display-1">Main Directories</h1>
     <table class="table table-striped table-hover">
       <thead>
         <tr>
@@ -64,6 +65,21 @@
         </tr>
       </thead>
       <tr ng-repeat="(key, value) in folders"  >
+        <td>{{$index}} </td> <td> {{key}} </td> <td><p ng-bind-html="value"></p></td>
+      </tr>
+    </table>
+    <br>
+    <md-divider></md-divider>
+    <h1 class="md-display-1">App Modules</h1>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Folder </th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="(key, value) in modules"  >
         <td>{{$index}} </td> <td> {{key}} </td> <td><p ng-bind-html="value"></p></td>
       </tr>
     </table>

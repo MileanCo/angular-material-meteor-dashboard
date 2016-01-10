@@ -17,6 +17,7 @@
       <li><a href="#seed_project"> Seed Project </a> </li>
     </ol>
   </div>
+  <br>
   <a name="overview"></a>
   <h1 class="md-display-2">Overview</h1>
   <div class="md-padding md-whiteframe-z2">
@@ -29,6 +30,7 @@
 
 
   </div>
+  <br>
   <a name="getting_started"></a>
   <h1 class="md-display-2">Getting Started</h1>
   <div class="md-padding md-whiteframe-z2">
@@ -37,7 +39,7 @@
       <ul>
         <li>Do not start from scratch! Use existing modules, code, etc. to jump-start your ideas. </li>
         <li>Use Firefox Inspector, Debugger, Network, and Console tools to debug your app. (Access via "Right-Click->Inspect Element") </li>
-        <li>Most errors you come across can be found on Google. If not, you may be doing something completely incorrect </li>
+        <li>Most errors you come across can be found on Google. If not, you may be doing something incorrect. </li>
         <li> </li>
 
       </ul>
@@ -57,7 +59,7 @@
 
 
   </div>
-
+  <br>
   <a name="structure"></a>
   <h1 class="md-display-2">Structure</h1>
   <div class="md-padding md-whiteframe-z2">
@@ -92,23 +94,29 @@
       </tr>
     </table>
   </div>
-
+  <br>
   <a name="builds"></a>
   <h1 class="md-display-2">Builds</h1>
   <div class="md-padding md-whiteframe-z2">
 
   </div>
-
+  <br>
   <a name="usage"></a>
   <h1 class="md-display-2">Usage</h1>
   <div class="md-padding md-whiteframe-z2">
 
   </div>
-
+  <br>
   <a name="themes"></a>
   <h1 class="md-display-2">Themes</h1>
-  <div class="md-padding md-whiteframe-z2">
-
+  <div class="md-padding md-whiteframe-z2" >
+    To change the colors of this theme you need to edit the following files:
+    <br>
+    <ul>
+      <li><i>client/lib/theme/mdStyleColor.js</i> - contains Material theme colors for primary, accent, and warn colors.</li>
+      <li><i>client/styles/material-colors/md-theme.less</i> - contains LESS variables (essentially CSS) for primary, accent, success, info, error, and warn colors.</li>
+      <li><i>client/modules/dashboard/controllers/DashboardCtrl.js </i> - colorFunction() contains color definitions for the chart. </li>
+    </ul>
   </div>
 
   <a name="directives"></a>
@@ -116,11 +124,28 @@
   <div class="md-padding md-whiteframe-z2">
 
   </div>
-
+  <br>
   <a name="seed_project"></a>
   <h1 class="md-display-2">Seed Project</h1>
   <div class="md-padding md-whiteframe-z2">
+    To jump start a new application, use the "seed project" as a skeleton for the base of your project. <a href="www.meteor.com">Meteor</a> is a great choice to pick as it streamlines
+    the development of both backend and frontend systems using all JavaScript, with many systems already developed such as authentication.
+    <br><br>
+    The seed project includes the following features:
+    <ul>
+      <li> Google Material design </li>
+      <li> Icons</li>
+      <li> Chart technology
+        <ul>
+          <li><a href="https://developers.google.com/chart/interactive/docs/gallery/barchart">Material Charts</a></li>
+          <li><a href="http://krispo.github.io/angular-nvd3/">nvD3</a> </li>
+          <li><a href="http://www.chartjs.org/">ChartJS.org</a> </li>
+        </ul>
+      </li>
+      <li>  </li>
+      <li>  </li>
 
+    </ul>
   </div>
 
 </div>

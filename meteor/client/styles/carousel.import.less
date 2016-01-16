@@ -1,28 +1,20 @@
-/* Carousel base class */
-.carousel {
-  height: 400px;
-  //height:100%;
-  margin-bottom: 60px;
-  width: 100%;
-  margin: 0 auto;
-
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 400px;
+  //height: 400px;
   //height:100%;
   background-color: #777;
 }
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  //min-width: 50%;
-  height: 400px;
-  //height:100%;
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    //margin: 0 auto;
+    //height: 320px;
+    z-index: 10;
+    top: 0;
+    bottom: auto;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    //max-height: 1000px;
 }

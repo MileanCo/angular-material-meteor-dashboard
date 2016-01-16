@@ -14,7 +14,8 @@ angular.module("app.dashboard")
     // Map
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
-    var colorArray = ['#4fc3f7', '#e1f5fe', '#fdd835', '#00FFFF']; // ffeb3b 
+    // TO GET GRAPH MATERIAL COLORS: https://www.google.com/design/spec/style/color.html#color-color-palette
+    var colorArray = ['#4fc3f7', '#e1f5fe', '#fdd835', '#00FFFF']; // ffeb3b
     $scope.colorFunction = function() {
     	return function(d, i) {
         	return colorArray[i];
@@ -195,7 +196,7 @@ angular.module("app.dashboard")
 
     $scope.complete = false;
     // Profile should always be {}
-    $scope.profile = $rootScope.currentUser.profile;
+    //$scope.profile = $rootScope.currentUser.profile;
 
     // Set 'selectedTab' for highlight/underscore [DOES NOT CHANGE STATE]
     $scope.$on('$stateChangeSuccess', function (event, toState) {

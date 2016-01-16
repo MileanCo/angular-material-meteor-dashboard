@@ -12,10 +12,8 @@
   <!-- MAIN CONTENT -->
   <md-content class="gray-bg" flex>
     <!-- HEADER [blue] CARD -->
-    <div class="header-card md-padding" >
-      <h1 class="page-header" ng-bind="page.title"> </h1>
-      <ncy-breadcrumb ncy-breadcrumb-text-separator=' > '></ncy-breadcrumb>
-    </div>
+
+    <div ng-if="state_name != 'core.home'" ng-include="'client/modules/core/views/includes/header-img.include.ng.html'"></div>
 
     <!-- UI CONTENT VIEW -->
     <ui-view layout="column" > </ui-view >

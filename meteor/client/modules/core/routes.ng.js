@@ -3,13 +3,14 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
     // We can catch the error thrown when the $requireUser promise is rejected
     // and redirect the user back to the main page
     if (error === 'AUTH_REQUIRED') {
+      console.log("TO-DO: AUTH REQ, GO TO HOME");
       $state.go('core.home');
     }
   });
 
   // CUSTOMIZE
   $rootScope.page = {
-        SITENAME : "Frozen",
+        SITENAME : "AMM Dashboard",
         // Sets page title
         setTitle: function(title) {
             this.title = title ;
@@ -24,6 +25,8 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
       } else {
         $rootScope.page.setTitle(""); // no title if none specified
       }
+      // For Header to display Blue Breadcrumbs Header or nah
+      $rootScope.state_name = $state.current.name;
       // Scroll to top of page on refresh
       $window.scrollTo(0, 0);
   });
@@ -101,7 +104,18 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
       resolve: {
         "currentUser": function($meteor){
           // Resolves the promise successfully if a user is authenticated and rejects otherwise.
-          return $meteor.requireUser();
+          //console.log($meteor.requireUser());
+
+          var user = {
+            emails: [ {address:"admin@yoursite.com", verified:false} ],
+            profile: {
+              first_name:"Administrator",
+              last_name: "Smith",
+            },
+          };
+          console.log(user);
+
+          return user; //$meteor.requireUser() ; // MODIFY (add this): $meteor.requireUser();
         }
       }
     })
@@ -109,7 +123,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           url: '/home',
           templateUrl: 'client/modules/dashboard/views/example1.ng.html',
           ncyBreadcrumb: {
-            label: 'Home'
+            label: 'Example 1'
           },
           data: {
             'selectedTab': 0,

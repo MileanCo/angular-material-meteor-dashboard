@@ -1,5 +1,5 @@
 <h2 flex class="md-display-1 "> Checkout </h2>
-<div class="md-whiteframe-z2 md-padding" layout="column" layout-align="space-around start">
+<div class="md-whiteframe-z2 md-padding" layout="column" layout-align="start stretch">
   <span class="md-subhead color-light-blue-500">Price: $ {{price}} </span>
   <form class="checkout">
     <p></p>
@@ -31,7 +31,7 @@
   </form>
   <div flex layout="column"  layout-align="space-around center">
     <div flex>
-      <md-button class="md-raised md-primary" ui-sref="core.forms.wizard.launch" aria-label="next"> Purchase </md-button>
+      <md-button class="md-raised md-accent" ui-sref="core.forms.wizard.launch" aria-label="next"> Purchase </md-button>
     </div>
     <div flex>
       <md-button class="md-raised" ui-sref="core.forms.wizard.profile" aria-label="next"> Back </md-button>

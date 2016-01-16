@@ -1,4 +1,4 @@
-<div layout="column" layout-align="start start">
+<div layout="column" layout-align="start stretch">
   <h2 flex class="md-display-1 color-light-blue-500"> Thank You! </h2>
   <div flex class="md-whiteframe-z2 md-padding" layout="column" ng-hide="searched">
     <span flex class="md-subhead">Enjoy your new premium subscription service. Your card was accepted. Please check your email for further instructions. </span>
@@ -32,10 +32,11 @@
       <h2> Results </h2>
 
     </div>
-    <div flex ng-hide="searched">
-      <md-button type="submit" class="md-raised md-primary">Launch</md-button>
-    </div>
-    <div flex>
+
+    <div flex layout="column"  layout-align="space-around center">
+      <div flex ng-hide="searched">
+        <md-button type="submit" class="md-raised md-accent">Launch</md-button>
+      </div>
       <md-button class="md-raised" ui-sref="core.forms.wizard.profile" ng-click="exploreAgain()" aria-label="back"> Explore Again! </md-button>
     </div>
   </div>

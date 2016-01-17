@@ -1,0 +1,10 @@
+<div class="menu-link">
+  <!-- ng-class="{'{{section.icon}}' : true}"  -->
+  <md-button ng-click="focusSection()" ui-sref-active="active" ui-sref="{{section.state}}">
+    <!-- <md-icon md-font-set="material-icons">{{section.icon}}</md-icon>-->
+    {{section.name}}
+    <span class="md-visually-hidden" ng-if="isSelected()">
+      current page
+    </span>
+  </md-button>
+</div>

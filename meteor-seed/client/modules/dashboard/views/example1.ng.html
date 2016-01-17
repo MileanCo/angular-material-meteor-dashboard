@@ -1,0 +1,91 @@
+<div layout-gt-sm="row" layout="column" layout-align="center start" >
+  <!--
+  <div flex-gt-sm="66"  layout="column" >
+    <div flex layout="row">
+      <widget-card flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-card>
+      <widget-card flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-card>
+    </div>
+    <div flex layout="row">
+      <widget-card flex title="9" comments="Open Tasks" colour="default" icon="fa fa-tasks"></widget-card>
+      <widget-card flex title="2,893" comments="Customers" colour="warning" icon="fa fa-star-o"></widget-card>
+    </div>
+  </div>-->
+    <div flex="33" layout="column" >
+        <widget-card flex title="16,481" comments="Total profit" colour="success" icon="fa fa-dollar"></widget-card>
+        <widget-card flex title="9,214" comments="Followers" colour="info" icon="fa fa-thumbs-up"></widget-card>
+    </div>
+    <div flex="33" layout="column" >
+        <widget-card flex title="9" comments="Open Tasks" icon="fa fa-tasks"></widget-card>
+        <widget-card flex title="2,893" comments="Customers" colour="warn" icon="fa fa-star-o"></widget-card>
+    </div>
+
+  <div flex-gt-sm="33"  class="md-whiteframe-z2">
+    <nvd3 options="sold.options" data="sold.data"></nvd3>
+    <!--
+    <canvas flex id="doughnut" class="chart chart-doughnut"
+      chart-data="doughnut.data" chart-labels="doughnut.labels"
+      chart-legend="true" >
+    </canvas>
+  -->
+  </div>
+</div>
+
+<div layout-gt-sm="row" layout="column" >
+  <div flex-gt-sm="55" class="md-whiteframe-z2" layout="column">
+      <md-content>
+        <md-tabs md-autoselect md-border-bottom>
+            <md-tab label="one">
+              <md-content class="md-padding">
+                <h2 class="md-display-1">Tab One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="two">
+              <md-content class="md-padding">
+                <h2 class="md-display-1">Tab Two</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+              </md-content>
+            </md-tab>
+            <md-tab label="three">
+              <md-content class="md-padding">
+                <h2 class="md-display-2">Tab Three</h2>
+                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+              </md-content>
+            </md-tab>
+        </md-tabs>
+      </md-content>
+  </div>
+
+  <!-- UPDATE SOCIAL STATUS -->
+  <div flex-gt-sm="45" class="md-whiteframe-z2" layout="column" layout-padding>
+    <md-input-container flex>
+      <label>Status </label>
+      <input name="status" ng-model="status" placeholder="Write something..."
+        aria-multiline="true"
+        md-maxlength="120" >
+    </md-input-container>
+    <div flex layout="row">
+      <md-button class="md-icon-button" aria-label="camera">
+        <md-icon md-font-set="material-icons">photo_camera</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="video">
+        <md-icon md-font-set="material-icons">videocam</md-icon>
+      </md-button>
+      <span flex> </span>
+      <md-button class="md-primary" aria-label="Post">Post</md-button>
+    </div>
+  </div>
+</div>
+
+<div layout-gt-sm="row" layout="column" >
+  <!-- TASKS -->
+  <div flex-gt-sm="55" flex layout="column" layout-wrap>
+    <h1 class="md-headline">Progress &amp; Tasks </h1>
+    <widget-task flex title="Bandwidth" stat="71 / 400 GB" comments="Used this month" icon="fa-cab" type="info" number="17"> </widget-task>
+    <widget-task flex title="Q1 Revenue" stat="$ 631,021 / $ 1,000,000" comments="Profit goal progress this quarter" icon="fa-dollar" type="success" number="63"> </widget-task>
+    <widget-task flex title="Research" comments="Progress on research of new technology" icon="fa-circle-o-notch fa-spin" type="info" number="44"> </widget-task>
+    <widget-task flex title="Disk Space" stat="375 / 400 GB" comments="Web space utilized" icon="fa-folder-o" type="danger" number="94"> </widget-task>
+  </div>
+</div>

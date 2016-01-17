@@ -1,0 +1,84 @@
+<md-card class="md-{{colour}}">
+  <md-card-title layout="row" layout-align="start start">
+    <div class="md-media-sm card-media" style="padding: 0 25px 0 0; ">
+      <i flex class="{{icon}} fa-3x"></i>
+    </div>
+    <!-- </md-card-title-media> -->
+
+    <md-card-title-text class="md-{{colour}}">
+      <h1 style="vertical-align: text-top; horizontal-align: text-right;"> {{title}} </h1>
+    </md-card-title-text>
+
+    <md-card-title-media>
+      <!-- DETAILS menu -->
+      <md-menu md-menu-origin md-position-mode="target-right target" >
+        <md-button class="md-icon-button" style="" aria-label="Details" ng-click="$mdOpenMenu($event)">
+          <md-icon md-font-set="material-icons"> more_vert </md-icon>
+        </md-button>
+        <md-menu-content width="3">
+            <!-- LOGIN -->
+            <md-menu-item>
+              <md-button ui-sref="#" ><md-icon md-font-set="material-icons"> favorite </md-icon> Favorite
+              </md-button>
+            </md-menu-item>
+            <!-- REGISTER -->
+            <md-menu-item>
+              <md-button ui-sref="#"><md-icon md-font-set="material-icons"> more_horiz </md-icon> Details </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ui-sref="#"><md-icon md-font-set="material-icons"> power_settings_new </md-icon> Action </md-button>
+            </md-menu-item>
+          </md-menu-content>
+      </md-menu>
+    </md-card-title-media>
+  </md-card-title>
+  <md-card-content layout="row" layout-align="start start">
+    <span class="md-subhead">{{comments}}</span>
+  </md-card-content>
+  <!--
+  <md-card-actions layout="row" layout-align="end center">
+    <md-button class="md-icon-button" aria-label="Details" >
+      <md-icon md-font-set="material-icons"> more_vert </md-icon>
+    </md-button>
+  </md-card-actions>
+  <md-card-title layout="row" layout-align="start start">
+    <md-card-title-media>
+      <div class="md-media-sm card-media">
+        <i flex class="{{icon}} fa-3x"></i>
+      </div>
+    </md-card-title-media>
+    <md-card-title-text class="md-{{colour}}">
+      <h1 class="md-headline">{{title}}</h1>
+      <span class="md-subhead">{{comments}}</span>
+    </md-card-title-text>
+  </md-card-title>
+-->
+<!--
+<md-card-title-text class="md-{{colour}}">
+  <h1 class="md-headline">{{title}}</h1>
+  <span class="md-subhead">{{comments}}</span>
+</md-card-title-text>
+  <md-card-content layout="row">
+    <div class="md-media-xl card-media">
+      <i flex class="{{icon}} fa-3x"></i>
+
+      <md-button class="md-icon-button" aria-label="Details">
+        <md-icon md-font-set="material-icons"> more_vert </md-icon>
+      </md-button>
+    </div>
+    <div>
+      <h1 class="md-headline">{{title}}</h1>
+      <span class="md-subhead">{{comments}}</span>
+    </div>
+    <md-card-actions layout="column">
+
+    </md-card-actions>
+  </md-card-content>
+  -->
+  <!--
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button>Action 1</md-button>
+      <md-button>Action 2</md-button>
+    </md-card-actions>
+  -->
+</md-card>

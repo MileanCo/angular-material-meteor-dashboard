@@ -1,0 +1,16 @@
+<h1 class="md-display-1">User Profile</h1>
+<div layout="column" class="md-whiteframe-z2 md-padding">
+    <form role="form" name="userProfileForm" ng-submit="updateProfile(userProfileForm)" novalidate>
+        <md-input-container flex>
+          <label>First Name</label>
+          <input ng-model="currentUser.profile.first_name" name="first_name" required md-maxlength="40" type="text">
+        </md-input-container>
+
+        <md-input-container flex>
+          <label>Last Name</label>
+          <input ng-model="currentUser.profile.last_name" name="last_name" required md-maxlength="40" type="text">
+        </md-input-container>
+      <p> Email: {{ currentUser.emails[0].address }} </p>
+      <md-button type="submit" class="md-raised" >Update Profile </md-button>
+    </form>
+</div>

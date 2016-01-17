@@ -1,0 +1,198 @@
+// IMPORTS
+
+// DEFINEs PRIMARY, ACCENT, & WARN SHADES
+@import "material-colors/md-theme.less";
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// FIX FIREFOX flexbox
+@-moz-document url-prefix() {
+ #flexible-content{
+      flex: 1;
+    }
+}
+.main_body {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+
+}
+
+md-content {
+  background: white;
+  //border: 1px solid #e1e1e1;
+}
+
+// anything with 'class="gray-bg"'
+.gray-bg {
+  background: #f6f6f6;
+}
+
+// md-whiteframe-z*
+// set color to white
+div[class*='md-whiteframe-z'] {
+  background: #FFFFFF;
+  margin: 15px;
+}
+
+// LABELS
+.notification-label {
+  position:absolute;
+  right:0px;
+  font-size:70%;
+}
+
+a {
+  color:@md-accent ;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+// ALL BUTTONS
+.md-button {
+  text-transform: none;
+  color: #000;
+  min-width: 10em;
+  font-weight: 500;
+}
+.md-raised md-button {
+  text-transform: none;
+}
+.md-primary md-button {
+  text-transform: none;
+  color: #000;
+}
+.md-accent md-button {
+  text-transform: none;
+  color: #000;
+}
+
+.md-button.square {
+  min-width: 42px;
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+}
+
+
+.md-tab {
+  background: white;
+  color: #010101;
+  text-transform: none;
+}
+
+md-content md-tabs {
+  background: #f6f6f6;
+  border: 1px solid #e1e1e1; }
+  md-content md-tabs md-tab-content {
+    background: white; }
+  md-content md-tabs md-tabs-wrapper {
+    background: white; }
+    md-content h1:first-child {
+      margin-top: 0; }
+
+
+// CUSTOM CARDS & WIDGETS
+md-card.md-dark {
+  background-color: @md-grey-800;
+  color: #F4F4F4;
+}
+md-card.md-primary {
+  background-color: @md-primary;
+  color: #F4F4F4;
+}
+md-card.md-accent {
+  background-color: @md-accent;
+  color: #F9F9F9;
+}
+md-card.md-warn {
+  background-color: @md-warn;
+  color: #333;
+}
+md-card.md-success {
+  background-color: @md-success;
+  color: #333;
+}
+md-card.md-error {
+  background-color: @md-error;
+  color: #F4F4F4;
+}
+md-card.md-info {
+  background-color: @md-info;
+  color: #333;
+}
+md-card.md-info.hue-2 {
+  background-color: @md-info-hue-2;
+}
+md-card.md-info.hue-3 {
+  background-color: @md-info-hue-3;
+}
+
+// TOAST
+md-toast.md-success-toast-theme {
+    background-color: @md-success ;
+}
+md-toast.md-error-toast-theme {
+    background-color: @md-error ;
+}
+md-toast.md-info-toast-theme {
+    background-color: @md-info ;
+}
+
+// Top toolbar
+.header-card {
+  background-image : url("images/banner_blue-lines-diag_light_small.jpg");
+  background-color: #cccccc;
+  color:#FFFFFF;
+  height:150px;
+}
+
+// Top-left above Sidebar
+.profile-card {
+  height:150px;
+  //background-size: 300px;
+  background-image : url("images/mnts-nature-small.jpg");
+  background-color: #cccccc;
+  color:#FFFFFF;
+
+}
+
+// Used to display FA icons with Material
+md-icon.fa {
+  display:block;
+  padding-left:0px;
+}
+
+
+// not sure this does anything
+// supposed to fix "first selected item highlight" on notifs drop-downs
+  md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  md-list-item.notifications > p,
+  .notifications md-list-item > .md-list-item-inner > p,
+  .notifications md-list-item .md-list-item-inner > p,
+  .notifications md-list-item .md-list-item-inner > .md-list-item-inner > p {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */ }
+  .listdemoListControls .secondary-button-padding p {
+    padding-right: 100px; }
+
+
+@import "sidemenu.import.less";
+@import "breadcrumbs.import.less";

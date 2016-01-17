@@ -1,0 +1,17 @@
+
+
+<md-tabs md-selected="currentTab" md-stretch-tabs="always" md-align-tabs="top" flex >
+  <md-tab ng-click="goToTab(currentTab)">
+    <md-tab-label>Dashboard</md-tab-label>
+  </md-tab>
+  <md-tab ng-click="goToTab(currentTab)">
+    <md-tab-label>Profile</md-tab-label>
+  </md-tab>
+  <md-tab ng-click="goToTab(currentTab)">
+    <md-tab-label>Instances</md-tab-label>
+  </md-tab>
+</md-tabs>
+
+<div class="md-padding">
+    <ui-view flex> </ui-view>
+</div>

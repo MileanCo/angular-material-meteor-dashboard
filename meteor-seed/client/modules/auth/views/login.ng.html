@@ -1,0 +1,47 @@
+<div class="bg-grey-900" layout="column" layout-align="start center" layout-fill >
+  <h1 class="md-display-1 color-white"><a ui-sref="core.dashboard.home"> {{page.SITENAME}} </a> </h1>
+  <p></p>
+  <md-card class="color-white" md-theme="dark" layout-padding layout="column" layout-sm="column">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Login </span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <form layout="column">
+          <md-input-container>
+            <!-- <md-icon md-svg-icon="content:ic_mail_24px"></md-icon> -->
+            <md-icon md-font-set="material-icons" flex > mail </md-icon>
+            <input type="text" ng-model="lc.credentials.email"
+                   placeholder="email" aria-label="email"/>
+          </md-input-container>
+          <md-input-container>
+            <md-icon md-font-set="material-icons" flex > lock_open </md-icon>
+            <input type="password" ng-model="lc.credentials.password"
+                   placeholder="password" aria-label="password"/>
+          </md-input-container>
+          <div ng-show="lc.error" md-style-color="{'color': 'warn.hue-1'}">
+            <small>{{ lc.error }}</small>
+          </div>
+          <md-button class="md-raised md-primary" ng-click="lc.login()"
+                     aria-label="login">Go!
+          </md-button>
+      </form>
+      <div layout="row" layout-align="space-around center">
+        <a class="md-accent" ui-sref="core.resetpw">Forgot password?</a>
+        <a class="md-accent" ui-sref="core.register">Create an account</a>
+      </div>
+
+    </md-card-content>
+    <md-divider></md-divider>
+    <p>Login with</p>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-button> <i class="fa fa-facebook-square"></i> Facebook</md-button>
+      <md-button> <i class="fa fa-twitter-square"></i> Twitter  </md-button>
+      <md-button> <i class="fa fa-google-plus"></i> Google</md-button>
+    </md-card-actions>
+  </md-card>
+  <p > </p>
+  <!-- FOOTER -->
+  <div flex class="color-white" ng-include="'client/modules/menu/views/includes/footer.ng.html'"></div>
+</div>

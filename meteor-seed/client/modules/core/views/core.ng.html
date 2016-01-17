@@ -1,0 +1,24 @@
+  <!-- SIDEBAR -->
+<div ng-include="'client/modules/menu/views/includes/sidebar.ng.html'"></div>
+
+<!-- MAIN CONTENT -->
+<div layout="column" flex>
+  <!-- TOOLBAR / HEADER -->
+  <div ng-include="'client/modules/menu/views/includes/header_toolbar.ng.html'"></div>
+
+  <!-- SEARCH toolbar-->
+  <div ng-include="'client/modules/menu/views/includes/search_toolbar.ng.html'"></div>
+
+  <!-- MAIN CONTENT -->
+  <md-content class="gray-bg" flex>
+    <!-- HEADER [blue] CARD -->
+
+    <div ng-if="state_name != 'core.home'" ng-include="'client/modules/core/views/includes/header-img.include.ng.html'"></div>
+
+    <!-- UI CONTENT VIEW -->
+    <ui-view layout="column" > </ui-view >
+
+    <!-- FOOTER -->
+    <div class="gray-bg" ng-include="'client/modules/menu/views/includes/footer.ng.html'"></div>
+  </md-content>
+</div>

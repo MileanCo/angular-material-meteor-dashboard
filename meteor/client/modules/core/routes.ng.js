@@ -3,7 +3,6 @@ angular.module("app.core").run(function ($rootScope, $state, $window ) {
     // We can catch the error thrown when the $requireUser promise is rejected
     // and redirect the user back to the main page
     if (error === 'AUTH_REQUIRED') {
-      console.log("TO-DO: AUTH REQ, GO TO HOME");
       $state.go('core.home');
     }
   });
@@ -253,6 +252,13 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           label: 'Material Elements'
         },
         templateUrl: 'client/modules/forms/views/elements.ng.html',
+      })
+      .state('core.forms.layout', {
+        url:'/layout',
+        ncyBreadcrumb: {
+          label: 'Layout'
+        },
+        templateUrl: 'client/modules/forms/views/layout.ng.html',
       })
       // WIZARD ////////////////
       .state('core.forms.wizard', {

@@ -10,6 +10,12 @@
               <li><a href="#app_modules">App Modules </a></li>
           </ul>
       </li>
+      <li><a href="#menus"> Menus </a>
+        <ul>
+            <li><a href="#menu_sidebar">Sidebar</a></li>
+            <li><a href="#menu_top">Top Header </a></li>
+        </ul>
+      </li>
       <li><a href="#builds"> Builds </a> </li>
       <li><a href="#usage"> Usage </a> </li>
       <li><a href="#themes"> Themes </a> </li>
@@ -40,8 +46,7 @@
         <li>Do not start from scratch! Use existing modules, code, etc. to jump-start your ideas. </li>
         <li>Use Firefox Inspector, Debugger, Network, and Console tools to debug your app. (Access via "Right-Click->Inspect Element") </li>
         <li>Most errors you come across can be found on Google. If not, you may be doing something incorrect. </li>
-        <li> </li>
-
+        <li><a href="https://material.angularjs.org/latest/layout/introduction">CSS Flexbox</a> can be a bit tricky. Look at how core.html is structured with all the other modules. Flexbox is very sensitive with the nested use of <code> flex </code>. </li>
       </ul>
 
     </p>
@@ -53,7 +58,13 @@
 
     <h1 class="md-headline">Modify - Make it yours</h1>
     <p>
-
+      <ul>
+        <li> Sidebar </li>
+        <li> Top bar </li>
+        <li> Profile card </li>
+        <li> Theme colors </li>
+        <li> Home page  </li>
+      </ul>
     </p>
 
 
@@ -74,13 +85,14 @@
         </tr>
       </thead>
       <tr ng-repeat="(key, value) in folders"  >
-        <td>{{$index}} </td> <td> {{key}} </td> <td><p ng-bind-html="value"></p></td>
+        <td>{{$index}} </td> <td><code> {{key}}</code> </td> <td><p ng-bind-html="value"></p></td>
       </tr>
     </table>
     <br>
     <md-divider></md-divider>
     <a name="app_modules"></a>
-    <h1 class="md-display-1">App Modules</h1>
+    <h1 class="md-display-1">App Modules </h1>
+    <p>Detailed descriptions of all folders in <code>client/modules</code>.</p>
     <table class="table table-striped table-hover">
       <thead>
         <tr>
@@ -90,9 +102,46 @@
         </tr>
       </thead>
       <tr ng-repeat="(key, value) in modules"  >
-        <td>{{$index}} </td> <td> {{key}} </td> <td><p ng-bind-html="value"></p></td>
+        <td>{{$index}} </td> <td><code>{{key}}</code> </td> <td><p ng-bind-html="value"></p></td>
       </tr>
     </table>
+  </div>
+  <br>
+
+  <a name="menus"></a>
+  <h1 class="md-display-2">Menus</h1>
+  <div class="md-padding md-whiteframe-z2">
+    <p>The main Menu controller is located at: <code>client/lib/modules/menu/MenuCtrl.ng.js</code>. Modify topbar notifications, messages, etc. and Profile card (above sidebar) contents. </p>
+    <a name="menu_sidebar"></a>
+    <h1 class="md-display-1">Sidebar</h1>
+    <p>
+          To modify Sidebar contents:
+          <ol>
+            <li> Edit <code>client/lib/modules/menu/SideMenuService.ng.js</code> </li>
+            <li> Add routes to sidebar links <code>client/lib/modules/core/routes.ng.js</code> </li>
+          </ol>
+    </p>
+    <md-divider></md-divider><Br>
+    <a name="menu_top"></a>
+    <h1 class="md-display-1">Top Header</h1>
+    <p>
+      To modify the top navigation:
+      <ol>
+        <li> Edit <code>client/lib/modules/menu/views/includes/header_toolbar.ng.html</code> </li>
+        <li> Add navigation routes in <code>client/lib/modules/core/routes.ng.js</code>. Don't forget to include all controllers, directives, and templates! </li>
+      </ol>
+    </p>
+    <md-divider></md-divider><Br>
+    <a name="menu_top"></a>
+    <h1 class="md-display-1">Profile Card</h1>
+    <p>
+      To modify the profile card:
+      <ol>
+        <li> Edit <code>client/lib/modules/menu/views/includes/profile_card.ng.html</code> </li>
+        <li> Edit <code>client/lib/modules/menu/MenuCtrl.ng.js</code> </li>
+      </ol>
+    </p>
+
   </div>
   <br>
   <a name="builds"></a>
@@ -113,9 +162,9 @@
     To change the colors of this theme you need to edit the following files:
     <br>
     <ul>
-      <li><i>client/lib/theme/mdStyleColor.js</i> - contains Material theme colors for primary, accent, and warn colors.</li>
-      <li><i>client/styles/material-colors/md-theme.less</i> - contains LESS variables (essentially CSS) for primary, accent, success, info, error, and warn colors.</li>
-      <li><i>client/modules/dashboard/controllers/DashboardCtrl.js </i> - colorFunction() contains color definitions for the chart. </li>
+      <li><code>client/lib/theme/mdStyleColor.js</code> - contains Material theme colors for primary, accent, and warn colors.</li>
+      <li><code>client/styles/material-colors/md-theme.less</code> - contains LESS variables (essentially CSS) for primary, accent, success, info, error, and warn colors.</li>
+      <li><code>client/modules/dashboard/controllers/DashboardCtrl.js </code> - colorFunction() contains color definitions for the chart. </li>
     </ul>
   </div>
 

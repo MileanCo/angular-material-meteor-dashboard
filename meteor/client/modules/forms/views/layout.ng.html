@@ -1,0 +1,53 @@
+<p>This theme's layout utilizes CSS Flexbox, a popular new tool to fix layouts on web pages. It is the default for Angular Material. Find out more about how this works on their site. </p>
+
+<h1 class="md-display-1">Layout Directive</h1>
+<div layout="row" class="md-whiteframe-z2">
+  <div flex layout="row" >
+    <div class="bg-cyan-300" layout-padding flex> First item in row</div>
+    <div class="bg-blue-grey-700" layout-padding flex>Second item in row</div>
+  </div>
+  <div flex layout="column" >
+    <div class="bg-cyan-400" layout-padding flex>First item in column</div>
+    <div class="bg-blue-grey-600" layout-padding flex>Second item in column</div>
+  </div>
+</div>
+
+<br>
+
+<h1 class="md-display-1">Flex Percent Values</h1>
+<div layout="row" class="md-whiteframe-z2" layout-wrap>
+    <div class="bg-cyan-300" flex="30"  layout-padding>
+      [flex="30"]
+    </div>
+    <div class="bg-blue-grey-700" flex="45"  layout-padding>
+      [flex="45"]
+    </div>
+    <div class="bg-cyan-400" flex="25" layout-padding>
+      [flex="25"]
+    </div>
+    <div class="bg-blue-grey-600" flex="33" layout-padding>
+      [flex="33"]
+    </div>
+    <div class="bg-cyan-200" flex="66" layout-padding>
+      [flex="66"]
+    </div>
+    <div class="bg-blue-grey-500" flex="50" layout-padding>
+      [flex="50"]
+    </div>
+    <div class="bg-cyan-500" flex layout-padding>
+      [flex]
+    </div>
+</div>
+<br>
+
+
+
+<h1 class="md-display-1"> Responsive Flex Directives </h1>
+<div layout="row" class="md-whiteframe-z2" layout-wrap>
+  <div class="bg-cyan-200" flex-gt-sm="66" flex="33"  layout-padding>
+    flex 33% on mobile, <br>and 66% on gt-sm devices.
+  </div>
+  <div class="bg-blue-grey-600" flex-gt-sm="33" flex="66"  layout-padding>
+    flex 66%  on mobile, <br>and 33% on gt-sm devices.
+  </div>
+</div>

@@ -164,12 +164,7 @@
               type: 'link',
               state: 'core.maps.googlemaps',
               icon: 'univ'
-            }, {
-              name: 'Vector',
-              state: 'core.maps.vector',
-              type: 'link',
-              icon: ''
-            },
+            }
           ]
         });
 

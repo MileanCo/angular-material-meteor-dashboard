@@ -4,20 +4,20 @@ angular.module("app.core")
     var vm = this;
 
     $scope.modules = {
-      'client/modules/auth':  "Contains all authentication related functionality. Login, registration, and reset-password views & controllers. Meteor handles the real 'authentication' meat behind the scenes. All we do is call their functions.",
-      'client/modules/charts':  "Contains all charting libraries and their use case examples. ",
-      'client/modules/core':  "Core module of the entire app. It is the parent of all other sub-modules. Shared content goes here - breadcrumbs, home page, sidebar, topbar, navigation, etc. Look inside core.html",
-      'client/modules/dashboard': "Contains all views, controllers, and directives related to the Dashboard functionality. 'dashboard.html' is the parent of the tabbed child-pages (<i>example1.html, instances.html, and profile.html</i>). <br> \
+      'auth':  "Contains all authentication related functionality. Login, registration, and reset-password views & controllers. Meteor handles the real 'authentication' meat behind the scenes. All we do is call their functions.",
+      'charts':  "Contains all charting libraries and their use case examples. ",
+      'core':  "Core module of the entire app. It is the parent of all other sub-modules. Shared content goes here - breadcrumbs, home page, sidebar, topbar, navigation, etc. Look inside core.html",
+      'dashboard': "Contains all views, controllers, and directives related to the Dashboard functionality. 'dashboard.html' is the parent of the tabbed child-pages (<i>example1.html, instances.html, and profile.html</i>). <br> \
                         Also, the directives 'widget-card' and 'widget-task' and their HTML template code is located here. These can be used anywhere in the app.",
-      'client/modules/forms': "Contains example code for Material form elements (Radio buttons, Checkboxes, Input, Selects, etc).",
-      'client/modules/forms/wizard':  "A sub-module contained within form that shows how a Wizard can be created.",
-      'client/modules/maps':  "Google Maps module that shows how maps can be included. ",
-      'client/modules/menu':  "<b>Contains all menus! </b> MenuCtrl controls ALL menus. Modify SideMenuService for sidebar navs, and header_toolbar.html/MenuCtrl for top nav.",
-      'client/modules/menu/directives/templates': "Contains directive templates used by Sidebar! ",
-      'client/modules/menu/views/includes': "The html files in views/includes are used by core.html to build the app layout (sidebar, header nav, search, & footer).",
-      'client/modules/tables':  "Contains sample code for how tables are built.",
-      'client/modules/ui': "Contains sample code for Dashboard Directives and Material UI elements (buttons, cards, components, icons, wigdets, etc)",
-      'client/modules/ui/views/dialogs':"Contains code for all pop-up dialogs from UI components.",
+      'forms': "Contains example code for Material form elements (Radio buttons, Checkboxes, Input, Selects, etc).",
+      'forms/wizard':  "A sub-module contained within form that shows how a Wizard can be created.",
+      'maps':  "Google Maps module that shows how maps can be included. ",
+      'menu':  "<b>Contains all menus! </b> MenuCtrl controls ALL menus. Modify SideMenuService for sidebar navs, and header_toolbar.html/MenuCtrl for top nav.",
+      'menu/directives/templates': "Contains directive templates used by Sidebar! ",
+      'menu/views/includes': "The html files in views/includes are used by core.html to build the app layout (sidebar, header nav, search, & footer).",
+      'tables':  "Contains sample code for how tables are built.",
+      'ui': "Contains sample code for Dashboard Directives and Material UI elements (buttons, cards, components, icons, wigdets, etc)",
+      'ui/views/dialogs':"Contains code for all pop-up dialogs from UI components.",
     };
 
     $scope.folders = {

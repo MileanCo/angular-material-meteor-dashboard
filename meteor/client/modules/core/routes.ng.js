@@ -325,7 +325,7 @@ angular.module("app.core").config(function ($breadcrumbProvider, $urlRouterProvi
           templateUrl: 'client/modules/charts/views/nvd3.ng.html',
         })
 
-    // CHARTS //////////////////////////////////////////
+    // MAPS //////////////////////////////////////////
     .state('core.maps', {
       url:'/maps',
       ncyBreadcrumb: {

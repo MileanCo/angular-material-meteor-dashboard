@@ -123,12 +123,13 @@
               state: 'core.resetpw',
               type: 'link',
               icon: ''
-            }, {
-              name: 'Pricing Tables',
-              state: 'core.pricingtables',
-              type: 'link',
-              icon: ''
-            },
+            }
+            //, {
+            //  name: 'Pricing Tables',
+            //  state: 'core.pricingtables',
+            //  type: 'link',
+            //  icon: ''
+            //},
           ]
         });
 

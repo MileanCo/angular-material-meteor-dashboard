@@ -16,7 +16,6 @@
             <li><a href="#menu_top">Top Header </a></li>
         </ul>
       </li>
-      <li><a href="#builds"> Builds </a> </li>
       <li><a href="#usage"> Usage </a> </li>
       <li><a href="#themes"> Themes </a> </li>
       <li><a href="#directives"> Directives </a> </li>
@@ -143,17 +142,33 @@
     </p>
 
   </div>
-  <br>
-  <a name="builds"></a>
-  <h1 class="md-display-2">Builds</h1>
-  <div class="md-padding md-whiteframe-z2">
 
-  </div>
   <br>
   <a name="usage"></a>
   <h1 class="md-display-2">Usage</h1>
   <div class="md-padding md-whiteframe-z2">
+    <p> Run command "meteor" to start the application.
+      <br><br>
 
+      <h1 class="md-display-1">Site Layout</h1>
+      <pre>
+      index.html
+      &emsp; core.html
+      &emsp;&emsp; home.html
+      &emsp;&emsp; charts.html
+      &emsp;&emsp;&emsp; chartjs.html
+      &emsp;&emsp; dashboard.html
+      &emsp;&emsp;&emsp; example1.html
+      &emsp;&emsp;&emsp; profile.html
+      &emsp;&emsp;...
+    </pre>
+    The parent/child relationship shown above is made possible through the use of <code> &#60;div ui-view&#62;  &#60;/div&#62; </code> .
+    In other words, <code>core.html</code> is the "base" template that builds all other pages through html-includes and partials (ui-view) [router].
+    </p>
+    <!-- <ul>
+      <li> </li>
+      <li> </li>
+    </ul> -->
   </div>
   <br>
   <a name="themes"></a>
@@ -177,22 +192,25 @@
   <a name="seed_project"></a>
   <h1 class="md-display-2">Seed Project</h1>
   <div class="md-padding md-whiteframe-z2">
-    To jump start a new application, use the "seed project" as a skeleton for the base of your project. <a href="www.meteor.com">Meteor</a> is a great choice to pick as it streamlines
+    To jump start a new application, use the "seed project" (<code>meteor-seed</code>) as a skeleton for the base of your project. <a href="www.meteor.com">Meteor</a> is a great choice to pick as it streamlines
     the development of both backend and frontend systems using all JavaScript, with many systems already developed such as authentication.
     <br><br>
     The seed project includes the following features:
     <ul>
+      <li> Authentication </li>
+      <li> Dashboard </li>
+      <li> Sidebar, top toolbar, &amp; Profile </li>
       <li> Google Material design </li>
-      <li> Icons</li>
-      <li> Chart technology
+      <li> Font Awesome &amp; Material Icons</li>
+      <li> Chart libraries
         <ul>
           <li><a href="https://developers.google.com/chart/interactive/docs/gallery/barchart">Material Charts</a></li>
           <li><a href="http://krispo.github.io/angular-nvd3/">nvD3</a> </li>
           <li><a href="http://www.chartjs.org/">ChartJS.org</a> </li>
         </ul>
       </li>
-      <li>  </li>
-      <li>  </li>
+
+
 
     </ul>
   </div>

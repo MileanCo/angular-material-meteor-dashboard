@@ -6,7 +6,7 @@
 * Includes SEED project to instantly create a new web app without needing to create boilerplate code.
 * Uses Mongo Database for data storage, authetication, etc.
 * Includes data generator for JSON and CSV files.
-
+* FREE download, just remember to contribute to the project and link back to github.com/Mystec
 
 ## Modules
 * Authentication

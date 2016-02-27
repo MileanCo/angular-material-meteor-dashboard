@@ -1,66 +1,39 @@
-# TO-DO #
-* Refactor core
-* CODE to use:
-    * https://github.com/Xerdi/Material-Design-Flipper
-    * http://codepen.io/MattiaAstorino/pen/zxRayG/
-    * http://codepen.io/deltacoast/pen/azXKrZ/ 
-
-* Write docs
-* Comments everywhere! 
-* Pages -> Login, Register, ForgotPwd, etc.
-* Make grunt/bower/MEAN version! 
-
-Links:
-* http://codepen.io/zavoloklom/pen/dIgco
-* http://themeforest.net/item/materil-angular-material-design-admin-template/full_screen_preview/11062969
-* http://wrapbootstrap.com/preview/WB04HF123
-* https://wrapbootstrap.com/theme/material-admin-responsive-angularjs-WB011H985
+### INTRO
+* [LIVE DEMO] (http://angular-meteor-dashboard.meteor.com)
+* Angular Material Dashboard - an admin template for creating dashboard-styled web applications utilizing Google's Material Design, Angular, and Meteor (server-side full-stack javascript engine).
+* Includes documentation!
+* MEAN project is currently under progress.
+* Includes SEED project to instantly create a new web app without needing to create boilerplate code.
+* Uses Mongo Database for data storage, authetication, etc.
+* Includes data generator for JSON and CSV files.
 
 
+## Modules
+* Authentication
+* Charts - Google, C3, and ChartJS
+* Dashboard
+* Documentation
+* Forms
+* Maps
+* Menu (Sidebar, Topbar)
+* Material UI Elements
+** Wizard
+* Tables
 
-# README #
 
+### SETUP
 COMMANDS to get your application up and running
 
-1. git clone https://joel_stenkvist@bitbucket.org/rockware/arank.git
-2. cd arank
+1. git clone https://github.com/Mystec/angular-material-meteor-dashboard.git
+2. cd meteor/
 3. INSTALL Meteor - https://www.meteor.com/install
 4. meteor
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
 ### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
 
 
 ### OTHER ### 
 DEPLOY METEOR on HOME/NodeJS:
 	http://www.marcusficner.de/blog/deploy-meteor-app-on-centos
 
-Files outside the client, server and tests subdirectories are loaded on both the client and the server!
-Files inside the client folder will run only on the client side.
-
-
-ex_ http://themeforest.net/item/material-design-admin-with-angularjs/full_screen_preview/13582227
 

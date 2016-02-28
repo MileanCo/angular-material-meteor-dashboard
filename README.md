@@ -20,20 +20,19 @@
 * Maps
 * Menu (Sidebar, Profile header, Top Navbar)
 * Material UI Elements
-** Wizard:w
+  * Wizard:w
 * Tables
 
 ## Site Layout
- index.html
-	core.html
-         	home.html
-	charts.html
-        	chartjs.html
-        dashboard.html
-        	example1.html
-        	profile.html
+* index.html
+  * core.html
+    * home.html
+    * charts.html
+      * chartjs.html
+    *  dashboard.html 
+      * example1.html
+      * profile.html
 ...
-
 
 
 
@@ -46,7 +45,7 @@ COMMANDS to get your application up and running
 4. meteor
 
 
-### OTHER ### 
+### OTHER 
 DEPLOY METEOR on HOME/NodeJS:
 	http://www.marcusficner.de/blog/deploy-meteor-app-on-centos
 

@@ -20,7 +20,7 @@
 * Maps
 * Menu (Sidebar, Profile header, Top Navbar)
 * Material UI Elements
-  * Wizard:w
+  * Wizard
 * Tables
 
 ## Site Layout
@@ -32,7 +32,7 @@
     *  dashboard.html 
       * example1.html
       * profile.html
-...
+* ...
 
 
 

@@ -1,7 +1,7 @@
 ### INTRO
-* [LIVE DEMO] (http://angular-meteor-dashboard.meteor.com)
+* [LIVE DEMO](http://104.236.24.66:8080)
 * Angular Material Dashboard - an admin template for creating dashboard-styled web applications utilizing Google's Material Design, Bootstrap 3, Angular, and Meteor (server-side full-stack javascript engine).
-* Includes [documentation](http://angular-meteor-dashboard.meteor.com/)!
+* Includes [documentation](http://104.236.24.66:8080)!
 * MEAN project is currently under progress.
 * Includes SEED project to instantly create a new web app without needing to create boilerplate code.
 * Uses Mongo Database for data storage, authentication, etc.

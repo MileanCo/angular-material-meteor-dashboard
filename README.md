@@ -46,9 +46,10 @@ COMMANDS to get your application up and running
 
 
 ### OTHER 
-DEPLOY METEOR on HOME/NodeJS:
+* DEPLOY METEOR on HOME/NodeJS:
 	http://www.marcusficner.de/blog/deploy-meteor-app-on-centos
-Developed with Meteor 1.2
+	
+* Developed with Meteor 1.2
 
 
 

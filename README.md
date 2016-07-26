@@ -1,5 +1,5 @@
 ### INTRO
-* [LIVE DEMO](http://104.236.24.66:8080)
+* [LIVE DEMO](http://milean.co:8080)
 * Angular Material Dashboard - an admin template for creating dashboard-styled web applications utilizing Google's Material Design, Bootstrap 3, Angular, and Meteor (server-side full-stack javascript engine).
 * Includes [documentation](http://104.236.24.66:8080)!
 * MEAN project is currently under progress.
@@ -29,7 +29,7 @@
     * home.html
     * charts.html
       * chartjs.html
-    *  dashboard.html 
+    *  dashboard.html
       * example1.html
       * profile.html
 * ...
@@ -45,10 +45,10 @@ COMMANDS to get your application up and running
 4. meteor
 
 
-### OTHER 
+### OTHER
 * DEPLOY METEOR on HOME/NodeJS:
 	http://www.marcusficner.de/blog/deploy-meteor-app-on-centos
-	
+
 * Developed with Meteor 1.2
 
 
@@ -61,5 +61,3 @@ COMMANDS to get your application up and running
 Commands to run:
 * docker docker run -p 27017:27017 --name mongo_instance -d mongo
 * docker run    -e ROOT_URL=http://your_ip     -e MONGO_URL=mongodb://your_ip:27017/meteor   -p 8080:80 mystec/ammdash
-
-

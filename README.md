@@ -1,5 +1,5 @@
 # UPDATE - NEW Seed Project!
-* (Angular Meteor with ES6 JavaScript Dashboard Starter)[https://github.com/MileanCo/angular-meteor-es6-dashboard-seed/]
+* [Angular Meteor with ES6 JavaScript Dashboard Starter](https://github.com/MileanCo/angular-meteor-es6-dashboard-seed/)
 * Project below uses ES5 javascript and Meteor 1.3.
 * The new project uses Latest Meteor package (1.4+), AngularJS, JavaScript 2015+ ES6 features, and deployment docs on DigitalOcean.
 

@@ -1,7 +1,12 @@
+# UPDATE - NEW Seed Project!
+* (Angular Meteor with ES6 JavaScript Dashboard Starter)[https://github.com/MileanCo/angular-meteor-es6-dashboard-seed/]
+* Project below uses ES5 javascript and Meteor 1.3.
+* The new project uses Latest Meteor package (1.4+), AngularJS, JavaScript 2015+ ES6 features, and deployment docs on DigitalOcean.
+
 ### INTRO
 * [LIVE DEMO](http://milean.co:8080)
 * Angular Material Dashboard - an admin template for creating dashboard-styled web applications utilizing Google's Material Design, Bootstrap 3, Angular, and Meteor (server-side full-stack javascript engine).
-* Includes [documentation](http://104.236.24.66:8080)!
+* Includes [documentation](http://milean.co:8080)!
 * MEAN project is currently under progress.
 * Includes SEED project to instantly create a new web app without needing to create boilerplate code.
 * Uses Mongo Database for data storage, authentication, etc.

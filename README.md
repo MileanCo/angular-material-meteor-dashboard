@@ -5,7 +5,7 @@
 ### INTRO
 * [LIVE DEMO](http://milean.co:8080)
 * Angular Material Dashboard - an admin template for creating dashboard-styled web applications utilizing Google's Material Design, Bootstrap 3, Angular, and Meteor 1.2 (server-side full-stack javascript engine).
-* Includes [documentation](http://milean.co:8080)!
+* Includes [documentation](http://milean.co:8080/documentation)!
 * MEAN project is currently under progress.
 * Includes SEED project to instantly create a new web app without needing to create boilerplate code.
 * Uses Mongo Database for data storage, authentication, etc.

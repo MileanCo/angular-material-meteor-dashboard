@@ -66,3 +66,5 @@ COMMANDS to get your application up and running
 Commands to run:
 * docker docker run -p 27017:27017 --name mongo_instance -d mongo
 * docker run    -e ROOT_URL=http://your_ip     -e MONGO_URL=mongodb://your_ip:27017/meteor   -p 8080:80 mystec/ammdash
+If you already have a mongo container running for another app (most likely mongo set up with MUP), you can link to that one like this:
+docker run --link=mongo_instance:mongo -e ROOT_URL=http://your_ip -e MONGO_URL=mongodb://mongo:27017/meteor -p 8080:80 mystec/ammdash
